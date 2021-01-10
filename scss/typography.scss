@@ -1,3 +1,46 @@
+/***  Layout  ***/
+
+@mixin media-query-min($value, $operator: "min-width", $query: "screen") {
+  @media #{$query} and (#{$operator}: #{$value}) {
+    @content;
+  }
+}
+
+@mixin media-query-max($value, $operator: "max-width", $query: "screen") {
+  @media #{$query} and (#{$operator}: #{$value}) {
+    @content;
+  }
+}
+
+/* ##usage##
+    @include media-query-min(500px) {
+    }
+  */
+$xs: 400px;
+$sm: 768px;
+$md: 1000px;
+$lg: 1250px;
+$xl: 1800px;
+
+.layout-container {
+  max-width: 300px;
+  width: 90%;
+  margin: auto;
+  @include media-query-max($xs) {
+    max-width: 498px;
+    width: 80%;
+  }
+  @include media-query-max($sm) {
+    max-width: 800px;
+    width: 80%;
+  }
+  @include media-query-max($md) {
+    max-width: 1050px;
+  }
+}
+
+/***  Typography  ***/
+
 @import url("https://use.typekit.net/lho3axg.css");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
 
@@ -6,8 +49,22 @@
   src: local("BigCaslon"), url(../fonts/BigCaslon.ttf) format("truetype");
 }
 
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+html {
+  font-size: 62.5%;
+}
 $headerFont: "Libre Caslon Text";
 $bodyFont: "jaf-bernina-sans-condensed";
+
+$black: #000000;
+$white: #ffffff;
+$blue: #026891;
+$yellow: #efb234;
+$red: #c93928;
 
 h1,
 h2,
@@ -15,9 +72,59 @@ h3,
 h4 {
   font-family: $headerFont;
   font-weight: 400;
+  color: $blue;
 }
 p,
 a {
   font-family: $bodyFont;
   font-weight: 300;
+}
+a {
+  text-decoration: none;
+}
+p,
+a {
+  letter-spacing: 0.2rem;
+  font-size: 16px;
+  line-height: 110%;
+  color: $black;
+  @include media-query-min($sm) {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 680));
+  }
+  @include media-query-min($md) {
+    @include font-size(1.8);
+  }
+}
+h1 {
+  letter-spacing: 0.2rem;
+  font-size: 48px;
+  line-height: 110%;
+  @include media-query-min($sm) {
+    font-size: calc(48px + 12 * ((100vw - 320px) / 680));
+  }
+  @include media-query-min($md) {
+    @include font-size(6);
+  }
+}
+h2 {
+  letter-spacing: 0.2rem;
+  font-size: 24px;
+  line-height: 110%;
+  @include media-query-min($sm) {
+    font-size: calc(24px + 12 * ((100vw - 320px) / 680));
+  }
+  @include media-query-min($md) {
+    @include font-size(3.6);
+  }
+}
+h3 {
+  letter-spacing: 0.2rem;
+  font-size: 18px;
+  line-height: 110%;
+  @include media-query-min($sm) {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 680));
+  }
+  @include media-query-min($md) {
+    @include font-size(2.2);
+  }
 }
