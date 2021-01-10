@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# horlick-editorial
+
+Marketing website for Leah Horlick's editing and indexing services
