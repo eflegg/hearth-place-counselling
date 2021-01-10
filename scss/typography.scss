@@ -1,0 +1,23 @@
+@import url("https://use.typekit.net/lho3axg.css");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
+
+@font-face {
+  font-family: "BigCaslon";
+  src: local("BigCaslon"), url(../fonts/BigCaslon.ttf) format("truetype");
+}
+
+$headerFont: "Libre Caslon Text";
+$bodyFont: "jaf-bernina-sans-condensed";
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headerFont;
+  font-weight: 400;
+}
+p,
+a {
+  font-family: $bodyFont;
+  font-weight: 300;
+}
