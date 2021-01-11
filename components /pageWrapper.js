@@ -2,14 +2,13 @@ import Head from "next/head";
 import Link from "next/link";
 import Footer from "./Global/Footer";
 import Navigation from "./Global/Navigation";
+import Hero from "./Global/Hero";
 
 export default function Layout({ children }) {
   return (
-    <div className="main">
-      <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <Navigation />
+    <div className="layout-container">
+      <Hero />
+
       {children}
       <Footer />
     </div>

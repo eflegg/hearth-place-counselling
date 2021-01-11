@@ -26,15 +26,15 @@ $xl: 1800px;
   max-width: 300px;
   width: 90%;
   margin: auto;
-  @include media-query-max($xs) {
+  @include media-query-min($xs) {
     max-width: 498px;
     width: 80%;
   }
-  @include media-query-max($sm) {
+  @include media-query-min($sm) {
     max-width: 800px;
     width: 80%;
   }
-  @include media-query-max($md) {
+  @include media-query-min($md) {
     max-width: 1050px;
   }
 }
