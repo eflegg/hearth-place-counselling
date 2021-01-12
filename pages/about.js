@@ -1,18 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import Layout from "../components /pageWrapper";
 
 export default function About() {
   return (
-    <div className="main--about">
+    <Layout pageTitle={"About"}>
       <Head>
-        <title>Horlick Editorial - About</title>
+        <title>Horlick Editorial - Services</title>
       </Head>
-      <h1>Meet Leah Horlick</h1>
-      <h2>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </h2>
-    </div>
+    </Layout>
   );
 }

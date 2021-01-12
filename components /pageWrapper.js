@@ -4,10 +4,10 @@ import Footer from "./Global/Footer";
 import Navigation from "./Global/Navigation";
 import Hero from "./Global/Hero";
 
-export default function Layout({ children }) {
+export default function Layout({ children, pageTitle }) {
   return (
     <div className="layout-container">
-      <Hero />
+      <Hero pageTitle={pageTitle} />
 
       {children}
       <Footer />

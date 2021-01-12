@@ -65,6 +65,9 @@ const MobileNav = styled.div`
 `;
 
 const DesktopNav = styled.nav`
+  position: relative;
+  margin-top: 25px;
+  z-index: 1;
   ul {
     display: flex;
     justify-content: flex-end;
@@ -97,17 +100,17 @@ export default function Navigation(props) {
               </Link>
             </li>
             <li>
-              <Link href="/about">
+              <Link href="/blog">
                 <a>Blog</a>
               </Link>
             </li>
             <li>
-              <Link href="/about" activeClassName="active">
-                Work
+              <Link href="/services" activeClassName="active">
+                Services
               </Link>
             </li>
             <li>
-              <Link href="/about">
+              <Link href="/contact">
                 <a>Contact</a>
               </Link>
             </li>

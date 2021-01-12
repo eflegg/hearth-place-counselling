@@ -1,18 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import Layout from "../components /pageWrapper";
 
 export default function Services() {
   return (
-    <div className="main--about">
+    <Layout pageTitle={"Services"}>
       <Head>
         <title>Horlick Editorial - Services</title>
       </Head>
-      <h1>Services</h1>
-      <h2>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </h2>
-    </div>
+    </Layout>
   );
 }
