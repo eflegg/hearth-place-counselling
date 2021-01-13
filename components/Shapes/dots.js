@@ -1,12 +1,12 @@
-import { Spring, config } from "react-spring/renderprops.cjs";
+import { Spring, Transition, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
 import styled from "styled-components";
 import theme from "../Theme";
 import { Waypoint } from "react-waypoint";
 
 const DotContainer = styled.div`
-  border: 1px solid hotpink;
-  width: 100%;
+  /* border: 1px solid hotpink; */
+
   .single-dot {
     height: 13px;
     width: 13px;
@@ -31,34 +31,54 @@ export default function Dots(props) {
       }}
     >
       <DotContainer className={`${props.className ? props.className : ""}`}>
-        <Spring
+        <Transition
           config={{ delay: 400 }}
+          items={dotsVisible}
           from={{ opacity: 0 }}
-          to={{ opacity: 1 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
         >
-          {(props) => <div style={props} className="single-dot"></div>}
-        </Spring>
-        <Spring
+          {(dotsVisible) =>
+            dotsVisible &&
+            ((props) => <div className="single-dot" style={props}></div>)
+          }
+        </Transition>
+        <Transition
           config={{ delay: 550 }}
+          items={dotsVisible}
           from={{ opacity: 0 }}
-          to={{ opacity: 1 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
         >
-          {(props) => <div style={props} className="single-dot"></div>}
-        </Spring>
-        <Spring
+          {(dotsVisible) =>
+            dotsVisible &&
+            ((props) => <div className="single-dot" style={props}></div>)
+          }
+        </Transition>
+        <Transition
           config={{ delay: 700 }}
+          items={dotsVisible}
           from={{ opacity: 0 }}
-          to={{ opacity: 1 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
         >
-          {(props) => <div style={props} className="single-dot"></div>}
-        </Spring>
-        <Spring
+          {(dotsVisible) =>
+            dotsVisible &&
+            ((props) => <div className="single-dot" style={props}></div>)
+          }
+        </Transition>
+        <Transition
           config={{ delay: 850 }}
+          items={dotsVisible}
           from={{ opacity: 0 }}
-          to={{ opacity: 1 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
         >
-          {(props) => <div style={props} className="single-dot"></div>}
-        </Spring>
+          {(dotsVisible) =>
+            dotsVisible &&
+            ((props) => <div className="single-dot" style={props}></div>)
+          }
+        </Transition>
       </DotContainer>
     </Waypoint>
   );
