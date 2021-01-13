@@ -1,15 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
-import Layout from "../components /pageWrapper";
+import Layout from "../components/pageWrapper";
 import styled from "styled-components";
-import theme from "../components /Theme";
+import theme from "../components/Theme";
+import Dots from "../components/Shapes/dots";
 
 const HomeContainer = styled.div`
   position: relative;
-  button {
-    background-color: ${theme.colours.yellow};
-    padding: 15px 30px;
-    margin: 0 auto;
+  .intro-text {
+    margin: 80px auto 50px;
   }
 `;
 
@@ -23,14 +22,15 @@ export default function Home() {
       </Head>
       <Layout pageTitle={"Horlick Editorial"}>
         <HomeContainer>
-          <div className="intro-text">
-            <p>
+          <div className="intro-text text-center">
+            <h3 className="text-center">
               Leah Horlick is a professional indexer and editor in Calgary, AB.
               Probably expand with a more detailed statement of the guiding
               values of your work.
-            </p>
-            <button>Meet Leah</button>
+            </h3>
+            <button className="btn">Meet Leah</button>
           </div>
+          <Dots />
         </HomeContainer>
       </Layout>
     </>

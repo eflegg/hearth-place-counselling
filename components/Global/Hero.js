@@ -7,7 +7,7 @@ import { Spring, config } from "react-spring/renderprops.cjs";
 
 const HeroContainer = styled.div`
   /* border: 1px solid blue; */
-  margin-top: 60px;
+
   display: flex;
   justify-content: flex-end;
   .hero-text {
@@ -33,7 +33,7 @@ const HeroContainer = styled.div`
     position: relative;
     height: 300px;
     width: 75%;
-
+    margin-top: 60px;
     .hero-colour-left {
       position: absolute;
       background: ${theme.colours.yellow};
@@ -64,14 +64,15 @@ const HeroContainer = styled.div`
 export default function Hero(props) {
   return (
     <HeroContainer>
+      <Navigation />
       <div className="hero-colour">
-        {/* <Spring
+        <Spring
           config={config.slow}
           from={{ opacity: 0, width: "0%" }}
           to={{ opacity: 1, width: "0%" }}
         >
           {(props) => <div className="hero-colour-left" style={props}></div>}
-        </Spring> */}
+        </Spring>
         <Spring
           config={config.slow}
           from={{ opacity: 0, width: "0%" }}
@@ -81,8 +82,8 @@ export default function Hero(props) {
         </Spring>
         <Spring
           config={config.slow}
-          from={{ opacity: 0, width: "100%" }}
-          to={{ opacity: 1, width: "0%" }}
+          from={{ width: "100%" }}
+          to={{ width: "0%" }}
         >
           {(props) => <div className="hero-colour-white" style={props}></div>}
         </Spring>
@@ -90,27 +91,27 @@ export default function Hero(props) {
         <div className="hero-text">
           <h1>{props.pageTitle}</h1>
           <Spring
-            config={config.slow}
+            config={{ delay: 200 }}
             from={{ opacity: 0, width: "0%" }}
             to={{ opacity: 1, width: "50%" }}
           >
             {(props) => <div className="hero-line" style={props}></div>}
           </Spring>
           <Spring
-            config={{ delay: 700 }}
+            config={{ delay: 400 }}
             from={{ opacity: 0, width: "0%" }}
             to={{ opacity: 1, width: "40%" }}
           >
             {(props) => <div className="hero-line" style={props}></div>}
           </Spring>
           <Spring
+            config={{ delay: 400 }}
             from={{ opacity: 0, width: "0%" }}
             to={{ opacity: 1, width: "30%" }}
           >
             {(props) => <div className="hero-line" style={props}></div>}
           </Spring>
         </div>
-        <Navigation />
       </div>
     </HeroContainer>
   );

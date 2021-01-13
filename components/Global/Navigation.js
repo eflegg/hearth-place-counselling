@@ -4,15 +4,49 @@ import styled from "styled-components";
 import theme from "../Theme";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
+import { Spring, config } from "react-spring/renderprops.cjs";
 
 const MobileNav = styled.div`
+  .nav-active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 110vw;
+    background-color: ${theme.colours.yellow};
+    ul {
+      margin-top: 50px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .nav-link__mobile {
+        a {
+          color: white;
+          font-size: 30px;
+          margin-top: 20px;
+          line-height: 80px;
+        }
+      }
+    }
+  }
   .btn-nav {
+    &:focus {
+      outline: none;
+    }
     height: 50px;
     width: 50px;
-    z-index: 5;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: transparent;
+    border: 0px;
+    position: absolute;
+    top: 5px;
+    right: 25px;
     span {
       width: 50px;
       height: 5px;
@@ -23,7 +57,6 @@ const MobileNav = styled.div`
     }
     .burger-2 {
       position: relative;
-      left: 10px;
     }
     &.nav-close {
       .burger-1 {
@@ -52,7 +85,6 @@ const MobileNav = styled.div`
         transition: all 0.15s ease-in-out;
       }
       .burger-2 {
-        left: 10px;
         overflow: hidden;
         transition: all 0.15s ease-in-out;
       }
@@ -65,7 +97,7 @@ const MobileNav = styled.div`
 `;
 
 const DesktopNav = styled.nav`
-  position: relative;
+  position: absolute;
   margin-top: 25px;
   z-index: 1;
   ul {
@@ -114,10 +146,15 @@ export default function Navigation(props) {
                 <a>Contact</a>
               </Link>
             </li>
+            <li>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
           </ul>
         </DesktopNav>
       ) : (
-        <MobileNav className="mobile-nav">
+        <MobileNav className="mobile-nav" style={props}>
           <button
             className={`btn-nav ${navActive ? "nav-close" : "nav-open"}`}
             onClick={() => {
@@ -138,51 +175,73 @@ export default function Navigation(props) {
           </button>
           {navActive ? (
             <>
-              <nav
-                id="navMenu"
-                className={`${
-                  props.className ? props.className : ""
-                }  nav-active`}
+              <Spring
+                from={{ width: "0vw", height: "0vh" }}
+                to={{ width: "100vw", height: "100vh" }}
               >
-                <ul>
-                  <li
-                    onClick={() => {
-                      toggleNav(false);
-                    }}
+                {(props) => (
+                  <nav
+                    style={props}
+                    id="navMenu"
+                    className={`${
+                      props.className ? props.className : ""
+                    }  nav-active`}
                   >
-                    <Link href="/about">
-                      <a>About</a>
-                    </Link>
-                  </li>
-                  <li
-                    onClick={() => {
-                      toggleNav(false);
-                    }}
-                  >
-                    <Link href="/about">
-                      <a>Blog</a>
-                    </Link>
-                  </li>
-                  <li
-                    onClick={() => {
-                      toggleNav(false);
-                    }}
-                  >
-                    <Link href="/about" activeClassName="active">
-                      Work
-                    </Link>
-                  </li>
-                  <li
-                    onClick={() => {
-                      toggleNav(false);
-                    }}
-                  >
-                    <Link href="/about">
-                      <a>Contact</a>
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
+                    <ul>
+                      <li
+                        className="nav-link__mobile"
+                        onClick={() => {
+                          toggleNav(false);
+                        }}
+                      >
+                        <Link href="/about">
+                          <a>About</a>
+                        </Link>
+                      </li>
+                      <li
+                        className="nav-link__mobile"
+                        onClick={() => {
+                          toggleNav(false);
+                        }}
+                      >
+                        <Link href="/blog">
+                          <a>Blog</a>
+                        </Link>
+                      </li>
+                      <li
+                        className="nav-link__mobile"
+                        onClick={() => {
+                          toggleNav(false);
+                        }}
+                      >
+                        <Link href="/services" activeClassName="active">
+                          Services
+                        </Link>
+                      </li>
+                      <li
+                        className="nav-link__mobile"
+                        onClick={() => {
+                          toggleNav(false);
+                        }}
+                      >
+                        <Link href="/contact">
+                          <a>Contact</a>
+                        </Link>
+                      </li>
+                      <li
+                        className="nav-link__mobile"
+                        onClick={() => {
+                          toggleNav(false);
+                        }}
+                      >
+                        <Link href="/">
+                          <a>Home</a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                )}
+              </Spring>
             </>
           ) : null}
         </MobileNav>
