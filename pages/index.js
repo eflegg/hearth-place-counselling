@@ -4,6 +4,7 @@ import Layout from "../components/pageWrapper";
 import styled from "styled-components";
 import theme from "../components/Theme";
 import Dots from "../components/Shapes/dots";
+import HomeHire from "../components/HomeHire";
 
 const HomeContainer = styled.div`
   position: relative;
@@ -31,6 +32,7 @@ export default function Home() {
             <button className="btn">Meet Leah</button>
           </div>
           <Dots />
+          <HomeHire />
         </HomeContainer>
       </Layout>
     </>
