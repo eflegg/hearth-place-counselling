@@ -29,7 +29,7 @@ $lg: 1250px;
 $xl: 1800px;
 
 .layout-container {
-  overflow: hidden;
+  // overflow: hidden;
   max-width: 350px;
   width: 90%;
   margin: auto;
@@ -69,6 +69,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 $headerFont: "Libre Caslon Text";
 $bodyFont: "jaf-bernina-sans-condensed";
