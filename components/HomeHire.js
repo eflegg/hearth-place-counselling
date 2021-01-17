@@ -5,6 +5,16 @@ import theme from "./Theme";
 import { Waypoint } from "react-waypoint";
 
 const HomeHireContainer = styled.section`
+  .img-1 {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    img {
+      width: 100vw;
+      overflow: visible;
+    }
+  }
   h2 {
     text-align: right;
     margin-bottom: 25px;
@@ -33,6 +43,12 @@ const Reason = styled.div`
   padding: 50px;
   position: relative;
   max-width: 180px;
+  ${theme.mediaQuery.xs`
+   max-width: 250px;
+  `}
+  ${theme.mediaQuery.sm`
+   max-width: 180px;
+  `}
   ${theme.mediaQuery.md`
    max-width: 250px;
   `}
@@ -89,6 +105,12 @@ const Reason = styled.div`
 export default function HomeHire() {
   return (
     <HomeHireContainer>
+      <div className="img-1">
+        <img
+          src="/laptop.jpg"
+          alt="photo of laptop with glasses and coffe cup"
+        />
+      </div>
       <h2>Why Hire an Indexer?</h2>
       <ReasonContainer>
         <Reason className="reason-container reason-left">
