@@ -31,7 +31,6 @@ export default function Home() {
             </h3>
             <button className="btn">Meet Leah</button>
           </div>
-          <Dots />
           <HomeHire />
         </HomeContainer>
       </Layout>

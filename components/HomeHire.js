@@ -3,6 +3,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import theme from "./Theme";
 import { Waypoint } from "react-waypoint";
+import Dots from "./Shapes/dots";
 
 const HomeHireContainer = styled.section`
   .img-1 {
@@ -12,6 +13,7 @@ const HomeHireContainer = styled.section`
     overflow: visible;
     img {
       width: 100vw;
+      height: auto;
       overflow: visible;
     }
   }
@@ -111,24 +113,26 @@ export default function HomeHire() {
           alt="photo of laptop with glasses and coffe cup"
         />
       </div>
+      <Dots />
       <h2>Why Hire an Indexer?</h2>
       <ReasonContainer>
         <Reason className="reason-container reason-left">
           <p>
-            The first reason you should hire a professional. Because you should
-            always hire a professional.
+            My professional training and academic background ensures that you'll
+            receive an index your readers can rely on.
           </p>
         </Reason>
         <Reason className="reason-container reason-center">
           <p>
-            The first reason you should hire a professional. Because you should
-            always hire a professional.
+            I use specialized indexing software that keeps me fast and accurate,
+            making it possible for you to meet your publisher's deadlines.
           </p>
         </Reason>
         <Reason className="reason-container reason-right">
           <p>
-            The first reason you should hire a professional. Because you should
-            always hire a professional.
+            hiring a professional ensures that your readers get the best
+            possible guide to your text, and that you get more time to celebrate
+            your book.
           </p>
         </Reason>
       </ReasonContainer>
