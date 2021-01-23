@@ -5,25 +5,29 @@ import styled from "styled-components";
 import theme from "../components/Theme";
 import { Waypoint } from "react-waypoint";
 
-const ServiceContainer = styled.div`
-  .services-1__title {
-    width: 100%;
-    margin: 100px 0;
-    display: flex;
-    justify-content: space-between;
-    h2 {
-      width: 100%;
-      text-align: right;
-    }
-    .horiz-line {
-      border-bottom: 3px solid ${theme.colours.yellow};
-      width: 60%;
-      transform: translateX(-20%);
-    }
-  }
-`;
-
 export default function SingleService(props) {
+  const ServiceContainer = styled.div`
+    .services-1__title {
+      width: 100%;
+      margin: 100px 0;
+      display: flex;
+      ${props.reverse ? "flex-direction: row-reverse;" : "flex-direction: row;"}
+      justify-content: space-between;
+      h2 {
+        width: 100%;
+        ${props.reverse
+          ? "text-align: left;"
+          : "text-align: right;"}/* text-align: right; */
+      }
+      .horiz-line {
+        border-bottom: 3px solid ${theme.colours.yellow};
+        width: 60%;
+        ${props.reverse
+          ? "transform: translateX(40%);"
+          : "transform: translateX(-40%);"}/* transform: translateX(-40%); */
+      }
+    }
+  `;
   return (
     <ServiceContainer className="services-1">
       <Waypoint onEnter={props.onEnter} onLeave={props.onLeave}>

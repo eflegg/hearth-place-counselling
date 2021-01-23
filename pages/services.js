@@ -15,11 +15,11 @@ const ServicesContainer = styled.section`
     margin: 100px 0;
     display: flex;
     justify-content: space-between;
-    .horiz-line {
+    /* .horiz-line {
       border-bottom: 3px solid ${theme.colours.yellow};
       width: 60%;
       transform: translateX(-40%);
-    }
+    } */
   }
   .index-dots {
     display: flex;
@@ -60,7 +60,7 @@ export default function Services() {
       </Head>
       <ServicesContainer>
         <div className="services-1">
-          <Waypoint
+          {/* <Waypoint
             onEnter={() => {
               setIndexLine(true);
               console.log("index line visible");
@@ -86,7 +86,19 @@ export default function Services() {
 
               <h2>Indexing</h2>
             </div>
-          </Waypoint>
+          </Waypoint> */}
+          <SingleService
+            onEnter={() => {
+              setIndexLine(true);
+              console.log("index line visible");
+            }}
+            onLeave={() => {
+              setIndexLine(false);
+              console.log("index line NOT visible");
+            }}
+            items={indexLine}
+            serviceTitle={"Indexing"}
+          />
           <p>
             I completed my indexing training through the acclaimed program at UC
             Berkeley. I’m a member of the Indexing Society of Canada, and was a
@@ -163,6 +175,7 @@ export default function Services() {
           </FAQ>
         </div>
         <SingleService
+          reverse
           onEnter={() => {
             setIndexLine(true);
             console.log("index line visible");
