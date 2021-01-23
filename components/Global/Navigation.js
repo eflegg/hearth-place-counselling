@@ -5,6 +5,7 @@ import theme from "../Theme";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 import { Spring, config } from "react-spring/renderprops.cjs";
+import ActiveLink from "./ActiveLink";
 
 const MobileNav = styled.div`
   .nav-active {
@@ -98,7 +99,8 @@ const MobileNav = styled.div`
 
 const DesktopNav = styled.nav`
   position: absolute;
-  margin-top: 25px;
+  transform: translateY(105%);
+
   z-index: 1;
   ul {
     display: flex;
@@ -108,6 +110,17 @@ const DesktopNav = styled.nav`
       margin-right: 30px;
       a {
         color: ${theme.colours.blue};
+        &.active:after {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin: 0 auto;
+          background-color: ${theme.colours.blue};
+          position: relative;
+          top: 8px;
+        }
       }
     }
   }
@@ -125,31 +138,58 @@ export default function Navigation(props) {
       </Head>
       {isDesktop ? (
         <DesktopNav>
-          <ul>
+          {/* <ul>
             <li>
-              <Link href="/about">
+              <ActiveLink activeClassName="active" href="/about">
                 <a>About</a>
-              </Link>
+              </ActiveLink>
             </li>
             <li>
-              <Link href="/blog">
+              <ActiveLink activeClassName="active" href="/blog">
                 <a>Blog</a>
-              </Link>
+              </ActiveLink>
             </li>
             <li>
-              <Link href="/services" activeClassName="active">
+              <ActiveLink href="/services" activeClassName="active">
                 Services
-              </Link>
+              </ActiveLink>
             </li>
             <li>
-              <Link href="/contact">
+              <ActiveLink activeClassName="active" href="/contact">
                 <a>Contact</a>
-              </Link>
+              </ActiveLink>
             </li>
             <li>
-              <Link href="/">
+              <ActiveLink activeClassName="active" href="/">
                 <a>Home</a>
-              </Link>
+              </ActiveLink>
+            </li>
+          </ul> */}
+          <ul className="nav">
+            <li>
+              <ActiveLink activeClassName="active" href="/">
+                <a className="nav-link">Home</a>
+              </ActiveLink>
+            </li>
+            <li>
+              <ActiveLink activeClassName="active" href="/about">
+                <a className="nav-link">About</a>
+              </ActiveLink>
+            </li>
+            <li>
+              <ActiveLink activeClassName="active" href="/services">
+                <a className="nav-link">Services</a>
+              </ActiveLink>
+            </li>
+            <li>
+              <ActiveLink activeClassName="active" href="/blog">
+                <a className="nav-link">Blog</a>
+              </ActiveLink>
+            </li>
+            <li>
+              <ActiveLink activeClassName="active" href="/contact">
+                <a className="nav-link">Contact</a>
+              </ActiveLink>
             </li>
           </ul>
         </DesktopNav>

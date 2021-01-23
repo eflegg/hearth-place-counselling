@@ -8,7 +8,7 @@ const FooterContainer = styled.footer`
   margin: 0 auto;
   padding-top: 30px;
   h3 {
-    color: black;
+    color: ${theme.colours.black};
     text-align: center;
   }
 `;

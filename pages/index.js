@@ -29,7 +29,11 @@ export default function Home() {
               Probably expand with a more detailed statement of the guiding
               values of your work.
             </h3>
-            <button className="btn">Meet Leah</button>
+            <button className="btn">
+              <Link href="/about">
+                <a>Meet Leah</a>
+              </Link>
+            </button>
           </div>
           <HomeHire />
         </HomeContainer>

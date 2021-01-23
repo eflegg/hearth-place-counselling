@@ -21,7 +21,7 @@ export const mediaQuery = Object.keys(breakpoints).reduce(
 );
 
 export const colours = {
-  black: "#000000",
+  black: "darkslategrey",
   white: "#ffffff",
   blue: "#026891",
   yellow: "#EFB234",
