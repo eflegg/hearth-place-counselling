@@ -7,6 +7,10 @@ const FormField = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  .error {
+    margin-top: 3px;
+    color: darkred;
+  }
   label {
     font-family: ${theme.type.body};
     font-size: 20px;
