@@ -1,6 +1,4 @@
 import { Spring, Transition, config } from "react-spring/renderprops.cjs";
-import { useState } from "react";
-
 import styled from "styled-components";
 import theme from "../components/Theme";
 import { Waypoint } from "react-waypoint";

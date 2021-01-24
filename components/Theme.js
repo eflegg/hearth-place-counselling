@@ -1,5 +1,10 @@
 import { css } from "styled-components";
 
+export const type = {
+  header: "Libre Caslon Text",
+  body: "jaf-bernina-sans-condensed",
+};
+
 export const breakpoints = {
   xs: "400px",
   sm: "768px",
@@ -32,6 +37,7 @@ const theme = {
   mediaQuery,
   breakpoints,
   colours,
+  type,
 };
 
 export default theme;

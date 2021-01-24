@@ -185,8 +185,63 @@ export default function Services() {
             console.log("index line NOT visible");
           }}
           items={indexLine}
+          serviceTitle={"Proofreading and Editing"}
+        />
+        <p>
+          My careful attention to detail and formal training has made me a
+          sought-after stylistic and copy editor who has worked for magazines
+          like PRISM international, Poetry Is Dead, Canadian Dimension,
+          Shameless, and most recently New Forum. Contact me to discuss rates
+          and the right kind of editing for your project.
+        </p>
+        <SingleService
+          onEnter={() => {
+            setIndexLine(true);
+            console.log("index line visible");
+          }}
+          onLeave={() => {
+            setIndexLine(false);
+            console.log("index line NOT visible");
+          }}
+          items={indexLine}
           serviceTitle={"Manuscript Consultation"}
         />
+        <p>
+          I’m a long-time member of the Writer’s Union of Canada with an MFA in
+          Creative Writing from the University of British Columbia. I’ve sat on
+          juries for the BC Arts Council and successfully received full funding
+          from the Canada Council. My previous manuscript clients have applied
+          successfully to retreats like Lambda Literary, or been longlisted for
+          prizes including the Gerald Lampert Award. My own active literary
+          practice keeps me in the loop about what publishers, grantors, and
+          graduate programs are looking for. You or your publisher can reach out
+          at any time to tell me about your project and learn more about my
+          approach.{" "}
+        </p>
+        <SingleService
+          reverse
+          onEnter={() => {
+            setIndexLine(true);
+            console.log("index line visible");
+          }}
+          onLeave={() => {
+            setIndexLine(false);
+            console.log("index line NOT visible");
+          }}
+          items={indexLine}
+          serviceTitle={"Transcription"}
+        />
+        <p>
+          I’m a fast, accurate transcriber specializing in university and
+          gallery clients with time-sensitive work on stigmatized topics. I’ve
+          transcribed sensitive, highly-confidential audio for projects related
+          to biomedical innovation, transgender health, hepatitis C, and
+          HIV/AIDS. Previous clients include grunt gallery in Vancouver and the
+          Johnson-Shoyama School of Public Policy at the University of
+          Saskatchewan. I’ve also provided live captioning for nonprofit AGMs;
+          contact me to discuss rates and make sure you’re using the best
+          platform possible for your project or event.
+        </p>
       </ServicesContainer>
     </Layout>
   );
