@@ -6,11 +6,10 @@ import Input from "./Input";
 import validator from "validator";
 
 const FormContainer = styled.form`
-  border: 2px solid blue;
   display: flex;
   flex-wrap: wrap;
   max-width: 650px;
-  margin: 0 auto;
+  margin: 100px auto;
   justify-content: space-between;
 `;
 
@@ -23,9 +22,11 @@ export default class ContactForm extends Component {
       publisher: "",
       wordCount: "",
       message: "",
+      status: "",
     };
     this.testName = this.testName.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.submitForm = this.submitForm.bind(this);
     this.testEmail = this.testEmail.bind(this);
   }
 
@@ -70,14 +71,35 @@ export default class ContactForm extends Component {
   onSubmit() {
     console.log("submitting");
   }
+  submitForm(ev) {
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        this.setState({ status: "SUCCESS" });
+      } else {
+        this.setState({ status: "ERROR" });
+      }
+    };
+    xhr.send(data);
+  }
 
   render() {
+    const { status } = this.state;
     return (
       <FormContainer
         className={`${
           this.props.className ? this.props.className : ""
         } form-container`}
-        onSubmit={this.onSubmit}
+        onSubmit={this.submitForm}
+        action="https://formspree.io/f/xknpypkd"
+        method="POST"
       >
         <Input
           label="Full Name"
@@ -131,14 +153,20 @@ export default class ContactForm extends Component {
           label="Message"
           name={"message"}
           type={"text"}
-          value={this.state.wordCount}
+          value={this.state.message}
           onChange={(event) => {
-            this.setState({ wordCount: event.target.value });
+            this.setState({ message: event.target.value });
           }}
           onBlur={this.testName}
           type={"textarea"}
           wide
         />
+        {status === "SUCCESS" ? (
+          <p>Thanks!</p>
+        ) : (
+          <button className="btn">Submit</button>
+        )}
+        {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </FormContainer>
     );
   }
