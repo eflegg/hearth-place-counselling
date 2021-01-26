@@ -46,6 +46,10 @@ $xl: 1800px;
   }
 }
 
+body {
+  background: oldlace;
+}
+
 /***  Typography  ***/
 
 @import url("https://use.typekit.net/lho3axg.css");
@@ -77,7 +81,8 @@ $bodyFont: "jaf-bernina-sans-condensed";
 $black: darkslategrey;
 $white: #ffffff;
 $blue: #026891;
-$yellow: #efb234;
+$yellowDark: #efb234;
+$yellow: #ffdc5e;
 $red: #c93928;
 
 h1,
@@ -86,7 +91,7 @@ h3,
 h4 {
   font-family: $headerFont;
   font-weight: 400;
-  color: $blue;
+  color: $black;
   margin: 0;
 }
 p {
@@ -114,7 +119,7 @@ h1 {
   letter-spacing: 0.2rem;
   font-size: 48px;
   line-height: 110%;
-
+  color: $blue;
   @include media-query-min($sm) {
     font-size: calc(48px + 12 * ((100vw - 320px) / 680));
   }
@@ -135,7 +140,7 @@ h2 {
 }
 h3 {
   letter-spacing: 0.2rem;
-  color: $blue;
+
   font-size: 18px;
   line-height: 135%;
   @include media-query-min($sm) {
@@ -143,6 +148,7 @@ h3 {
   }
   @include media-query-min($md) {
     @include font-size(2.2);
+    line-height: 36px;
   }
 }
 

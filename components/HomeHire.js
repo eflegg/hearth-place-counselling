@@ -109,12 +109,6 @@ const Reason = styled.div`
 export default function HomeHire() {
   return (
     <HomeHireContainer>
-      <div className="img-1">
-        <img
-          src="/laptop.jpg"
-          alt="photo of laptop with glasses and coffe cup"
-        />
-      </div>
       <Dots />
       <h2>Why Hire an Indexer?</h2>
       <ReasonContainer>

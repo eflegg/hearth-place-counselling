@@ -9,12 +9,45 @@ import ContactForm from "../components/Forms/ContactForm";
 
 const HomeContainer = styled.div`
   position: relative;
-  .intro-text {
-    margin: 150px auto;
-  }
+
   .reverse {
     div {
       margin-left: auto;
+    }
+  }
+  .intro-container {
+    display: flex;
+    align-items: center;
+    margin: 100px auto;
+    .intro-text {
+      border: 4px solid ${theme.colours.blue};
+      text-align: right;
+      padding: 40px;
+      transform: translateX(-20%);
+    }
+    button {
+      margin-left: 20px;
+    }
+  }
+  img {
+    max-width: 100%;
+    min-width: 500px;
+    max-height: 600px;
+    object-fit: cover;
+  }
+  .home--img-combo {
+    &:nth-child(1) {
+      width: 100%;
+      ${theme.mediaQuery.sm`
+    width: 50%;
+    `}
+    }
+    &:nth-child(2) {
+      width: 100%;
+      margin-top: 30px;
+      ${theme.mediaQuery.sm`
+    width: 50%;
+    `}
     }
   }
 `;
@@ -32,18 +65,12 @@ const HomeContact = styled.div`
     margin-top: 30px;
     ${theme.mediaQuery.sm`
     width: 30%;
+    transform: translateX(25%);
     `}
-  }
-  .img-2 {
-    width: 100%;
-    ${theme.mediaQuery.sm`
-    width: 60%;
-    margin-left: 50px;
-    `}
-    img {
-      max-width: 100%;
-      max-height: 700px;
-      object-fit: cover;
+
+    .home-contact--text {
+      padding: 40px;
+      border: 4px solid ${theme.colours.blue};
     }
   }
 `;
@@ -58,35 +85,46 @@ export default function Home(props) {
       </Head>
       <Layout pageTitle={"Horlick Editorial"}>
         <HomeContainer>
-          <div className="intro-text text-center">
-            <h3 className="text-center">
-              Leah Horlick is a professional indexer and editor in Calgary, AB.
-              Probably expand with a more detailed statement of the guiding
-              values of your work.
-            </h3>
-            <button className="btn">
-              <Link href="/about">
-                <a>Meet Leah</a>
-              </Link>
-            </button>
-          </div>
-          <HomeHire />
-          <Dots reverse={true} className="reverse" />
-          <HomeContact>
-            <div className="img-2">
+          <Dots className="reverse" />
+          <div className="intro-container">
+            <div className="home--img-combo">
               <img
-                src="/flower.jpg"
-                alt="photo of flower and notebook with pen"
+                src="/keyboard.jpg"
+                alt="photo of laptop with glasses and coffe cup"
               />
             </div>
-            <div className="home-contact">
-              <h2>Ready to get started? Drop me a line</h2>
+            <div className="home--img-combo ">
+              <h3 className="intro-text">
+                Leah Horlick is a professional indexer and editor in Calgary,
+                AB. Probably expand with a more detailed statement of the
+                guiding values of your work.
+              </h3>
+              <button className="btn">
+                <Link href="/about">
+                  <a>Meet Leah</a>
+                </Link>
+              </button>
+            </div>
+          </div>
+          <HomeHire />
+          <Dots className="reverse" />
+          <HomeContact>
+            <div className="home-contact home--img-combo">
+              <h3 className="home-contact--text">
+                Wondering if you need an indexer? Ready to get started? Drop me
+                a line
+              </h3>
               <button className="btn">
                 <Link href="/contact">
                   <a>Contact Leah</a>
                 </Link>
               </button>
-              {/* <ContactForm /> */}
+            </div>
+            <div className="home--img-combo">
+              <img
+                src="/flower.jpg"
+                alt="photo of flower and notebook with pen"
+              />
             </div>
           </HomeContact>
         </HomeContainer>

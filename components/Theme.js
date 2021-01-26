@@ -29,7 +29,9 @@ export const colours = {
   black: "darkslategrey",
   white: "#ffffff",
   blue: "#026891",
-  yellow: "#EFB234",
+  yellowDark: "#EFB234",
+  yellow: "#ffdc5e",
+
   red: "#c93928",
 };
 
