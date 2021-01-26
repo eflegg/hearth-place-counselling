@@ -26,7 +26,7 @@ const HomeContainer = styled.div`
       transform: translateX(-20%);
     }
     button {
-      margin-left: 20px;
+      transform: translateX(-20%);
     }
   }
   img {
@@ -60,6 +60,9 @@ const HomeContact = styled.div`
   flex-direction: row;`}
   justify-content: space-around;
   align-items: center;
+  button {
+    margin-left: auto;
+  }
   .home-contact {
     width: 100%;
     margin-top: 30px;
@@ -67,6 +70,11 @@ const HomeContact = styled.div`
     width: 30%;
     transform: translateX(25%);
     `}
+    display: flex;
+    flex-direction: column;
+    button {
+      transform: translateX(25%);
+    }
 
     .home-contact--text {
       padding: 40px;

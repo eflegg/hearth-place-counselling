@@ -6,6 +6,7 @@ import { Waypoint } from "react-waypoint";
 
 const DotContainer = styled.div`
   /* border: 1px solid hotpink; */
+  height: 55px;
   margin: 50px auto;
   .single-dot {
     height: 13px;
@@ -73,7 +74,7 @@ export default function Dots(props) {
             ((props) => <div className="single-dot" style={props}></div>)
           }
         </Transition>
-        <Transition
+        {/* <Transition
           config={{ delay: 850 }}
           items={dotsVisible}
           from={{ opacity: 0 }}
@@ -84,7 +85,7 @@ export default function Dots(props) {
             dotsVisible &&
             ((props) => <div className="single-dot" style={props}></div>)
           }
-        </Transition>
+        </Transition> */}
       </DotContainer>
     </Waypoint>
   );
