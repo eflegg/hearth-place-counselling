@@ -76,8 +76,13 @@ const Reason = styled.div`
   }
   &.reason-center {
     top: -40px;
-    left: 50px;
+    left: 37px;
     transition: all 0.75s ease-in-out;
+    ${theme.mediaQuery.sm`
+    transition: all .75s ease-in-out;
+    left: 50px;
+  
+      `}
     ${theme.mediaQuery.sm`
     transition: all .75s ease-in-out;
     left: -25px;

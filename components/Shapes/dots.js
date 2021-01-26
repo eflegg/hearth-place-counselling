@@ -13,7 +13,11 @@ const DotContainer = styled.div`
     width: 13px;
     border-radius: 50%;
     background: ${theme.colours.blue};
-    margin-bottom: 8px;
+    margin: 0 auto 8px;
+    ${theme.mediaQuery.sm`
+    margin-left: 0;
+    margin-right: 0;`}
+
     &.right {
       margin-left: auto;
     }

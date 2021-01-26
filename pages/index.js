@@ -17,13 +17,22 @@ const HomeContainer = styled.div`
   }
   .intro-container {
     display: flex;
+    flex-direction: column-reverse;
+    ${theme.mediaQuery.sm`
+    flex-direction: row;`}
     align-items: center;
     margin: 100px auto;
     .intro-text {
       border: 4px solid ${theme.colours.blue};
       text-align: right;
       padding: 40px;
+      /* transform: translateX(-15%); */
+      ${theme.mediaQuery.sm`
+      transform: translateX(-15%);
+      `}
+      ${theme.mediaQuery.md`
       transform: translateX(-20%);
+      `}
     }
     button {
       transform: translateX(-20%);
@@ -31,8 +40,13 @@ const HomeContainer = styled.div`
   }
   img {
     max-width: 100%;
+    ${theme.mediaQuery.sm`
+    min-width: 400px;
+    `}
+    ${theme.mediaQuery.md`
     min-width: 500px;
     max-height: 600px;
+    `}
     object-fit: cover;
   }
   .home--img-combo {
