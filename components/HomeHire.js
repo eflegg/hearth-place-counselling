@@ -4,6 +4,7 @@ import styled from "styled-components";
 import theme from "./Theme";
 import { Waypoint } from "react-waypoint";
 import Dots from "./Shapes/dots";
+import Link from "next/link";
 
 const HomeHireContainer = styled.section`
   .img-1 {
@@ -137,7 +138,12 @@ export default function HomeHire() {
           </p>
         </Reason>
       </ReasonContainer>
-      <button className="btn">My Services</button>
+
+      <button className="btn">
+        <Link href="/services">
+          <a>See My Services</a>
+        </Link>
+      </button>
     </HomeHireContainer>
   );
 }

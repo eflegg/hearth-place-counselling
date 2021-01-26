@@ -6,7 +6,6 @@ import { Waypoint } from "react-waypoint";
 
 const DotContainer = styled.div`
   /* border: 1px solid hotpink; */
-
   .single-dot {
     height: 13px;
     width: 13px;

@@ -10,7 +10,7 @@ import ContactForm from "../components/Forms/ContactForm";
 const HomeContainer = styled.div`
   position: relative;
   .intro-text {
-    margin: 80px auto 50px;
+    margin: 150px auto;
   }
   .reverse {
     div {
@@ -22,14 +22,28 @@ const HomeContainer = styled.div`
 const HomeContact = styled.div`
   margin: 100px auto;
   display: flex;
+  flex-direction: column;
+  ${theme.mediaQuery.sm`
+  flex-direction: row;`}
   justify-content: space-around;
   align-items: center;
-
+  .home-contact {
+    width: 100%;
+    margin-top: 30px;
+    ${theme.mediaQuery.sm`
+    width: 30%;
+    `}
+  }
   .img-2 {
-    width: 70%;
+    width: 100%;
+    ${theme.mediaQuery.sm`
+    width: 60%;
     margin-left: 50px;
+    `}
     img {
       max-width: 100%;
+      max-height: 700px;
+      object-fit: cover;
     }
   }
 `;
@@ -59,15 +73,20 @@ export default function Home(props) {
           <HomeHire />
           <Dots reverse={true} className="reverse" />
           <HomeContact>
-            <div className="home-contact">
-              <h2>Contact Me</h2>
-              <ContactForm />
-            </div>
             <div className="img-2">
               <img
                 src="/flower.jpg"
                 alt="photo of flower and notebook with pen"
               />
+            </div>
+            <div className="home-contact">
+              <h2>Ready to get started? Drop me a line</h2>
+              <button className="btn">
+                <Link href="/contact">
+                  <a>Contact Leah</a>
+                </Link>
+              </button>
+              {/* <ContactForm /> */}
             </div>
           </HomeContact>
         </HomeContainer>

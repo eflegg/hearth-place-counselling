@@ -89,13 +89,13 @@ h4 {
   color: $blue;
   margin: 0;
 }
-p,
-a {
+p {
   font-family: $bodyFont;
   font-weight: 300;
 }
 a {
   text-decoration: none;
+  font-family: $headerFont;
 }
 p,
 a {
@@ -135,7 +135,7 @@ h2 {
 }
 h3 {
   letter-spacing: 0.2rem;
-  color: darkslategrey;
+  color: $blue;
   font-size: 18px;
   line-height: 135%;
   @include media-query-min($sm) {
@@ -170,5 +170,10 @@ li {
   color: white;
   font-family: $headerFont;
   font-size: 22px;
+  a {
+    color: white;
+    font-family: $headerFont;
+    font-size: 22px;
+  }
   text-align: center;
 }

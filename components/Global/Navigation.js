@@ -99,7 +99,7 @@ const MobileNav = styled.div`
 
 const DesktopNav = styled.nav`
   position: absolute;
-  transform: translateY(105%);
+  /* transform: translateY(105%); */
 
   z-index: 1;
   ul {
