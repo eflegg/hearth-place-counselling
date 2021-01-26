@@ -9,7 +9,7 @@ const FormContainer = styled.form`
   display: flex;
   flex-wrap: wrap;
   max-width: 650px;
-  margin: 100px auto;
+  margin: 50px auto;
   justify-content: space-between;
 `;
 
@@ -25,9 +25,11 @@ export default class ContactForm extends Component {
       status: "",
     };
     this.testName = this.testName.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    // this.onSubmit = this.onSubmit.bind(this);
     this.submitForm = this.submitForm.bind(this);
+    // this.validateForm = this.validateForm.bind(this);
     this.testEmail = this.testEmail.bind(this);
+    this.testMessage = this.testMessage.bind(this);
   }
 
   testName() {
@@ -68,9 +70,46 @@ export default class ContactForm extends Component {
     }
   }
 
-  onSubmit() {
-    console.log("submitting");
+  testMessage() {
+    let { message } = this.state;
+    this.setState({
+      fnameActive: false,
+    });
+    if (message !== "") {
+      this.setState({
+        invalidMessage: false,
+        messageError: false,
+      });
+      return true;
+    } else {
+      this.setState({
+        invalidMessage: true,
+        messageError: "Please enter a message!",
+      });
+    }
   }
+
+  // validateForm() {
+  //   return new Promise((resolve, reject) => {
+  //     if (this.testName() && this.testEmail() && this.testMessage()) {
+  //       resolve("success");
+  //     } else {
+  //       resolve("error");
+  //     }
+  //   });
+  // }
+
+  // onSubmit(ev) {
+  //   ev.preventDefault();
+  //   this.testName();
+  //   this.testEmail();
+  //   this.testMessage();
+  //   this.validateForm().then((res, err) => {
+  //     if (res === "success") {
+  //       this.submitForm();
+  //     }
+  //   });
+  // }
   submitForm(ev) {
     ev.preventDefault();
     const form = ev.target;
@@ -135,7 +174,6 @@ export default class ContactForm extends Component {
           onChange={(event) => {
             this.setState({ publisher: event.target.value });
           }}
-          onBlur={this.testName}
           narrow
         />
         <Input
@@ -146,18 +184,19 @@ export default class ContactForm extends Component {
           onChange={(event) => {
             this.setState({ wordCount: event.target.value });
           }}
-          onBlur={this.testName}
           narrow
         />
         <Input
-          label="Message"
+          label="Message (please include your subject matter and and outline of the production schedule, if applicable)"
           name={"message"}
-          type={"text"}
+          type={"textarea"}
           value={this.state.message}
           onChange={(event) => {
             this.setState({ message: event.target.value });
           }}
-          onBlur={this.testName}
+          onBlur={this.testMessage}
+          error={this.state.invalidMessage}
+          errorMessage={this.state.messageError ? this.state.messageError : ""}
           type={"textarea"}
           wide
         />
@@ -166,7 +205,11 @@ export default class ContactForm extends Component {
         ) : (
           <button className="btn">Submit</button>
         )}
-        {status === "ERROR" && <p>Ooops! There was an error.</p>}
+        {status === "ERROR" && (
+          <p>
+            Oops! There was an error. Please check your fields and try again.{" "}
+          </p>
+        )}
       </FormContainer>
     );
   }

@@ -13,6 +13,12 @@ const DotContainer = styled.div`
     border-radius: 50%;
     background: ${theme.colours.blue};
     margin-bottom: 8px;
+    &.right {
+      margin-left: auto;
+    }
+    &.left {
+      margin-right: auto;
+    }
   }
 `;
 

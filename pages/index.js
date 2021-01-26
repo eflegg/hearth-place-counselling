@@ -5,15 +5,21 @@ import styled from "styled-components";
 import theme from "../components/Theme";
 import Dots from "../components/Shapes/dots";
 import HomeHire from "../components/HomeHire";
+import ContactForm from "../components/Forms/ContactForm";
 
 const HomeContainer = styled.div`
   position: relative;
   .intro-text {
     margin: 80px auto 50px;
   }
+  .reverse {
+    div {
+      margin-left: auto;
+    }
+  }
 `;
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Head>
@@ -36,6 +42,8 @@ export default function Home() {
             </button>
           </div>
           <HomeHire />
+          <Dots reverse={true} className="reverse" />
+          <ContactForm />
         </HomeContainer>
       </Layout>
     </>

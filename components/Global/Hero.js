@@ -32,8 +32,8 @@ const HeroContainer = styled.div`
   .hero-colour {
     position: relative;
     height: 300px;
-    width: 75%;
-    margin-top: 60px;
+    width: 65%;
+    /* margin-top: 60px; */
     .hero-colour-left {
       position: absolute;
       background: ${theme.colours.yellow};

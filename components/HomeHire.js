@@ -13,7 +13,8 @@ const HomeHireContainer = styled.section`
     overflow: visible;
     img {
       width: 100vw;
-      height: auto;
+      height: 500px;
+      object-fit: cover;
       overflow: visible;
     }
   }

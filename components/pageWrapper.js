@@ -6,11 +6,12 @@ import Hero from "./Global/Hero";
 
 export default function Layout({ children, pageTitle }) {
   return (
-    <div className="layout-container">
+    <>
       <Hero pageTitle={pageTitle} />
-
-      {children}
-      <Footer />
-    </div>
+      <div className="layout-container">
+        {children}
+        <Footer />
+      </div>
+    </>
   );
 }

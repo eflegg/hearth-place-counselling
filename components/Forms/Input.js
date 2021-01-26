@@ -13,6 +13,7 @@ const FormField = styled.div`
   }
   label {
     font-family: ${theme.type.body};
+    font-weight: 300;
     font-size: 20px;
     margin-bottom: 10px;
     color: ${theme.colours.black};
@@ -30,7 +31,10 @@ const FormField = styled.div`
     width: 100%;
   }
   &.field--narrow {
+    width: 100%;
+    ${theme.mediaQuery.sm`
     width: 48%;
+    `}
   }
 `;
 
