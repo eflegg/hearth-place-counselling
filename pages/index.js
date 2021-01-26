@@ -19,6 +19,21 @@ const HomeContainer = styled.div`
   }
 `;
 
+const HomeContact = styled.div`
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .img-2 {
+    width: 70%;
+    margin-left: 50px;
+    img {
+      max-width: 100%;
+    }
+  }
+`;
+
 export default function Home(props) {
   return (
     <>
@@ -43,7 +58,18 @@ export default function Home(props) {
           </div>
           <HomeHire />
           <Dots reverse={true} className="reverse" />
-          <ContactForm />
+          <HomeContact>
+            <div className="home-contact">
+              <h2>Contact Me</h2>
+              <ContactForm />
+            </div>
+            <div className="img-2">
+              <img
+                src="/flower.jpg"
+                alt="photo of flower and notebook with pen"
+              />
+            </div>
+          </HomeContact>
         </HomeContainer>
       </Layout>
     </>
