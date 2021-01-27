@@ -8,8 +8,12 @@ import HomeHire from "../components/HomeHire";
 import ContactForm from "../components/Forms/ContactForm";
 
 const HomeContainer = styled.div`
+  .dots-reverse {
+    div {
+      margin-left: auto;
+    }
+  }
   position: relative;
-
   .reverse {
     div {
       margin-left: auto;
@@ -107,7 +111,7 @@ export default function Home(props) {
       </Head>
       <Layout pageTitle={"Horlick Editorial"}>
         <HomeContainer>
-          <Dots className="reverse" />
+          <Dots className="dots-reverse" />
           <div className="intro-container">
             <div className="home--img-combo">
               <img
@@ -129,7 +133,7 @@ export default function Home(props) {
             </div>
           </div>
           <HomeHire />
-          <Dots className="reverse" />
+          <Dots className="dots-reverse" />
           <HomeContact>
             <div className="home-contact home--img-combo">
               <h3 className="home-contact--text">

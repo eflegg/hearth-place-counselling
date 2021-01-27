@@ -46,6 +46,12 @@ $xl: 1800px;
   }
 }
 
+.dots-reverse {
+  div {
+    margin-left: auto;
+  }
+}
+
 // body {
 //   background: oldlace;
 // }
@@ -113,6 +119,7 @@ a {
   }
   @include media-query-min($md) {
     @include font-size(1.8);
+    line-height: 32px;
   }
 }
 h1 {
@@ -154,6 +161,14 @@ h3 {
 
 li {
   list-style: none;
+}
+
+/***  Utilities  ***/
+
+.dots-reverse {
+  div {
+    margin-left: auto;
+  }
 }
 
 .text-center {
