@@ -27,15 +27,16 @@ const HomeContainer = styled.div`
     align-items: center;
     margin: 100px auto;
     .intro-text {
+      background: rgba(255, 255, 255, 0.5);
       border: 4px solid ${theme.colours.blue};
       text-align: right;
       padding: 40px;
-      /* transform: translateX(-15%); */
+      transform: translateX(-15%);
       ${theme.mediaQuery.sm`
       transform: translateX(-15%);
       `}
       ${theme.mediaQuery.md`
-      transform: translateX(-20%);
+      // transform: translateX(-20%);
       `}
     }
     button {
@@ -86,15 +87,16 @@ const HomeContact = styled.div`
     margin-top: 30px;
     ${theme.mediaQuery.sm`
     width: 30%;
-    transform: translateX(25%);
+    transform: translateX(20%);
     `}
     display: flex;
     flex-direction: column;
     button {
-      transform: translateX(25%);
+      transform: translateX(20%);
     }
 
     .home-contact--text {
+      background: rgba(255, 255, 255, 0.5);
       padding: 40px;
       border: 4px solid ${theme.colours.blue};
     }
@@ -138,7 +140,7 @@ export default function Home(props) {
             <div className="home-contact home--img-combo">
               <h3 className="home-contact--text">
                 Wondering if you need an indexer? Ready to get started? Drop me
-                a line
+                a line!
               </h3>
               <button className="btn">
                 <Link href="/contact">

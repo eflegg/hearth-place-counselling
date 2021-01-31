@@ -131,7 +131,7 @@ export default function HomeHire() {
         </Reason>
         <Reason className="reason-container reason-right">
           <p>
-            hiring a professional ensures that your readers get the best
+            Hiring a professional ensures that your readers get the best
             possible guide to your text, and that you get more time to celebrate
             your book.
           </p>

@@ -4,6 +4,9 @@ import Layout from "../components/pageWrapper";
 import styled from "styled-components";
 import theme from "../components/Theme";
 import Dots from "../components/Shapes/dots";
+import { Waypoint } from "react-waypoint";
+import { Spring, Transition, config } from "react-spring/renderprops.cjs";
+import { useState } from "react";
 
 const AboutContainer = styled.section`
   /* img {
@@ -25,12 +28,13 @@ const AboutContainer = styled.section`
       border: 4px solid ${theme.colours.blue};
       text-align: right;
       padding: 40px;
+      background: rgba(255, 255, 255, 0.6);
 
       ${theme.mediaQuery.sm`
-      transform: translateX(-10%);
+      transform: translateX(-8%);
       `}
       ${theme.mediaQuery.md`
-      transform: translateX(-10%);
+      transform: translateX(-8%);
       `}
     }
     &:nth-child(1) {
@@ -58,87 +62,11 @@ const AboutContainer = styled.section`
 
 const AboutIntro = styled.div`
   margin: 100px auto;
-  .draw {
-    padding: 100px 50px;
-    position: relative;
-    &:before,
-    &:after {
-      box-sizing: inherit;
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
-    transition: color 0.5s;
-
-    &:before,
-    &:after {
-      // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
-      border: 2px solid transparent;
-      width: 0;
-      height: 0;
-    }
-
-    // This covers the top & right borders (expands right, then down)
-    &:before {
-      top: 0;
-      left: 0;
-    }
-
-    // And this the bottom & left borders (expands left, then up)
-    &:after {
-      bottom: 0;
-      right: 0;
-    }
-
-    // Hover styles
-    &:hover::before,
-    &:hover::after {
-      width: 100%;
-      height: 100%;
-    }
-
-    &:hover::before {
-      border-top-color: ${theme.colours.blue}; // Make borders visible
-      border-right-color: ${theme.colours.blue};
-      transition: width 0.5s ease-in-out,
-        // Width expands first
-        height 0.5s ease-in-out 0.5s; // And then height
-    }
-
-    &:hover::after {
-      border-bottom-color: ${theme.colours.blue}; // Make borders visible
-      border-left-color: ${theme.colours.blue};
-      transition: border-color 0s ease-out 0.5s,
-        // Wait for ::before to finish before showing border
-        width 0.25s ease-out 0.5s,
-        // And then exanding width
-        height 0.25s ease-out 0.75s; // And finally height
-    }
-    /* &:hover {
-      color: ${theme.colours.yellow};
-    } */
-
-    // Start ::after in same position as ::before
-    &:after {
-      top: 0;
-      left: 0;
-    }
-
-    // Change colors
-    &:hover::before {
-      border-top-color: ${theme.colours.yellow};
-      border-right-color: ${theme.colours.yellow};
-    }
-
-    &:hover::after {
-      border-bottom-color: ${theme.colours.yellow};
-      border-left-color: ${theme.colours.yellow};
-      transition: // Animate height first, then width
-        height 0.25s ease-out, width 0.25s ease-out 0.25s;
-    }
-  }
+  position: relative;
+  /* .draw { */
+  padding: 100px 50px;
+  position: relative;
+  transition: color 0.25s;
 `;
 
 const AboutImage = styled.div`
@@ -152,6 +80,7 @@ const AboutImage = styled.div`
 `;
 
 export default function About() {
+  const [boxVisible, setVisible] = useState(false);
   return (
     <Layout pageTitle={"About"}>
       <Head>
@@ -163,22 +92,130 @@ export default function About() {
             <img src="/about-photo.jpg" alt="photo of Leah Horlick" />
           </div>
           <div className="about--img-combo">
-            <p className="about-text--excerpt">
+            <h4 className="about-text--excerpt">
               I completed my indexing training at the University of California,
               Berkeley, revisiting my love of language after nearly ten years
               working in museums and galleries.
-            </p>
+            </h4>
             <Dots className="dots-center" />
           </div>
         </AboutImage>
-        <AboutIntro className="about--intro">
-          <h3 className="text-center draw">
-            With over ten years of expertise navigating the publishing industry
-            and supporting writers who face barriers to career success, I’ve got
-            the lived experience and formal training to treat your manuscripts
-            with the care and respect they deserve.
-          </h3>
-        </AboutIntro>
+        <Waypoint
+          onEnter={() => {
+            setVisible(true);
+            console.log("box visible");
+          }}
+          onLeave={() => {
+            setVisible(false);
+            console.log("box NOT visible");
+          }}
+        >
+          <AboutIntro className="about--intro draw">
+            <Transition
+              config={{ delay: 300 }}
+              items={boxVisible}
+              from={{
+                boxSizing: "inherit",
+                position: "absolute",
+                borderWidth: "4px",
+                borderStyle: "solid",
+                borderTopColor: "transparent",
+                borderRightColor: "transparent",
+                borderLeftColor: "transparent",
+                borderBottomColor: "transparent",
+                width: "0%",
+                height: "0%",
+                top: "-8px",
+                left: "-8px",
+              }}
+              enter={{
+                width: "100%",
+                height: "100%",
+                borderLeftColor: "transparent",
+                borderBottomColor: "transparent",
+                borderTopColor: `${theme.colours.blue}`,
+                borderRightColor: `${theme.colours.blue}`,
+                transition: "width 0.25s ease, height 0.25s ease 0.25s",
+              }}
+              leave={{
+                boxSizing: "inherit",
+                position: "absolute",
+                borderWidth: "4px",
+                borderStyle: "solid",
+                borderTopColor: "transparent",
+                borderRightColor: "transparent",
+                borderLeftColor: "transparent",
+                borderBottomColor: "transparent",
+                width: "0%",
+                height: "0%",
+              }}
+            >
+              {(boxVisible) =>
+                boxVisible &&
+                ((propsBefore) => (
+                  <div className="before" style={propsBefore}></div>
+                ))
+              }
+            </Transition>
+            <Transition
+              config={{ delay: 300 }}
+              items={boxVisible}
+              from={{
+                boxSizing: "inherit",
+                position: "absolute",
+                right: 0,
+                bottom: 0,
+                width: "100%",
+                height: "100%",
+                borderWidth: "4px",
+                borderStyle: "solid",
+                borderTopColor: "transparent",
+                borderRightColor: "transparent",
+                borderLeftColor: "transparent",
+                borderBottomColor: "transparent",
+                width: "0%",
+                height: "0%",
+              }}
+              enter={{
+                height: "100%",
+                width: "100%",
+                transition: "height 0.25s ease 0.25s, width 0.25s ease",
+                borderTopColor: "transparent",
+                borderRightColor: "transparent",
+                borderLeftColor: `${theme.colours.blue}`,
+                borderBottomColor: `${theme.colours.blue}`,
+              }}
+              leave={{
+                boxSizing: "inherit",
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                borderWidth: "4px",
+                borderStyle: "solid",
+                borderTopColor: "transparent",
+                borderRightColor: "transparent",
+                borderLeftColor: "transparent",
+                borderBottomColor: "transparent",
+                width: "0%",
+                height: "0%",
+              }}
+            >
+              {(boxVisible) =>
+                boxVisible &&
+                ((propsAfter) => (
+                  <div className="after" style={propsAfter}></div>
+                ))
+              }
+            </Transition>
+
+            <h3 className="text-center">
+              With over ten years of expertise navigating the publishing
+              industry and supporting writers who face barriers to career
+              success, I’ve got the lived experience and formal training to
+              treat your manuscripts with the care and respect they deserve.
+            </h3>
+          </AboutIntro>
+        </Waypoint>
         <div className="about--main">
           <p>
             I won the Peter T. Millard Award for LGBT Research for a paper on

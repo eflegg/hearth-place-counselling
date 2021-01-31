@@ -10,6 +10,16 @@ const FooterContainer = styled.footer`
   h3 {
     color: ${theme.colours.black};
     text-align: center;
+    font-size: 20px;
+  }
+  .isc-logo {
+    width: 90%;
+    max-width: 300px;
+    margin: 25px auto;
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
   }
 `;
 
@@ -19,6 +29,9 @@ export default function Footer() {
   });
   return (
     <FooterContainer>
+      <div className="isc-logo">
+        <img src="/ISC-logo.png" alt="" />
+      </div>
       <h3>Copyright Leah Horlick</h3>
       <h3>{year}</h3>
     </FooterContainer>
