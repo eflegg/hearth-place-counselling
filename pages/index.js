@@ -31,7 +31,7 @@ const HomeContainer = styled.div`
       border: 4px solid ${theme.colours.yellow};
       text-align: right;
       padding: 40px;
-      transform: translateX(-15%);
+
       ${theme.mediaQuery.sm`
       transform: translateX(-15%);
       `}
@@ -40,7 +40,9 @@ const HomeContainer = styled.div`
       `}
     }
     button {
-      transform: translateX(-20%);
+      ${theme.mediaQuery.sm`
+      transform: translateX(-15%);
+      `}
     }
   }
   img {

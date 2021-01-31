@@ -59,14 +59,18 @@ const FAQ = styled.div`
     `}
       }
       &:nth-child(2) {
+        box-sizing: border-box;
         position: relative;
         background: rgba(255, 255, 255, 0.6);
-        padding: 40px;
+        padding: 30px;
         border: 4px solid ${theme.colours.blue};
         width: 100%;
         margin-top: 30px;
+        margin-bottom: 30px;
         ${theme.mediaQuery.sm`
     width: 50%;
+    margin-bottom: 0;
+    padding: 40px;
     `}
       }
     }
