@@ -45,8 +45,11 @@ const FAQ = styled.div`
     `}
     .services--img-combo {
       img {
+        width: 100%;
+        ${theme.mediaQuery.sm`
         transform: translateX(-20%);
         width: 150%;
+        `}
       }
 
       &:nth-child(1) {

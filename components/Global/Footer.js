@@ -18,7 +18,7 @@ const FooterContainer = styled.footer`
     justify-content: center;
   }
   .isc-logo {
-    margin: 25px auto;
+    margin: 25px 5px;
     text-align: center;
     img {
       width: 300px;
@@ -26,7 +26,7 @@ const FooterContainer = styled.footer`
     }
   }
   .wu-logo {
-    margin: 25px auto;
+    margin: 25px 5px;
     text-align: center;
     img {
       width: 150px;
