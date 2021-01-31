@@ -9,15 +9,6 @@ import { Spring, Transition, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
 
 const AboutContainer = styled.section`
-  .full-width--about {
-    position: relative;
-    left: -12%;
-    img {
-      width: 100vw;
-      overflow: hidden;
-    }
-  }
-
   .dots-center {
     margin-top: 100px;
     div {
@@ -51,6 +42,7 @@ const AboutContainer = styled.section`
     }
     &:nth-child(2) {
       width: 100%;
+
       margin-top: 30px;
       ${theme.mediaQuery.sm`
     width: 50%;
@@ -225,9 +217,9 @@ export default function About() {
             </h3>
           </AboutIntro>
         </Waypoint>
-        <div className="full-width--about">
+        {/* <div className="full-width--about">
           <img src="/laptop.jpg" alt="" />
-        </div>
+        </div> */}
         <div className="about--main">
           <p>
             I won the Peter T. Millard Award for LGBT Research for a paper on
