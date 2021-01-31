@@ -28,7 +28,7 @@ const HomeContainer = styled.div`
     margin: 100px auto;
     .intro-text {
       background: rgba(255, 255, 255, 0.5);
-      border: 4px solid ${theme.colours.blue};
+      border: 4px solid ${theme.colours.yellow};
       text-align: right;
       padding: 40px;
       transform: translateX(-15%);
@@ -36,7 +36,7 @@ const HomeContainer = styled.div`
       transform: translateX(-15%);
       `}
       ${theme.mediaQuery.md`
-      // transform: translateX(-20%);
+      // transform: translateX(-10%);
       `}
     }
     button {
@@ -117,7 +117,7 @@ export default function Home(props) {
           <div className="intro-container">
             <div className="home--img-combo">
               <img
-                src="/keyboard.jpg"
+                src="/banff.jpg"
                 alt="photo of laptop with glasses and coffe cup"
               />
             </div>
@@ -150,7 +150,7 @@ export default function Home(props) {
             </div>
             <div className="home--img-combo">
               <img
-                src="/flower.jpg"
+                src="/stoney-nakoda-crop.jpg"
                 alt="photo of flower and notebook with pen"
               />
             </div>

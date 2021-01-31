@@ -133,9 +133,9 @@ export default function About() {
                 height: "100%",
                 borderLeftColor: "transparent",
                 borderBottomColor: "transparent",
-                borderTopColor: `${theme.colours.blue}`,
-                borderRightColor: `${theme.colours.blue}`,
-                transition: "width 0.25s ease, height 0.25s ease 0.25s",
+                borderTopColor: `${theme.colours.yellow}`,
+                borderRightColor: `${theme.colours.yellow}`,
+                transition: "width 0.25s ease-out, height 0.25s ease-out 0.25s",
               }}
               leave={{
                 boxSizing: "inherit",
@@ -179,11 +179,11 @@ export default function About() {
               enter={{
                 height: "100%",
                 width: "100%",
-                transition: "height 0.25s ease 0.25s, width 0.25s ease",
+                transition: "height 0.25s ease-out 0.25s, width 0.25s ease-out",
                 borderTopColor: "transparent",
                 borderRightColor: "transparent",
-                borderLeftColor: `${theme.colours.blue}`,
-                borderBottomColor: `${theme.colours.blue}`,
+                borderLeftColor: `${theme.colours.yellow}`,
+                borderBottomColor: `${theme.colours.yellow}`,
               }}
               leave={{
                 boxSizing: "inherit",
