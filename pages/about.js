@@ -9,9 +9,15 @@ import { Spring, Transition, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
 
 const AboutContainer = styled.section`
-  /* img {
-    max-width: 100%;
-  } */
+  .full-width--about {
+    position: relative;
+    left: -12%;
+    img {
+      width: 100vw;
+      overflow: hidden;
+    }
+  }
+
   .dots-center {
     margin-top: 100px;
     div {
@@ -67,6 +73,9 @@ const AboutIntro = styled.div`
   padding: 100px 50px;
   position: relative;
   transition: color 0.25s;
+  h3 {
+    font-size: 18px;
+  }
 `;
 
 const AboutImage = styled.div`
@@ -216,6 +225,9 @@ export default function About() {
             </h3>
           </AboutIntro>
         </Waypoint>
+        <div className="full-width--about">
+          <img src="/laptop.jpg" alt="" />
+        </div>
         <div className="about--main">
           <p>
             I won the Peter T. Millard Award for LGBT Research for a paper on
