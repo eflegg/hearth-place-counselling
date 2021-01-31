@@ -267,6 +267,13 @@ export default function Services() {
           contact me to discuss rates and make sure you’re using the best
           platform possible for your project or event.
         </p>
+        <div className="text-center">
+          <button className="btn">
+            <Link href="/contact">
+              <a>Let's work together</a>
+            </Link>
+          </button>
+        </div>
       </ServicesContainer>
     </Layout>
   );

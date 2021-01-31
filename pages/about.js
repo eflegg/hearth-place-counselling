@@ -249,6 +249,13 @@ export default function About() {
             and Region 3 of the Métis Nation.
           </p>
         </div>
+        <div className="text-center">
+          <button className="btn">
+            <Link href="/services">
+              <a>See what I can offer</a>
+            </Link>
+          </button>
+        </div>
       </AboutContainer>
     </Layout>
   );
