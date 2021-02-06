@@ -11,11 +11,12 @@ export default function SingleService(props) {
       display: flex;
       ${props.reverse ? "flex-direction: row-reverse;" : "flex-direction: row;"}
       justify-content: space-between;
+      align-items: center;
       h2 {
-        width: 100%;
+        width: 40%;
         ${props.reverse
-          ? "text-align: left;"
-          : "text-align: right;"}/* text-align: right; */
+          ? "text-align: left; margin-right: auto"
+          : "text-align: right; margin-left: auto"}/* text-align: right; */
       }
       .horiz-line {
         border-bottom: 3px solid ${theme.colours.yellow};

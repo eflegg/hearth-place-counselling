@@ -10,17 +10,14 @@ import Dots from "../components/Shapes/dots";
 import SingleService from "../components/SingleService";
 
 const ServicesContainer = styled.section`
-  .services-1__title {
+  /* .services-1__title {
     width: 100%;
     margin: 100px 0;
     display: flex;
     justify-content: space-between;
-    /* .horiz-line {
-      border-bottom: 3px solid ${theme.colours.yellow};
-      width: 60%;
-      transform: translateX(-40%);
-    } */
-  }
+    align-items: center;
+  
+  } */
   .index-dots {
     display: flex;
     align-items: center;
