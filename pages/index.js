@@ -152,7 +152,7 @@ export default function Home(props) {
             </div>
             <div className="home--img-combo">
               <img
-                src="/stoney-nakoda-crop.jpg"
+                src="/original-stoney-nakoda.jpg"
                 alt="photo of flower and notebook with pen"
               />
             </div>
