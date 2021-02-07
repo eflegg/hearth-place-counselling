@@ -5,6 +5,7 @@ import theme from "./Theme";
 import { Waypoint } from "react-waypoint";
 import Dots from "./Shapes/dots";
 import Link from "next/link";
+import { useSpring, animated } from "react-spring";
 
 const HomeHireContainer = styled.section`
   .img-1 {
@@ -43,7 +44,7 @@ const ReasonContainer = styled.section`
   overflow: visible;
 `;
 
-const Reason = styled.div`
+const Reason = styled(animated.div)`
   padding: 50px;
   position: relative;
   max-width: 180px;
@@ -112,38 +113,81 @@ const Reason = styled.div`
 `;
 
 export default function HomeHire() {
+  const [visibleOne, setVisibleOne] = useState(false);
+  const [visibleTwo, setVisibleTwo] = useState(false);
+  const [visibleThree, setVisibleThree] = useState(false);
+  const propsOne = useSpring({
+    opacity: visibleOne ? 1 : 0.3,
+    transform: visibleOne ? `translateY(0px)` : `translateY(30px)`,
+  });
+  const propsTwo = useSpring({
+    // config: { delay: 750 },
+    opacity: visibleTwo ? 1 : 0,
+    transform: visibleOne ? `translateY(0px)` : `translateY(60px)`,
+  });
+  const propsThree = useSpring({
+    opacity: visibleThree ? 1 : 0,
+    transform: visibleOne ? `translateY(0px)` : `translateY(90px)`,
+    // config: { delay: 2500 },
+  });
   return (
     <HomeHireContainer>
       <Dots />
       <h2>Why Hire an Indexer?</h2>
       <ReasonContainer>
-        <Spring
-          config={{ delay: 2000 }}
-          from={{ opacity: 0, top: "15px" }}
-          to={{ opacity: 1, top: "0px" }}
+        <Waypoint
+          onEnter={() => {
+            setVisibleOne(true);
+            console.log("reason visible");
+          }}
+          onLeave={() => {
+            setVisibleOne(false);
+            console.log("reason not visible");
+          }}
         >
-          {(props) => (
-            <Reason style={props} className="reason-container reason-left">
-              <p>
-                My professional training and academic background ensures that
-                you'll receive an index your readers can rely on.
-              </p>
-            </Reason>
-          )}
-        </Spring>
-        <Reason className="reason-container reason-center">
-          <p>
-            I use specialized indexing software that keeps me fast and accurate,
-            making it possible for you to meet your publisher's deadlines.
-          </p>
-        </Reason>
-        <Reason className="reason-container reason-right">
-          <p>
-            Hiring a professional ensures that your readers get the best
-            possible guide to your text, and that you get more time to celebrate
-            your book.
-          </p>
-        </Reason>
+          <Reason style={propsOne} className="reason-container reason-left">
+            <p>
+              My professional training and academic background ensures that
+              you'll receive an index your readers can rely on.
+            </p>
+          </Reason>
+        </Waypoint>
+        <Waypoint
+          onEnter={() => {
+            setVisibleTwo(true);
+            console.log("reason visible");
+          }}
+          onLeave={() => {
+            setVisibleTwo(false);
+            console.log("reason not visible");
+          }}
+        >
+          <Reason style={propsTwo} className="reason-container reason-center">
+            <p>
+              I use specialized indexing software that keeps me fast and
+              accurate, making it possible for you to meet your publisher's
+              deadlines.
+            </p>
+          </Reason>
+        </Waypoint>
+        <Waypoint
+          onEnter={() => {
+            setVisibleThree(true);
+            console.log("reason visible");
+          }}
+          onLeave={() => {
+            setVisibleThree(false);
+            console.log("reason not visible");
+          }}
+        >
+          <Reason style={propsThree} className="reason-container reason-right">
+            <p>
+              Hiring a professional ensures that your readers get the best
+              possible guide to your text, and that you get more time to
+              celebrate your book.
+            </p>
+          </Reason>
+        </Waypoint>
       </ReasonContainer>
 
       <button className="btn">
