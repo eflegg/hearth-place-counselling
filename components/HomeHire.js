@@ -117,12 +117,20 @@ export default function HomeHire() {
       <Dots />
       <h2>Why Hire an Indexer?</h2>
       <ReasonContainer>
-        <Reason className="reason-container reason-left">
-          <p>
-            My professional training and academic background ensures that you'll
-            receive an index your readers can rely on.
-          </p>
-        </Reason>
+        <Spring
+          config={{ delay: 2000 }}
+          from={{ opacity: 0, top: "15px" }}
+          to={{ opacity: 1, top: "0px" }}
+        >
+          {(props) => (
+            <Reason style={props} className="reason-container reason-left">
+              <p>
+                My professional training and academic background ensures that
+                you'll receive an index your readers can rely on.
+              </p>
+            </Reason>
+          )}
+        </Spring>
         <Reason className="reason-container reason-center">
           <p>
             I use specialized indexing software that keeps me fast and accurate,
