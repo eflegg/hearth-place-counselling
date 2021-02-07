@@ -94,46 +94,21 @@ const FAQ = styled.div`
 
 export default function Services() {
   const [indexLine, setIndexLine] = useState(false);
-
+  //this needs to go into single service
   return (
     <Layout pageTitle={"Services"}>
       <Head>
         <title>Horlick Editorial - Services</title>
       </Head>
       <ServicesContainer>
+        {/* here you'll need to map over the collection of faqs from the database */}
         <div className="services-1">
           <SingleService
-            onEnter={() => {
-              setIndexLine(true);
-              console.log("index line visible");
-            }}
-            onLeave={() => {
-              setIndexLine(false);
-              console.log("index line NOT visible");
-            }}
-            items={indexLine}
             serviceTitle={"Indexing"}
+            servicesText={
+              "I completed my indexing training through the acclaimed program at UC Berkeley. I’m a member of the Indexing Society of Canada, and was a runner-up for their first-ever Equity &amp; Diversity Bursary. I have specialized training and experience working with sensitive subjects, confidential projects, and marginalized communities that makes me a careful, thorough indexer determined to support and protect the dignity of your projects. My specialities are languages &amps; linguistics, social justice movements, the fine arts, feminism and gender studies, mental health, Judaism and religious studies, German and Eastern European literature and history, and the LGBTQ2IA+ community. I know how important it is to find an editor and indexer who will treat your work on these topics with respect and nuance; I’ve been there myself. Contact me to learn more about my rates and timelines."
+            }
           />
-          <p>
-            I completed my indexing training through the acclaimed program at UC
-            Berkeley. I’m a member of the Indexing Society of Canada, and was a
-            runner-up for their first-ever Equity &amp; Diversity Bursary. I
-            have specialized training and experience working with sensitive
-            subjects, confidential projects, and marginalized communities that
-            makes me a careful, thorough indexer determined to support and
-            protect the dignity of your projects.{" "}
-          </p>
-          <p>
-            My specialities are languages &amps; linguistics, social justice
-            movements, the fine arts, feminism and gender studies, mental
-            health, Judaism and religious studies, German and Eastern European
-            literature and history, and the LGBTQ2IA+ community. I know how
-            important it is to find an editor and indexer who will treat your
-            work on these topics with respect and nuance; I’ve been there
-            myself. Contact me to learn more about my rates and timelines.
-          </p>
-
-          {/* here you'll need to map over the collection of faqs from the database */}
 
           <FAQ>
             <div className="faq-img">
@@ -198,72 +173,27 @@ export default function Services() {
         </div>
         <SingleService
           reverse
-          onEnter={() => {
-            setIndexLine(true);
-            console.log("index line visible");
-          }}
-          onLeave={() => {
-            setIndexLine(false);
-            console.log("index line NOT visible");
-          }}
-          items={indexLine}
           serviceTitle={"Proofreading and Editing"}
+          servicesText={
+            "My careful attention to detail and formal training has made me a sought-after stylistic and copy editor who has worked for magazines like PRISM international, Poetry Is Dead, Canadian Dimension, Shameless, and most recently New Forum. Contact me to discuss rates and the right kind of editing for your project."
+          }
         />
-        <p>
-          My careful attention to detail and formal training has made me a
-          sought-after stylistic and copy editor who has worked for magazines
-          like PRISM international, Poetry Is Dead, Canadian Dimension,
-          Shameless, and most recently New Forum. Contact me to discuss rates
-          and the right kind of editing for your project.
-        </p>
+
         <SingleService
-          onEnter={() => {
-            setIndexLine(true);
-            console.log("index line visible");
-          }}
-          onLeave={() => {
-            setIndexLine(false);
-            console.log("index line NOT visible");
-          }}
-          items={indexLine}
           serviceTitle={"Manuscript Consultation"}
+          servicesText={
+            " I’m a long-time member of the Writer’s Union of Canada with an MFA in Creative Writing from the University of British Columbia. I’ve sat on juries for the BC Arts Council and successfully received full funding from the Canada Council. My previous manuscript clients have applied successfully to retreats like Lambda Literary, or been longlisted for prizes including the Gerald Lampert Award. My own active literary practice keeps me in the loop about what publishers, grantors, and graduate programs are looking for. You or your publisher can reach out at any time to tell me about your project and learn more about my approach."
+          }
         />
-        <p>
-          I’m a long-time member of the Writer’s Union of Canada with an MFA in
-          Creative Writing from the University of British Columbia. I’ve sat on
-          juries for the BC Arts Council and successfully received full funding
-          from the Canada Council. My previous manuscript clients have applied
-          successfully to retreats like Lambda Literary, or been longlisted for
-          prizes including the Gerald Lampert Award. My own active literary
-          practice keeps me in the loop about what publishers, grantors, and
-          graduate programs are looking for. You or your publisher can reach out
-          at any time to tell me about your project and learn more about my
-          approach.{" "}
-        </p>
+
         <SingleService
           reverse
-          onEnter={() => {
-            setIndexLine(true);
-            console.log("index line visible");
-          }}
-          onLeave={() => {
-            setIndexLine(false);
-            console.log("index line NOT visible");
-          }}
-          items={indexLine}
           serviceTitle={"Transcription"}
+          servicesText={
+            "I’m a fast, accurate transcriber specializing in university and gallery clients with time-sensitive work on stigmatized topics. I’ve transcribed sensitive, highly-confidential audio for projects related to biomedical innovation, transgender health, hepatitis C, and HIV/AIDS. Previous clients include grunt gallery in Vancouver and the Johnson-Shoyama School of Public Policy at the University of Saskatchewan. I’ve also provided live captioning for nonprofit AGMs; contact me to discuss rates and make sure you’re using the best platform possible for your project or event."
+          }
         />
-        <p>
-          I’m a fast, accurate transcriber specializing in university and
-          gallery clients with time-sensitive work on stigmatized topics. I’ve
-          transcribed sensitive, highly-confidential audio for projects related
-          to biomedical innovation, transgender health, hepatitis C, and
-          HIV/AIDS. Previous clients include grunt gallery in Vancouver and the
-          Johnson-Shoyama School of Public Policy at the University of
-          Saskatchewan. I’ve also provided live captioning for nonprofit AGMs;
-          contact me to discuss rates and make sure you’re using the best
-          platform possible for your project or event.
-        </p>
+
         <div className="text-center">
           <button className="btn">
             <Link href="/contact">
