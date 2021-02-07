@@ -5,7 +5,9 @@ import styled from "styled-components";
 import theme from "../components/Theme";
 import Dots from "../components/Shapes/dots";
 import HomeHire from "../components/HomeHire";
-import ContactForm from "../components/Forms/ContactForm";
+import { useSpring, animated, config } from "react-spring";
+import { useState } from "react";
+import { Waypoint } from "react-waypoint";
 
 const HomeContainer = styled.div`
   .dots-reverse {
@@ -25,7 +27,14 @@ const HomeContainer = styled.div`
     ${theme.mediaQuery.sm`
     flex-direction: row;`}
     align-items: center;
-    margin: 100px auto;
+    margin: 50px auto;
+    ${theme.mediaQuery.sm`
+      margin: 80px auto;
+      `}
+    ${theme.mediaQuery.md`
+      margin: 100px auto;
+      `}
+   
     .intro-text {
       background: rgba(255, 255, 255, 0.5);
       border: 4px solid ${theme.colours.yellow};
@@ -73,7 +82,7 @@ const HomeContainer = styled.div`
   }
 `;
 
-const HomeContact = styled.div`
+const HomeContact = styled(animated.div)`
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -105,7 +114,13 @@ const HomeContact = styled.div`
   }
 `;
 
-export default function Home(props) {
+export default function Home() {
+  const [sectionVisible, setSectionVisible] = useState(false);
+  const props = useSpring({
+    config: config.slow,
+    opacity: sectionVisible ? 1 : 0,
+    transform: sectionVisible ? `translateY(0px)` : `translateY(90px)`,
+  });
   return (
     <>
       <Head>
@@ -116,47 +131,57 @@ export default function Home(props) {
       <Layout pageTitle={"Horlick Editorial"}>
         <HomeContainer>
           <Dots className="dots-reverse" />
-          <div className="intro-container">
-            <div className="home--img-combo">
-              <img
-                src="/banff.jpg"
-                alt="photo of laptop with glasses and coffe cup"
-              />
-            </div>
-            <div className="home--img-combo ">
-              <h3 className="intro-text">
-                Leah Horlick is a professional indexer and editor in Calgary,
-                AB. Probably expand with a more detailed statement of the
-                guiding values of your work.
-              </h3>
-              <button className="btn">
-                <Link href="/about">
-                  <a>Meet Leah</a>
-                </Link>
-              </button>
-            </div>
-          </div>
+          <Waypoint
+            onEnter={() => setSectionVisible(true)}
+            onLeave={() => setSectionVisible(false)}
+          >
+            <animated.div style={props} className="intro-container">
+              <div className="home--img-combo">
+                <img
+                  src="/banff.jpg"
+                  alt="photo of laptop with glasses and coffe cup"
+                />
+              </div>
+              <div className="home--img-combo ">
+                <h3 className="intro-text">
+                  Leah Horlick is a professional indexer and editor in Calgary,
+                  AB. Probably expand with a more detailed statement of the
+                  guiding values of your work.
+                </h3>
+                <button className="btn">
+                  <Link href="/about">
+                    <a>Meet Leah</a>
+                  </Link>
+                </button>
+              </div>
+            </animated.div>
+          </Waypoint>
           <HomeHire />
           <Dots className="dots-reverse" />
-          <HomeContact>
-            <div className="home-contact home--img-combo">
-              <h3 className="home-contact--text">
-                Wondering if you need an indexer? Ready to get started? Drop me
-                a line!
-              </h3>
-              <button className="btn">
-                <Link href="/contact">
-                  <a>Contact Leah</a>
-                </Link>
-              </button>
-            </div>
-            <div className="home--img-combo">
-              <img
-                src="/original-stoney-nakoda.jpg"
-                alt="photo of flower and notebook with pen"
-              />
-            </div>
-          </HomeContact>
+          <Waypoint
+            onEnter={() => setSectionVisible(true)}
+            onLeave={() => setSectionVisible(false)}
+          >
+            <HomeContact style={props}>
+              <div className="home-contact home--img-combo">
+                <h3 className="home-contact--text">
+                  Wondering if you need an indexer? Ready to get started? Drop
+                  me a line!
+                </h3>
+                <button className="btn">
+                  <Link href="/contact">
+                    <a>Contact Leah</a>
+                  </Link>
+                </button>
+              </div>
+              <div className="home--img-combo">
+                <img
+                  src="/original-stoney-nakoda.jpg"
+                  alt="photo of flower and notebook with pen"
+                />
+              </div>
+            </HomeContact>
+          </Waypoint>
         </HomeContainer>
       </Layout>
     </>

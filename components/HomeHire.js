@@ -117,18 +117,19 @@ export default function HomeHire() {
   const [visibleTwo, setVisibleTwo] = useState(false);
   const [visibleThree, setVisibleThree] = useState(false);
   const propsOne = useSpring({
+    config: config.fast,
     opacity: visibleOne ? 1 : 0.3,
     transform: visibleOne ? `translateY(0px)` : `translateY(30px)`,
   });
   const propsTwo = useSpring({
-    // config: { delay: 750 },
-    opacity: visibleTwo ? 1 : 0,
+    config: config.fast,
+    opacity: visibleTwo ? 1 : 0.3,
     transform: visibleOne ? `translateY(0px)` : `translateY(60px)`,
   });
   const propsThree = useSpring({
-    opacity: visibleThree ? 1 : 0,
+    opacity: visibleThree ? 1 : 0.3,
     transform: visibleOne ? `translateY(0px)` : `translateY(90px)`,
-    // config: { delay: 2500 },
+    config: config.fast,
   });
   return (
     <HomeHireContainer>
