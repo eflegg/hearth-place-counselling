@@ -58,13 +58,12 @@ $xl: 1800px;
 
 /***  Typography  ***/
 
-@import url("https://use.typekit.net/lho3axg.css");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
+// @font-face {
+//   font-family: "BigCaslon";
+//   src: local("BigCaslon"), url(../fonts/BigCaslon.ttf) format("truetype");
+// }
 
-@font-face {
-  font-family: "BigCaslon";
-  src: local("BigCaslon"), url(../fonts/BigCaslon.ttf) format("truetype");
-}
+@import url("https://use.typekit.net/lho3axg.css");
 
 @mixin font-size($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
@@ -82,7 +81,7 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-$headerFont: "Libre Caslon Text";
+$headerFont: "kings-caslon-display, serif;";
 $bodyFont: "jaf-bernina-sans-condensed";
 
 $black: darkslategrey;

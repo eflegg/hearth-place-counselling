@@ -1,13 +1,29 @@
-import { useState } from "react";
-import Head from "next/head";
+import { useState, useEffect } from "react";
+import { useSpring, animated } from "react-spring";
 import styled from "styled-components";
 import theme from "../Theme";
 import Navigation from "./Navigation";
 import { Spring, config } from "react-spring/renderprops.cjs";
 
-const HeroContainer = styled.div`
-  /* border: 1px solid blue; */
+import Link from "next/link";
 
+const HeroContainer = styled.div`
+  .home-logo {
+    left: 0;
+    position: fixed;
+  }
+  /* border: 1px solid blue; */
+  .logo {
+    padding: 30px;
+    font-size: 60px;
+    color: ${theme.colours.blue};
+    span {
+      &:nth-child(2) {
+        position: relative;
+        top: 20px;
+      }
+    }
+  }
   display: flex;
   justify-content: flex-end;
   .hero-text {
@@ -62,8 +78,31 @@ const HeroContainer = styled.div`
 `;
 
 export default function Hero(props) {
+  const [pos, setPos] = useState("top");
+  useEffect(() => {
+    document.addEventListener("scroll", (e) => {
+      let scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 100) {
+        setPos("moved");
+      } else {
+        setPos("top");
+      }
+    });
+  }, []);
+  const logoProps = useSpring({
+    config: config.slow,
+    opacity: pos === "top" ? 0 : 1,
+  });
   return (
     <HeroContainer>
+      <Link href={"/"}>
+        <animated.a style={logoProps} className="home-logo">
+          <div className="logo">
+            <span>H</span>
+            <span>E</span>
+          </div>
+        </animated.a>
+      </Link>
       <Navigation />
       <div className="hero-colour">
         <Spring
