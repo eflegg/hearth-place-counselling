@@ -28,13 +28,13 @@ const HomeContainer = styled.div`
     margin: 50px auto;
     ${theme.mediaQuery.sm`
     flex-direction: row;
-    align-items: flex-end;
+   
     margin: 80px auto;
     `}
 
     ${theme.mediaQuery.md`
       margin: 100px auto;
-    
+      align-items: flex-end;
       `}
    
     .intro-text {
@@ -55,7 +55,7 @@ const HomeContainer = styled.div`
       transform: translateX(-15%);
       `}
       ${theme.mediaQuery.md`
-    transform: translateX(-10%);
+    transform: translateX(10%);
       `}
     }
   }
