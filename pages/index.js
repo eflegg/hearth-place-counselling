@@ -137,10 +137,7 @@ export default function Home() {
           >
             <animated.div style={props} className="intro-container">
               <div className="home--img-combo">
-                <img
-                  src="/banff.jpg"
-                  alt="photo of laptop with glasses and coffe cup"
-                />
+                <img src="/banff.jpg" alt="The mountains of Banff" />
               </div>
               <div className="home--img-combo ">
                 <h3 className="intro-text">
@@ -177,7 +174,7 @@ export default function Home() {
               <div className="home--img-combo">
                 <img
                   src="/original-stoney-nakoda.jpg"
-                  alt="photo of flower and notebook with pen"
+                  alt="Leah by a river with mountains in the background"
                 />
               </div>
             </HomeContact>

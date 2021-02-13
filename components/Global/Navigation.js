@@ -138,33 +138,6 @@ export default function Navigation(props) {
       </Head>
       {isDesktop ? (
         <DesktopNav>
-          {/* <ul>
-            <li>
-              <ActiveLink activeClassName="active" href="/about">
-                <a>About</a>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink activeClassName="active" href="/blog">
-                <a>Blog</a>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink href="/services" activeClassName="active">
-                Services
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink activeClassName="active" href="/contact">
-                <a>Contact</a>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink activeClassName="active" href="/">
-                <a>Home</a>
-              </ActiveLink>
-            </li>
-          </ul> */}
           <ul className="nav">
             <li>
               <ActiveLink activeClassName="active" href="/">
@@ -181,11 +154,11 @@ export default function Navigation(props) {
                 <a className="nav-link">Services</a>
               </ActiveLink>
             </li>
-            <li>
+            {/* <li>
               <ActiveLink activeClassName="active" href="/blog">
                 <a className="nav-link">Blog</a>
               </ActiveLink>
-            </li>
+            </li> */}
             <li>
               <ActiveLink activeClassName="active" href="/contact">
                 <a className="nav-link">Contact</a>
@@ -238,7 +211,7 @@ export default function Navigation(props) {
                           <a>About</a>
                         </Link>
                       </li>
-                      <li
+                      {/* <li
                         className="nav-link__mobile"
                         onClick={() => {
                           toggleNav(false);
@@ -247,7 +220,7 @@ export default function Navigation(props) {
                         <Link href="/blog">
                           <a>Blog</a>
                         </Link>
-                      </li>
+                      </li> */}
                       <li
                         className="nav-link__mobile"
                         onClick={() => {

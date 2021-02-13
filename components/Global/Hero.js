@@ -14,15 +14,39 @@ const HeroContainer = styled.div`
   }
   /* border: 1px solid blue; */
   .logo {
-    padding: 30px;
-    font-size: 60px;
+    padding: 10px;
+    font-size: 30px;
     color: ${theme.colours.blue};
     span {
       &:nth-child(2) {
         position: relative;
-        top: 20px;
+        top: 10px;
+        left: -11px;
       }
     }
+    ${theme.mediaQuery.sm`
+      padding: 15px;
+    font-size: 45px;
+    color: ${theme.colours.blue};
+    span {
+      &:nth-child(2) {
+        position: relative;
+        top: 15px;
+        left: -16px;
+      }
+    }
+    `}
+    ${theme.mediaQuery.md`
+     padding: 30px;
+    font-size: 60px;
+    span {
+      &:nth-child(2) {
+        position: relative;
+        top: 19px;
+        left: -11px;
+      }
+    }
+    `}
   }
   display: flex;
   justify-content: flex-end;

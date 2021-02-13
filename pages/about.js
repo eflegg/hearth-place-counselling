@@ -225,7 +225,7 @@ export default function About() {
             I won the Peter T. Millard Award for LGBT Research for a paper on
             semiotics in butch-femme lesbian relationships, completed a
             voluntary thesis on lexicology in partnership with the Department of
-            Women’s &amp; Gender Studies, and graduated with High Honours. This
+            Women’s & Gender Studies, and graduated with High Honours. This
             interdisciplinary academic background makes me a thorough,
             analytical thinker with broad cultural sensitivity and a deep
             understanding of systemic oppression.
@@ -235,10 +235,10 @@ export default function About() {
             my lived experience and working as a peer in the frontline
             anti-violence field. With organizations like the BC Children’s
             Hospital and the Ending Violence Association of BC, I provided
-            mental health first aid and advocacy for queer &amp; trans youth,
-            sick &amp; disabled children, and young women impacted by
-            gender-based violence. I bring all this training—and my lived
-            experience—to your related texts.
+            mental health first aid and advocacy for queer & trans youth, sick &
+            disabled children, and young women impacted by gender-based
+            violence. I bring all this training—and my lived experience—to your
+            related texts.
           </p>
           <p>
             I grew up as a settler on the homelands of the Métis and Treaty 6
