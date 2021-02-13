@@ -43,10 +43,14 @@ export default function Footer() {
     <FooterContainer>
       <div className="footer-logos">
         <div className="isc-logo">
-          <img src="/ISC-logo.png" alt="" />
+          <a href="https://indexers.ca/" target="_blank">
+            <img src="/ISC-logo.png" alt="" />
+          </a>
         </div>
         <div className="wu-logo">
-          <img src="/writers-union.png" alt="" />
+          <a href="https://www.writersunion.ca/" target="_blank">
+            <img src="/writers-union.png" alt="" />
+          </a>
         </div>
       </div>
       <h3>Copyright Leah Horlick</h3>

@@ -24,15 +24,17 @@ const HomeContainer = styled.div`
   .intro-container {
     display: flex;
     flex-direction: column-reverse;
-    ${theme.mediaQuery.sm`
-    flex-direction: row;`}
     align-items: center;
     margin: 50px auto;
     ${theme.mediaQuery.sm`
-      margin: 80px auto;
-      `}
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 80px auto;
+    `}
+
     ${theme.mediaQuery.md`
       margin: 100px auto;
+    
       `}
    
     .intro-text {
@@ -45,12 +47,15 @@ const HomeContainer = styled.div`
       transform: translateX(-15%);
       `}
       ${theme.mediaQuery.md`
-      // transform: translateX(-10%);
+    transform: translateX(0%);
       `}
     }
     button {
       ${theme.mediaQuery.sm`
       transform: translateX(-15%);
+      `}
+      ${theme.mediaQuery.md`
+    transform: translateX(-10%);
       `}
     }
   }
@@ -60,8 +65,12 @@ const HomeContainer = styled.div`
     min-width: 400px;
     `}
     ${theme.mediaQuery.md`
-    min-width: 500px;
+    min-width: 550px;
     max-height: 600px;
+    `}
+      ${theme.mediaQuery.lg`
+    min-width: 675px;
+    max-height: 700px;
     `}
     object-fit: cover;
   }
@@ -142,8 +151,9 @@ export default function Home() {
               <div className="home--img-combo ">
                 <h3 className="intro-text">
                   Leah Horlick is a professional indexer and editor in Calgary,
-                  AB. Probably expand with a more detailed statement of the
-                  guiding values of your work.
+                  AB. My specialized training and experience with confidential
+                  projects and marginalized communities makes me a careful
+                  indexer, determined to support the dignity of your projects.
                 </h3>
                 <button className="btn">
                   <Link href="/about">
