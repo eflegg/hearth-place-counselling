@@ -183,7 +183,7 @@ export default function Home() {
               </div>
               <div className="home--img-combo">
                 <img
-                  src="/original-stoney-nakoda.jpg"
+                  src="/editedstoney.jpg"
                   alt="Leah by a river with mountains in the background"
                 />
               </div>
