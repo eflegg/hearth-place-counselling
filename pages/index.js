@@ -44,7 +44,7 @@ const HomeContainer = styled.div`
       padding: 40px;
 
       ${theme.mediaQuery.sm`
-      transform: translateX(-15%);
+      // transform: translateX(-15%);
       `}
       ${theme.mediaQuery.md`
     transform: translateX(0%);
