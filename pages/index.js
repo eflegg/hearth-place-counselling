@@ -153,10 +153,10 @@ export default function Home() {
               </div>
               <div className="home--img-combo ">
                 <h3 className="intro-text">
-                  Leah Horlick is a professional indexer and editor in Calgary,
-                  AB. My specialized training and experience with confidential
-                  projects and marginalized communities makes me a careful
-                  indexer, determined to support the dignity of your projects.
+                  I'm Leah, a professional indexer and editor in Calgary, AB. My
+                  specialized training and years of experience working with
+                  marginalized subjects will support your best work, from
+                  confidential projects to academic and creative texts.
                 </h3>
                 <button className="btn">
                   <Link href="/about">

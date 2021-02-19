@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import { Spring, config } from "react-spring/renderprops.cjs";
 import ActiveLink from "./ActiveLink";
 
-const MobileNav = styled.div`
+const MobileNav = styled.nav`
   .nav-active {
     display: block;
     position: absolute;
