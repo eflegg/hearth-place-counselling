@@ -168,7 +168,7 @@ export default function Hero(props) {
             {(props) => <div className="hero-line" style={props}></div>}
           </Spring>
           <Spring
-            config={{ delay: 400 }}
+            config={{ delay: 600 }}
             from={{ opacity: 0, width: "0%" }}
             to={{ opacity: 1, width: "30%" }}
           >

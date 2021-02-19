@@ -135,6 +135,9 @@ export default function Home() {
       <Head>
         <title>Horlick Editorial</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Horlick Editorial" />
+        <meta property="og:image" content="/about-photo.jpg" />
+        <meta property="og:url" content="http://horlickeditorial.ca/"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Layout pageTitle={"Horlick Editorial"}>
