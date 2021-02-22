@@ -22,7 +22,7 @@ export default class ContactForm extends Component {
       publisher: "",
       wordCount: "",
       message: "",
-      status: "",
+      // status: "",
     };
     this.testName = this.testName.bind(this);
     // this.onSubmit = this.onSubmit.bind(this);
@@ -130,90 +130,170 @@ export default class ContactForm extends Component {
   }
 
   render() {
-    const { status } = this.state;
-    return (
-      <FormContainer
-        className={`${
-          this.props.className ? this.props.className : ""
-        } form-container`}
-        onSubmit={this.submitForm}
-        action="https://formspree.io/f/xnqoyykd"
-        method="POST"
-      >
-        <Input
-          label="Full Name"
-          name={"fName"}
-          type={"text"}
-          value={this.state.fName}
-          onChange={(event) => {
-            this.setState({ fName: event.target.value });
-          }}
-          onBlur={this.testName}
-          error={this.state.invalidName}
-          errorMessage={this.state.nameError ? this.state.nameError : ""}
-          narrow
-        />
-        <Input
-          label="Email"
-          name="_replyto"
-          type={"text"}
-          value={this.state.email}
-          onChange={(event) => {
-            this.setState({ email: event.target.value });
-          }}
-          onBlur={this.testEmail}
-          error={this.state.invalidEmail}
-          errorMessage={this.state.emailError ? this.state.emailError : ""}
-          narrow
-        />
-        <Input
-          label="Publisher"
-          name={"publisher"}
-          type={"text"}
-          value={this.state.publisher}
-          onChange={(event) => {
-            this.setState({ publisher: event.target.value });
-          }}
-          narrow
-        />
-        <Input
-          label="Word Count"
-          name={"wordCount"}
-          type={"text"}
-          value={this.state.wordCount}
-          onChange={(event) => {
-            this.setState({ wordCount: event.target.value });
-          }}
-          narrow
-        />
-        <Input
-          label="Message (please include your subject matter and and outline of the production schedule, if applicable)"
-          name={"message"}
-          type={"textarea"}
-          value={this.state.message}
-          onChange={(event) => {
-            this.setState({ message: event.target.value });
-          }}
-          onBlur={this.testMessage}
-          error={this.state.invalidMessage}
-          errorMessage={this.state.messageError ? this.state.messageError : ""}
-          type={"textarea"}
-          wide
-        />
-        {status === "SUCCESS" ? (
-          <p>
-            Thank you for reaching out! You can expect a reply in the next two
-            business days on MST.{" "}
-          </p>
-        ) : (
+    // const { status } = this.state;
+    if (!this.state.status) {
+      return (
+        <FormContainer
+          className={`${
+            this.props.className ? this.props.className : ""
+          } form-container`}
+          onSubmit={this.submitForm}
+          action="https://formspree.io/f/xnqoyykd"
+          method="POST"
+        >
+          <Input
+            label="Full Name"
+            name={"fName"}
+            type={"text"}
+            value={this.state.fName}
+            onChange={(event) => {
+              this.setState({ fName: event.target.value });
+            }}
+            onBlur={this.testName}
+            error={this.state.invalidName}
+            errorMessage={this.state.nameError ? this.state.nameError : ""}
+            narrow
+          />
+          <Input
+            label="Email"
+            name="_replyto"
+            type={"text"}
+            value={this.state.email}
+            onChange={(event) => {
+              this.setState({ email: event.target.value });
+            }}
+            onBlur={this.testEmail}
+            error={this.state.invalidEmail}
+            errorMessage={this.state.emailError ? this.state.emailError : ""}
+            narrow
+          />
+          <Input
+            label="Publisher"
+            name={"publisher"}
+            type={"text"}
+            value={this.state.publisher}
+            onChange={(event) => {
+              this.setState({ publisher: event.target.value });
+            }}
+            narrow
+          />
+          <Input
+            label="Word Count"
+            name={"wordCount"}
+            type={"text"}
+            value={this.state.wordCount}
+            onChange={(event) => {
+              this.setState({ wordCount: event.target.value });
+            }}
+            narrow
+          />
+          <Input
+            label="Message (please include your subject matter and and outline of the production schedule, if applicable)"
+            name={"message"}
+            type={"textarea"}
+            value={this.state.message}
+            onChange={(event) => {
+              this.setState({ message: event.target.value });
+            }}
+            onBlur={this.testMessage}
+            error={this.state.invalidMessage}
+            errorMessage={
+              this.state.messageError ? this.state.messageError : ""
+            }
+            type={"textarea"}
+            wide
+          />
+
           <button className="btn">Submit</button>
-        )}
-        {status === "ERROR" && (
+        </FormContainer>
+      );
+    } else if (this.state.status === "SUCCESS") {
+      return (
+        <p>
+          Thank you for reaching out! You can expect a reply in the next two
+          business days on MST.{" "}
+        </p>
+      );
+    } else {
+      return (
+        <FormContainer
+          className={`${
+            this.props.className ? this.props.className : ""
+          } form-container`}
+          onSubmit={this.submitForm}
+          action="https://formspree.io/f/xnqoyykd"
+          method="POST"
+        >
+          <Input
+            label="Full Name"
+            name={"fName"}
+            type={"text"}
+            value={this.state.fName}
+            onChange={(event) => {
+              this.setState({ fName: event.target.value });
+            }}
+            onBlur={this.testName}
+            error={this.state.invalidName}
+            errorMessage={this.state.nameError ? this.state.nameError : ""}
+            narrow
+          />
+          <Input
+            label="Email"
+            name="_replyto"
+            type={"text"}
+            value={this.state.email}
+            onChange={(event) => {
+              this.setState({ email: event.target.value });
+            }}
+            onBlur={this.testEmail}
+            error={this.state.invalidEmail}
+            errorMessage={this.state.emailError ? this.state.emailError : ""}
+            narrow
+          />
+          <Input
+            label="Publisher"
+            name={"publisher"}
+            type={"text"}
+            value={this.state.publisher}
+            onChange={(event) => {
+              this.setState({ publisher: event.target.value });
+            }}
+            narrow
+          />
+          <Input
+            label="Word Count"
+            name={"wordCount"}
+            type={"text"}
+            value={this.state.wordCount}
+            onChange={(event) => {
+              this.setState({ wordCount: event.target.value });
+            }}
+            narrow
+          />
+          <Input
+            label="Message (please include your subject matter and and outline of the production schedule, if applicable)"
+            name={"message"}
+            type={"textarea"}
+            value={this.state.message}
+            onChange={(event) => {
+              this.setState({ message: event.target.value });
+            }}
+            onBlur={this.testMessage}
+            error={this.state.invalidMessage}
+            errorMessage={
+              this.state.messageError ? this.state.messageError : ""
+            }
+            type={"textarea"}
+            wide
+          />
+
+          <button className="btn">Submit</button>
+
           <p>
             Oops! There was an error. Please check your fields and try again.{" "}
           </p>
-        )}
-      </FormContainer>
-    );
+        </FormContainer>
+      );
+    }
   }
 }
