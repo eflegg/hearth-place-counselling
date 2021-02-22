@@ -99,8 +99,6 @@ const MobileNav = styled.nav`
 
 const DesktopNav = styled.nav`
   position: absolute;
-  /* transform: translateY(105%); */
-
   z-index: 1;
   ul {
     display: flex;
@@ -130,43 +128,17 @@ export default function Navigation(props) {
   const isDesktop = useMediaQuery({
     query: `(min-device-width: ${theme.breakpoints.md})`,
   });
+  const isMobile = useMediaQuery({
+    query: `(max-device-width: ${theme.breakpoints.md})`,
+  });
   const [navActive, toggleNav] = useState(false);
   return (
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      {isDesktop ? (
-        <DesktopNav>
-          <ul className="nav">
-            <li>
-              <ActiveLink activeClassName="active" href="/">
-                <a className="nav-link">Home</a>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink activeClassName="active" href="/about">
-                <a className="nav-link">About</a>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink activeClassName="active" href="/services">
-                <a className="nav-link">Services</a>
-              </ActiveLink>
-            </li>
-            {/* <li>
-              <ActiveLink activeClassName="active" href="/blog">
-                <a className="nav-link">Blog</a>
-              </ActiveLink>
-            </li> */}
-            <li>
-              <ActiveLink activeClassName="active" href="/contact">
-                <a className="nav-link">Contact</a>
-              </ActiveLink>
-            </li>
-          </ul>
-        </DesktopNav>
-      ) : (
+
+      {isMobile ? (
         <MobileNav className="mobile-nav" style={props}>
           <button
             className={`btn-nav ${navActive ? "nav-close" : "nav-open"}`}
@@ -212,15 +184,15 @@ export default function Navigation(props) {
                         </Link>
                       </li>
                       {/* <li
-                        className="nav-link__mobile"
-                        onClick={() => {
-                          toggleNav(false);
-                        }}
-                      >
-                        <Link href="/blog">
-                          <a>Blog</a>
-                        </Link>
-                      </li> */}
+                       className="nav-link__mobile"
+                       onClick={() => {
+                         toggleNav(false);
+                       }}
+                     >
+                       <Link href="/blog">
+                         <a>Blog</a>
+                       </Link>
+                     </li> */}
                       <li
                         className="nav-link__mobile"
                         onClick={() => {
@@ -258,6 +230,36 @@ export default function Navigation(props) {
             </>
           ) : null}
         </MobileNav>
+      ) : (
+        <DesktopNav className="desktop-nav">
+          <ul className="nav">
+            <li>
+              <ActiveLink activeClassName="active" href="/">
+                <a className="nav-link">Home</a>
+              </ActiveLink>
+            </li>
+            <li>
+              <ActiveLink activeClassName="active" href="/about">
+                <a className="nav-link">About</a>
+              </ActiveLink>
+            </li>
+            <li>
+              <ActiveLink activeClassName="active" href="/services">
+                <a className="nav-link">Services</a>
+              </ActiveLink>
+            </li>
+            {/* <li>
+            <ActiveLink activeClassName="active" href="/blog">
+              <a className="nav-link">Blog</a>
+            </ActiveLink>
+          </li> */}
+            <li>
+              <ActiveLink activeClassName="active" href="/contact">
+                <a className="nav-link">Contact</a>
+              </ActiveLink>
+            </li>
+          </ul>
+        </DesktopNav>
       )}
     </>
   );
