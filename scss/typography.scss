@@ -293,28 +293,35 @@ li {
       }
     }
   }
+  @include media-query-min($md) {
+    display: none;
+  }
 }
 .desktop-nav {
-  position: absolute;
-  z-index: 1;
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    li {
-      list-style: none;
-      margin-right: 30px;
-      a {
-        color: $blue;
-        &.active:after {
-          content: "";
-          display: block;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          margin: 0 auto;
-          background-color: $blue;
-          position: relative;
-          top: 8px;
+  display: none;
+  @include media-query-min($md) {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      li {
+        list-style: none;
+        margin-right: 30px;
+        a {
+          color: $blue;
+          &.active:after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-color: $blue;
+            position: relative;
+            top: 8px;
+          }
         }
       }
     }

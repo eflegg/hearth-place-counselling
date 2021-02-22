@@ -138,52 +138,52 @@ export default function Navigation(props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      {isMobile ? (
-        <MobileNav className="mobile-nav" style={props}>
-          <button
-            className={`btn-nav ${navActive ? "nav-close" : "nav-open"}`}
-            onClick={() => {
-              toggleNav(!navActive);
-            }}
-          >
-            <span className="burger-1"></span>
-            <span className="burger-2"></span>
-            <span className="burger-3"></span>
-          </button>
-          <button
-            role="button"
-            aria-controls="navMenu"
-            style={{ display: "none" }}
-            className="accessibility-close"
-          >
-            Close Nav
-          </button>
-          {navActive ? (
-            <>
-              <Spring
-                from={{ width: "0vw", height: "0vh" }}
-                to={{ width: "100vw", height: "100vh" }}
-              >
-                {(props) => (
-                  <nav
-                    style={props}
-                    id="navMenu"
-                    className={`${
-                      props.className ? props.className : ""
-                    }  nav-active`}
-                  >
-                    <ul>
-                      <li
-                        className="nav-link__mobile"
-                        onClick={() => {
-                          toggleNav(false);
-                        }}
-                      >
-                        <Link href="/about">
-                          <a>About</a>
-                        </Link>
-                      </li>
-                      {/* <li
+      {/* {isMobile ? ( */}
+      <MobileNav className="mobile-nav" style={props}>
+        <button
+          className={`btn-nav ${navActive ? "nav-close" : "nav-open"}`}
+          onClick={() => {
+            toggleNav(!navActive);
+          }}
+        >
+          <span className="burger-1"></span>
+          <span className="burger-2"></span>
+          <span className="burger-3"></span>
+        </button>
+        <button
+          role="button"
+          aria-controls="navMenu"
+          style={{ display: "none" }}
+          className="accessibility-close"
+        >
+          Close Nav
+        </button>
+        {navActive ? (
+          <>
+            <Spring
+              from={{ width: "0vw", height: "0vh" }}
+              to={{ width: "100vw", height: "100vh" }}
+            >
+              {(props) => (
+                <nav
+                  style={props}
+                  id="navMenu"
+                  className={`${
+                    props.className ? props.className : ""
+                  }  nav-active`}
+                >
+                  <ul>
+                    <li
+                      className="nav-link__mobile"
+                      onClick={() => {
+                        toggleNav(false);
+                      }}
+                    >
+                      <Link href="/about">
+                        <a>About</a>
+                      </Link>
+                    </li>
+                    {/* <li
                        className="nav-link__mobile"
                        onClick={() => {
                          toggleNav(false);
@@ -193,74 +193,74 @@ export default function Navigation(props) {
                          <a>Blog</a>
                        </Link>
                      </li> */}
-                      <li
-                        className="nav-link__mobile"
-                        onClick={() => {
-                          toggleNav(false);
-                        }}
-                      >
-                        <Link href="/services" activeClassName="active">
-                          Services
-                        </Link>
-                      </li>
-                      <li
-                        className="nav-link__mobile"
-                        onClick={() => {
-                          toggleNav(false);
-                        }}
-                      >
-                        <Link href="/contact">
-                          <a>Contact</a>
-                        </Link>
-                      </li>
-                      <li
-                        className="nav-link__mobile"
-                        onClick={() => {
-                          toggleNav(false);
-                        }}
-                      >
-                        <Link href="/">
-                          <a>Home</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </nav>
-                )}
-              </Spring>
-            </>
-          ) : null}
-        </MobileNav>
-      ) : (
-        <DesktopNav className="desktop-nav">
-          <ul className="nav">
-            <li>
-              <ActiveLink activeClassName="active" href="/">
-                <a className="nav-link">Home</a>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink activeClassName="active" href="/about">
-                <a className="nav-link">About</a>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink activeClassName="active" href="/services">
-                <a className="nav-link">Services</a>
-              </ActiveLink>
-            </li>
-            {/* <li>
+                    <li
+                      className="nav-link__mobile"
+                      onClick={() => {
+                        toggleNav(false);
+                      }}
+                    >
+                      <Link href="/services" activeClassName="active">
+                        Services
+                      </Link>
+                    </li>
+                    <li
+                      className="nav-link__mobile"
+                      onClick={() => {
+                        toggleNav(false);
+                      }}
+                    >
+                      <Link href="/contact">
+                        <a>Contact</a>
+                      </Link>
+                    </li>
+                    <li
+                      className="nav-link__mobile"
+                      onClick={() => {
+                        toggleNav(false);
+                      }}
+                    >
+                      <Link href="/">
+                        <a>Home</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              )}
+            </Spring>
+          </>
+        ) : null}
+      </MobileNav>
+      {/* ) : ( */}
+      <DesktopNav className="desktop-nav">
+        <ul className="nav">
+          <li>
+            <ActiveLink activeClassName="active" href="/">
+              <a className="nav-link">Home</a>
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink activeClassName="active" href="/about">
+              <a className="nav-link">About</a>
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink activeClassName="active" href="/services">
+              <a className="nav-link">Services</a>
+            </ActiveLink>
+          </li>
+          {/* <li>
             <ActiveLink activeClassName="active" href="/blog">
               <a className="nav-link">Blog</a>
             </ActiveLink>
           </li> */}
-            <li>
-              <ActiveLink activeClassName="active" href="/contact">
-                <a className="nav-link">Contact</a>
-              </ActiveLink>
-            </li>
-          </ul>
-        </DesktopNav>
-      )}
+          <li>
+            <ActiveLink activeClassName="active" href="/contact">
+              <a className="nav-link">Contact</a>
+            </ActiveLink>
+          </li>
+        </ul>
+      </DesktopNav>
+      {/* )} */}
     </>
   );
 }
