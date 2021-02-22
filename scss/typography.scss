@@ -206,93 +206,6 @@ li {
 // Navigation
 
 .mobile-nav {
-  .nav-active {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    height: 100vh;
-    width: 110vw;
-    background-color: $yellow;
-    ul {
-      margin-top: 50px;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .nav-link__mobile {
-        a {
-          color: white;
-          font-size: 30px;
-          margin-top: 20px;
-          line-height: 80px;
-        }
-      }
-    }
-  }
-  .btn-nav {
-    &:focus {
-      outline: none;
-    }
-    height: 50px;
-    width: 50px;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: transparent;
-    border: 0px;
-    position: absolute;
-    top: 5px;
-    right: 25px;
-    span {
-      width: 50px;
-      height: 5px;
-      margin-bottom: 5px;
-      margin-top: 5px;
-      background: $blue;
-      z-index: 2;
-    }
-    .burger-2 {
-      position: relative;
-    }
-    &.nav-close {
-      .burger-1 {
-        position: relative;
-        transform: rotate(-45deg);
-        top: 15px;
-        transition: all 0.15s ease-in-out;
-      }
-      .burger-2 {
-        position: relative;
-        left: 150px;
-        overflow: hidden;
-        transition: all 0.15s ease-in-out;
-      }
-      .burger-3 {
-        position: relative;
-        top: -15px;
-        transform: rotate(45deg);
-        transition: all 0.15s ease-in-out;
-      }
-    }
-    &.nav-open {
-      .burger-1 {
-        transform: rotate(0deg);
-
-        transition: all 0.15s ease-in-out;
-      }
-      .burger-2 {
-        overflow: hidden;
-        transition: all 0.15s ease-in-out;
-      }
-      .burger-3 {
-        transform: rotate(0deg);
-        transition: all 0.15s ease-in-out;
-      }
-    }
-  }
   @include media-query-min($md) {
     display: none;
   }
@@ -301,29 +214,5 @@ li {
   display: none;
   @include media-query-min($md) {
     display: block;
-    position: absolute;
-    z-index: 1;
-    ul {
-      display: flex;
-      justify-content: flex-end;
-      li {
-        list-style: none;
-        margin-right: 30px;
-        a {
-          color: $blue;
-          &.active:after {
-            content: "";
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            margin: 0 auto;
-            background-color: $blue;
-            position: relative;
-            top: 8px;
-          }
-        }
-      }
-    }
   }
 }

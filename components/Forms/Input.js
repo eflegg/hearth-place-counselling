@@ -20,11 +20,15 @@ const FormField = styled.div`
   }
   input {
     border: 1px solid ${theme.colours.black};
+    font-family: ${theme.type.body};
     height: 50px;
     padding-left: 10px;
   }
   textarea {
     min-height: 250px;
+    font-family: ${theme.type.body};
+    padding-left: 10px;
+    padding-top: 10px;
   }
 
   &.field--full {

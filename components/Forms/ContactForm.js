@@ -137,7 +137,7 @@ export default class ContactForm extends Component {
           this.props.className ? this.props.className : ""
         } form-container`}
         onSubmit={this.submitForm}
-        action="https://formspree.io/f/xknpypkd"
+        action="https://formspree.io/f/xnqoyykd"
         method="POST"
       >
         <Input
@@ -155,7 +155,7 @@ export default class ContactForm extends Component {
         />
         <Input
           label="Email"
-          name={"email"}
+          name="_replyto"
           type={"text"}
           value={this.state.email}
           onChange={(event) => {
@@ -201,7 +201,10 @@ export default class ContactForm extends Component {
           wide
         />
         {status === "SUCCESS" ? (
-          <p>Thanks!</p>
+          <p>
+            Thank you for reaching out! You can expect a reply in the next two
+            business days on MST.{" "}
+          </p>
         ) : (
           <button className="btn">Submit</button>
         )}
