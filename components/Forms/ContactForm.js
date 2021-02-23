@@ -27,7 +27,7 @@ export default class ContactForm extends Component {
     this.testName = this.testName.bind(this);
     // this.onSubmit = this.onSubmit.bind(this);
     this.submitForm = this.submitForm.bind(this);
-    // this.validateForm = this.validateForm.bind(this);
+    this.validateForm = this.validateForm.bind(this);
     this.testEmail = this.testEmail.bind(this);
     this.testMessage = this.testMessage.bind(this);
   }
@@ -89,15 +89,15 @@ export default class ContactForm extends Component {
     }
   }
 
-  // validateForm() {
-  //   return new Promise((resolve, reject) => {
-  //     if (this.testName() && this.testEmail() && this.testMessage()) {
-  //       resolve("success");
-  //     } else {
-  //       resolve("error");
-  //     }
-  //   });
-  // }
+  validateForm() {
+    let hasErrors = false;
+
+    if (this.testName() && this.testEmail() && this.testMessage()) {
+      return !hasErrors;
+    } else {
+      return hasErrors;
+    }
+  }
 
   // onSubmit(ev) {
   //   ev.preventDefault();
@@ -112,6 +112,7 @@ export default class ContactForm extends Component {
   // }
   submitForm(ev) {
     ev.preventDefault();
+
     const form = ev.target;
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
@@ -119,6 +120,7 @@ export default class ContactForm extends Component {
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (!this.validateForm()) return;
       if (xhr.status === 200) {
         form.reset();
         this.setState({ status: "SUCCESS" });
