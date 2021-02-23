@@ -18,8 +18,12 @@ const AboutContainer = styled.section`
 
   .about--img-combo {
     img {
-      transform: translateX(-20%);
-      width: 150%;
+      width: 100%;
+      ${theme.mediaQuery.sm`
+    
+    transform: translateX(-20%);
+    width: 150%;
+    `}
     }
     .about-text--excerpt {
       border: 4px solid ${theme.colours.blue};

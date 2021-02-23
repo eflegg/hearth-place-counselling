@@ -25,7 +25,7 @@ export default class ContactForm extends Component {
       // status: "",
     };
     this.testName = this.testName.bind(this);
-    // this.onSubmit = this.onSubmit.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
     this.submitForm = this.submitForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
     this.testEmail = this.testEmail.bind(this);
@@ -90,37 +90,44 @@ export default class ContactForm extends Component {
   }
 
   validateForm() {
-    let hasErrors = false;
-
-    if (this.testName() && this.testEmail() && this.testMessage()) {
-      return !hasErrors;
-    } else {
-      return hasErrors;
-    }
+    return new Promise((res, rej) => {
+      if (this.testName() && this.testEmail() && this.testMessage()) {
+        res("testsuccess");
+      } else {
+        res("testerror");
+      }
+    });
   }
 
-  // onSubmit(ev) {
-  //   ev.preventDefault();
-  //   this.testName();
-  //   this.testEmail();
-  //   this.testMessage();
-  //   this.validateForm().then((res, err) => {
-  //     if (res === "success") {
-  //       this.submitForm();
-  //     }
-  //   });
-  // }
-  submitForm(ev) {
+  onSubmit(ev) {
     ev.preventDefault();
-
     const form = ev.target;
+    this.testName();
+    this.testEmail();
+    this.testMessage();
+    this.validateForm().then((res, err) => {
+      if (res === "testsuccess") {
+        this.submitForm(form);
+      } else {
+        this.setState({ status: "ERROR" });
+      }
+    });
+  }
+
+  submitForm(form) {
+    // ev.preventDefault();
+    // const form = ev.target;
+
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (!this.validateForm()) return;
+      // this.testName();
+      // this.testEmail();
+      // this.testMessage();
+      // if (!this.validateForm()) return;
       if (xhr.status === 200) {
         form.reset();
         this.setState({ status: "SUCCESS" });
@@ -139,7 +146,7 @@ export default class ContactForm extends Component {
           className={`${
             this.props.className ? this.props.className : ""
           } form-container`}
-          onSubmit={this.submitForm}
+          onSubmit={this.onSubmit}
           action="https://formspree.io/f/xnqoyykd"
           method="POST"
         >
@@ -222,7 +229,7 @@ export default class ContactForm extends Component {
           className={`${
             this.props.className ? this.props.className : ""
           } form-container`}
-          onSubmit={this.submitForm}
+          onSubmit={this.onSubmit}
           action="https://formspree.io/f/xnqoyykd"
           method="POST"
         >
