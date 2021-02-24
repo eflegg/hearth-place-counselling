@@ -8,6 +8,9 @@ import HomeHire from "../components/HomeHire";
 import { useSpring, animated, config } from "react-spring";
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
+import { RichText } from "prismic-reactjs";
+import { Client } from "../prismic-configuration";
+// import Prismic from "prismic-javascript";
 
 const HomeContainer = styled.div`
   .dots-reverse {
@@ -123,13 +126,14 @@ const HomeContact = styled(animated.div)`
   }
 `;
 
-export default function Home() {
+export default function Home({ doc }) {
   const [sectionVisible, setSectionVisible] = useState(false);
   const props = useSpring({
     config: config.slow,
     opacity: sectionVisible ? 1 : 0,
     transform: sectionVisible ? `translateY(0px)` : `translateY(90px)`,
   });
+  const home = doc.data;
   return (
     <>
       <Head>
@@ -153,10 +157,11 @@ export default function Home() {
               </div>
               <div className="home--img-combo ">
                 <h3 className="intro-text">
-                  I'm Leah, a professional indexer and editor in Calgary, AB. My
+                  {RichText.asText(home.home_intro_text)}
+                  {/* I'm Leah, a professional indexer and editor in Calgary, AB. My
                   specialized training and years of experience working with
                   marginalized subjects will support your best work, from
-                  confidential projects to academic and creative texts.
+                  confidential projects to academic and creative texts. */}
                 </h3>
                 <button className="btn">
                   <Link href="/about">
@@ -196,4 +201,11 @@ export default function Home() {
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const doc = await Client().getSingle("home");
+  return {
+    props: { doc },
+  };
 }
