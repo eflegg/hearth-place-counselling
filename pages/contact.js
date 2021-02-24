@@ -21,7 +21,7 @@ export default function Contact() {
       <ContactDescrip>
         Looking for my support on a project? Don’t hesitate to reach out – you
         can contact me through the form below. For indexing services, please
-        provide all the relavant information to help me get back to you as
+        provide all the relevant information to help me get back to you as
         quickly as possible:
       </ContactDescrip>
       <ContactForm />

@@ -115,19 +115,13 @@ export default class ContactForm extends Component {
   }
 
   submitForm(form) {
-    // ev.preventDefault();
-    // const form = ev.target;
-
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      // this.testName();
-      // this.testEmail();
-      // this.testMessage();
-      // if (!this.validateForm()) return;
+
       if (xhr.status === 200) {
         form.reset();
         this.setState({ status: "SUCCESS" });
