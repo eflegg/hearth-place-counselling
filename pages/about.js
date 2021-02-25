@@ -7,6 +7,8 @@ import Dots from "../components/Shapes/dots";
 import { Waypoint } from "react-waypoint";
 import { Spring, Transition, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
+import { RichText } from "prismic-reactjs";
+import { Client } from "../prismic-configuration";
 
 const AboutContainer = styled.section`
   .dots-center {
@@ -84,8 +86,9 @@ const AboutImage = styled.div`
   `}
 `;
 
-export default function About() {
+export default function About({ doc }) {
   const [boxVisible, setVisible] = useState(false);
+  // const about = doc.data;
   return (
     <Layout pageTitle={"About"}>
       <Head>
@@ -98,9 +101,10 @@ export default function About() {
           </div>
           <div className="about--img-combo">
             <h4 className="about-text--excerpt">
-              I completed my indexing training at the University of California,
+              {/* I completed my indexing training at the University of California,
               Berkeley, revisiting my love of language after nearly ten years
-              working in museums and galleries.
+              working in museums and galleries. */}
+              {/* {RichText.asText(about.about_intro_text)} */}
             </h4>
             <Dots className="dots-center" />
           </div>
@@ -263,4 +267,11 @@ export default function About() {
       </AboutContainer>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const about = await Client().getSingle("about");
+  return {
+    props: { about },
+  };
 }

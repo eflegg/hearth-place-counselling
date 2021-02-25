@@ -153,15 +153,14 @@ export default function Home({ doc }) {
           >
             <animated.div style={props} className="intro-container">
               <div className="home--img-combo">
-                <img src="/banff.jpg" alt="The mountains of Banff" />
+                <img
+                  src={home.home_intro_photo.url}
+                  alt={home.home_intro_photo.alt}
+                />
               </div>
               <div className="home--img-combo ">
                 <h3 className="intro-text">
                   {RichText.asText(home.home_intro_text)}
-                  {/* I'm Leah, a professional indexer and editor in Calgary, AB. My
-                  specialized training and years of experience working with
-                  marginalized subjects will support your best work, from
-                  confidential projects to academic and creative texts. */}
                 </h3>
                 <button className="btn">
                   <Link href="/about">
@@ -171,7 +170,11 @@ export default function Home({ doc }) {
               </div>
             </animated.div>
           </Waypoint>
-          <HomeHire />
+          <HomeHire
+            reasonOne={RichText.asText(home.why_hire_one)}
+            reasonTwo={RichText.asText(home.why_hire_two)}
+            reasonThree={RichText.asText(home.why_hire_three)}
+          />
           <Dots className="dots-reverse" />
           <Waypoint
             onEnter={() => setSectionVisible(true)}
@@ -180,8 +183,7 @@ export default function Home({ doc }) {
             <HomeContact style={props}>
               <div className="home-contact home--img-combo">
                 <h3 className="home-contact--text">
-                  Wondering if you need an indexer? Ready to get started? Drop
-                  me a line!
+                  {RichText.asText(home.home_contact_text)}
                 </h3>
                 <button className="btn">
                   <Link href="/contact">
@@ -191,8 +193,8 @@ export default function Home({ doc }) {
               </div>
               <div className="home--img-combo">
                 <img
-                  src="/editedstoney.jpg"
-                  alt="Leah by a river with mountains in the background"
+                  src={home.home_contact_photo.url}
+                  alt={home.home_contact_photo.alt}
                 />
               </div>
             </HomeContact>
