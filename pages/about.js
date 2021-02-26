@@ -226,13 +226,17 @@ export default function About() {
         </div> */}
         <div className="about--main">
           <p>
-            I won the Peter T. Millard Award for LGBT Research for a paper on
-            semiotics in butch-femme lesbian relationships, completed a
-            voluntary thesis on lexicology in partnership with the Department of
-            Women’s & Gender Studies, and graduated with High Honours. This
-            interdisciplinary academic background makes me a thorough,
-            analytical thinker with broad cultural sensitivity and a deep
-            understanding of systemic oppression.
+            I hold a BA in Languages & Linguistics from the University of
+            Saskatchewan, where I won the Peter T. Millard Award for LGBT
+            Research for a paper on semiotics in butch-femme lesbian
+            relationships, completed a voluntary thesis on lexicology in
+            partnership with the Department of Women's & Gender Studies, and
+            graduated with High Honours. I went on to complete my MFA in
+            Creative Writing through the competitive residency program at the
+            University of British Columbia, where I received two graduate
+            research awards. This interdisciplinary academic background makes me
+            a thorough, analytical thinker with broad cultural sensitivity and a
+            deep understanding of systemic oppression.
           </p>
           <p>
             Like many queer and racialized people, I spent five years drawing on
