@@ -134,6 +134,7 @@ export default function Home({ doc }) {
     transform: sectionVisible ? `translateY(0px)` : `translateY(90px)`,
   });
   const home = doc.data;
+
   return (
     <>
       <Head>
