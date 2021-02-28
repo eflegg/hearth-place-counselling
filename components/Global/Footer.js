@@ -35,7 +35,7 @@ const FooterContainer = styled.footer`
   }
 `;
 
-export default function Footer() {
+export default function Footer({ footerData }) {
   const year = new Date().toLocaleDateString("en-US", {
     year: "numeric",
   });
@@ -44,12 +44,20 @@ export default function Footer() {
       <div className="footer-logos">
         <div className="isc-logo">
           <a href="https://indexers.ca/" target="_blank">
-            <img src="/ISC-logo.png" alt="" />
+            {/* <img src="/ISC-logo.png" alt="" /> */}
+            <img
+              src={footerData.data.isc_logo.url}
+              alt={footerData.data.isc_logo.alt}
+            />
           </a>
         </div>
         <div className="wu-logo">
           <a href="https://www.writersunion.ca/" target="_blank">
-            <img src="/writers-union.png" alt="" />
+            {/* <img src="/writers-union.png" alt="" /> */}
+            <img
+              src={footerData.data.wu_logo.url}
+              alt={footerData.data.wu_logo.alt}
+            />
           </a>
         </div>
       </div>

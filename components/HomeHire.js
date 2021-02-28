@@ -112,7 +112,7 @@ const Reason = styled(animated.div)`
   }
 `;
 
-export default function HomeHire() {
+export default function HomeHire(props) {
   const [visibleOne, setVisibleOne] = useState(false);
   const [visibleTwo, setVisibleTwo] = useState(false);
   const [visibleThree, setVisibleThree] = useState(false);
@@ -147,10 +147,7 @@ export default function HomeHire() {
           }}
         >
           <Reason style={propsOne} className="reason-container reason-left">
-            <p>
-              My professional training and academic background ensures that
-              you'll receive an index your readers can rely on.
-            </p>
+            <p>{props.reasonOne}</p>
           </Reason>
         </Waypoint>
         <Waypoint
@@ -164,11 +161,7 @@ export default function HomeHire() {
           }}
         >
           <Reason style={propsTwo} className="reason-container reason-center">
-            <p>
-              I use specialized indexing software that keeps me fast and
-              accurate, making it possible for you to meet your publisher's
-              deadlines.
-            </p>
+            <p>{props.reasonTwo}</p>
           </Reason>
         </Waypoint>
         <Waypoint
@@ -182,11 +175,7 @@ export default function HomeHire() {
           }}
         >
           <Reason style={propsThree} className="reason-container reason-right">
-            <p>
-              Hiring a professional ensures that your readers get the best
-              possible guide to your text, and that you get more time to
-              celebrate your book.
-            </p>
+            <p>{props.reasonThree}</p>
           </Reason>
         </Waypoint>
       </ReasonContainer>

@@ -7,6 +7,8 @@ import Dots from "../components/Shapes/dots";
 import { Waypoint } from "react-waypoint";
 import { Spring, Transition, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
+import { RichText } from "prismic-reactjs";
+import { Client } from "../prismic-configuration";
 
 const AboutContainer = styled.section`
   .dots-center {
@@ -84,23 +86,28 @@ const AboutImage = styled.div`
   `}
 `;
 
-export default function About() {
+export default function About({ about, footer }) {
   const [boxVisible, setVisible] = useState(false);
+
   return (
-    <Layout pageTitle={"About"}>
+    <Layout pageTitle={"About"} footer={footer}>
       <Head>
         <title>Horlick Editorial - About</title>
       </Head>
       <AboutContainer>
         <AboutImage>
           <div className="about--img-combo">
-            <img src="/about-photo.jpg" alt="photo of Leah Horlick" />
+            <img
+              src={about.data.about_image.url}
+              alt={about.data.about_image.alt}
+            />
           </div>
           <div className="about--img-combo">
             <h4 className="about-text--excerpt">
-              I completed my indexing training at the University of California,
+              {/* I completed my indexing training at the University of California,
               Berkeley, revisiting my love of language after nearly ten years
-              working in museums and galleries.
+              working in museums and galleries. */}
+              {RichText.asText(about.data.about_intro_text)}
             </h4>
             <Dots className="dots-center" />
           </div>
@@ -214,48 +221,13 @@ export default function About() {
             </Transition>
 
             <h3 className="text-center">
-              With over ten years of expertise navigating the publishing
-              industry and supporting writers who face barriers to career
-              success, I’ve got the lived experience and formal training to
-              treat your manuscripts with the care and respect they deserve.
+              {RichText.asText(about.data.about_exerpt)}
             </h3>
           </AboutIntro>
         </Waypoint>
-        {/* <div className="full-width--about">
-          <img src="/laptop.jpg" alt="" />
-        </div> */}
+
         <div className="about--main">
-          <p>
-            I hold a BA in Languages & Linguistics from the University of
-            Saskatchewan, where I won the Peter T. Millard Award for LGBT
-            Research for a paper on semiotics in butch-femme lesbian
-            relationships, completed a voluntary thesis on lexicology in
-            partnership with the Department of Women's & Gender Studies, and
-            graduated with High Honours. I went on to complete my MFA in
-            Creative Writing through the competitive residency program at the
-            University of British Columbia, where I received two graduate
-            research awards. This interdisciplinary academic background makes me
-            a thorough, analytical thinker with broad cultural sensitivity and a
-            deep understanding of systemic oppression.
-          </p>
-          <p>
-            Like many queer and racialized people, I spent five years drawing on
-            my lived experience and working as a peer in the frontline
-            anti-violence field. With organizations like the BC Children’s
-            Hospital and the Ending Violence Association of BC, I provided
-            mental health first aid and advocacy for queer & trans youth, sick &
-            disabled children, and young women impacted by gender-based
-            violence. I bring all this training—and my lived experience—to your
-            related texts.
-          </p>
-          <p>
-            I grew up as a settler on the homelands of the Métis and Treaty 6
-            Cree territory in Saskatoon, and lived on unceded Coast Salish
-            Territories in Vancouver for nearly ten years. This summer, I
-            finally returned to the prairies and I’m now located in gorgeous
-            Mohkinstis (Calgary, Alberta), on the territory of Treaty 7 Nations
-            and Region 3 of the Métis Nation.
-          </p>
+          <RichText render={about.data.about_body} Component="p" />
         </div>
         <div className="text-center">
           <button className="btn">
@@ -267,4 +239,11 @@ export default function About() {
       </AboutContainer>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const about = await Client().getSingle("about");
+  return {
+    props: { about },
+  };
 }
