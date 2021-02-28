@@ -12,10 +12,10 @@ const ContactDescrip = styled.p`
   font-weight: 400;
 `;
 
-export default function Contact({ doc }) {
+export default function Contact({ doc, footer }) {
   const contact = doc.data;
   return (
-    <Layout pageTitle={"Contact"}>
+    <Layout pageTitle={"Contact"} footer={footer}>
       <Head>
         <title>Horlick Editorial - Contact</title>
         <meta property="og:title" content="Contact" key="title" />

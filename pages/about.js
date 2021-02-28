@@ -86,11 +86,11 @@ const AboutImage = styled.div`
   `}
 `;
 
-export default function About({ about }) {
+export default function About({ about, footer }) {
   const [boxVisible, setVisible] = useState(false);
 
   return (
-    <Layout pageTitle={"About"}>
+    <Layout pageTitle={"About"} footer={footer}>
       <Head>
         <title>Horlick Editorial - About</title>
       </Head>

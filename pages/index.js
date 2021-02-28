@@ -126,7 +126,8 @@ const HomeContact = styled(animated.div)`
   }
 `;
 
-export default function Home({ doc }) {
+export default function Home({ doc, footer }) {
+  console.log("home footer: " + footer);
   const [sectionVisible, setSectionVisible] = useState(false);
   const props = useSpring({
     config: config.slow,
@@ -145,7 +146,7 @@ export default function Home({ doc }) {
         <meta property="og:url" content="http://horlickeditorial.ca/"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Layout pageTitle={"Horlick Editorial"}>
+      <Layout pageTitle={"Horlick Editorial"} footer={footer}>
         <HomeContainer>
           <Dots className="dots-reverse" />
           <Waypoint

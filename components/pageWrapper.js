@@ -6,6 +6,7 @@ import Hero from "./Global/Hero";
 import { Client } from "../prismic-configuration";
 
 const Layout = ({ pageTitle, children, footer }) => {
+  console.log(footer);
   return (
     <>
       <Hero pageTitle={pageTitle} />

@@ -21,19 +21,3 @@ export default class App extends NextApp {
     return <Component {...pageProps} footer={props.footer} />;
   }
 }
-
-// import { Client } from "../prismic-configuration";
-
-// export default function App({ Component, pageProps, footer }) {
-//   console.log(footer);
-//   return <Component {...pageProps} footer={footer} />;
-// }
-
-// export async function getInitialProps(appCtx) {
-//   const footer = await Client().getSingle("footer");
-//   return {
-//     props: {
-//       footer,
-//     },
-//   };
-// }

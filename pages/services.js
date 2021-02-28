@@ -95,12 +95,12 @@ const FAQ = styled.div`
   }
 `;
 
-export default function Services({ doc, faqs }) {
+export default function Services({ doc, faqs, footer }) {
   // const [indexLine, setIndexLine] = useState(false);
   const services = doc.data;
   //this needs to go into single service
   return (
-    <Layout pageTitle={"Services"}>
+    <Layout pageTitle={"Services"} footer={footer}>
       <Head>
         <title>Horlick Editorial - Services</title>
       </Head>
