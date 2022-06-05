@@ -11,6 +11,7 @@ import SingleService from "../components/SingleService";
 import { Client } from "../prismic-configuration";
 import { RichText } from "prismic-reactjs";
 import Prismic from "prismic-javascript";
+import FAQSingle from "../components/FAQ";
 
 const ServicesContainer = styled.section`
   /* .services-1__title {

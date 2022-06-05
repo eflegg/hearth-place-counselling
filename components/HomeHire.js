@@ -131,6 +131,7 @@ export default function HomeHire(props) {
     transform: visibleOne ? `translateY(0px)` : `translateY(90px)`,
     config: config.fast,
   });
+
   return (
     <HomeHireContainer>
       <Dots />
