@@ -1,8 +1,9 @@
 import { css } from "styled-components";
 
 export const type = {
-  header: "Libre Caslon Text",
-  body: "jaf-bernina-sans-condensed",
+  header: "Shadows Into",
+  body: "Shadows Into Light Two",
+  accent: "",
 };
 
 export const breakpoints = {
@@ -26,13 +27,13 @@ export const mediaQuery = Object.keys(breakpoints).reduce(
 );
 
 export const colours = {
-  black: "darkslategrey",
-  white: "#ffffff",
-  blue: "#026891",
-  yellowDark: "#EFB234",
-  yellow: "#ffdc5e",
-
-  red: "#c93928",
+  campfire: "#57618b",
+  lichen: "#cfd29f",
+  gold: "#d79741",
+  stone: "#b7aeb9",
+  clay: "#e9e9e9",
+  plum: "#5d3350",
+  river: "#a8afbf",
 };
 
 const theme = {

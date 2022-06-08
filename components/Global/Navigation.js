@@ -183,16 +183,7 @@ export default function Navigation(props) {
                         <a>About</a>
                       </Link>
                     </li>
-                    {/* <li
-                       className="nav-link__mobile"
-                       onClick={() => {
-                         toggleNav(false);
-                       }}
-                     >
-                       <Link href="/blog">
-                         <a>Blog</a>
-                       </Link>
-                     </li> */}
+
                     <li
                       className="nav-link__mobile"
                       onClick={() => {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "./Global/Footer";
 import Navigation from "./Global/Navigation";
 import Hero from "./Global/Hero";
-import { Client } from "../prismic-configuration";
+import { createClient } from "../prismic";
 
 const Layout = ({ pageTitle, children, footer }) => {
   console.log(footer);
@@ -19,3 +19,13 @@ const Layout = ({ pageTitle, children, footer }) => {
 };
 
 export default Layout;
+
+export async function getInitialProps() {
+  const client = createClient();
+  const footer = (await client.getSingle("footer")) || {};
+  return {
+    props: {
+      footer: footer,
+    },
+  };
+}

@@ -1,0 +1,23 @@
+{
+  "id": "115ffbdd-d5aa-464e-a29c-f7a1c45f771c",
+  "uid": "minus-sint-sit",
+  "type": "about",
+  "data": {
+    "aboutTitle": [
+      {
+        "type": "paragraph",
+        "text": "Lorem minim sunt cillum ea velit culpa pariatur ut Lorem quis adipisicing occaecat ut.",
+        "spans": []
+      }
+    ],
+    "imageOne": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
+    }
+  }
+}

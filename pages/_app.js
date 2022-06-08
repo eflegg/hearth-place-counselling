@@ -1,13 +1,19 @@
 import "../scss/typography.scss";
-
+import {
+  PrismicRichText,
+  useFirstPrismicDocument,
+  useSinglePrismicDocument,
+} from "@prismicio/react";
 import React from "react";
 import NextApp from "next/app";
-import { Client } from "../prismic-configuration";
+import { createClient } from "../prismic";
 
 export default class App extends NextApp {
-  static async getInitialProps() {
-    const client = Client();
-    const footer = (await client.getSingle("footer")) || {};
+  static async getInitialProps(appCtx) {
+    const footer = (await createClient().getSingle("footer")) || null;
+
+    console.log("FOOTER", footer);
+
     return {
       props: {
         footer: footer,
@@ -17,7 +23,11 @@ export default class App extends NextApp {
 
   render() {
     const { Component, pageProps, props } = this.props;
-    console.log(props.footer);
-    return <Component {...pageProps} footer={props.footer} />;
+    // console.log(props.footer);
+    return (
+      <>
+        <Component {...pageProps} footer={props.footer} />
+      </>
+    );
   }
 }

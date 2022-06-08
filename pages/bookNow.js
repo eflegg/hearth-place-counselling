@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import ContactForm from "../components/Forms/ContactForm";
-import Layout from "../components/pageWrapper";
+import Layout from "../components/Layout";
 import styled from "styled-components";
 import { RichText } from "prismic-reactjs";
-import { Client } from "../prismic-configuration";
+import { createClient } from "../prismic";
 
 const ContactDescrip = styled.p`
   margin: 75px auto;
@@ -17,19 +17,17 @@ export default function Contact({ doc, footer }) {
   return (
     <Layout pageTitle={"Contact"} footer={footer}>
       <Head>
-        <title>Horlick Editorial - Contact</title>
-        <meta property="og:title" content="Contact" key="title" />
+        <title>Book Now</title>
+        <meta property="og:title" content="Book Now" key="title" />
       </Head>
-      <ContactDescrip>
-        {RichText.asText(contact.contact_description)}
-      </ContactDescrip>
+
       <ContactForm />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const doc = await Client().getSingle("contact");
+  const doc = await createClient().getSingle("book-now");
   return {
     props: { doc },
   };

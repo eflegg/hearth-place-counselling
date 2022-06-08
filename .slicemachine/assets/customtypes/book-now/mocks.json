@@ -1,0 +1,14 @@
+{
+  "id": "a56c88ae-1bf6-4d64-a1ae-38b2fbc0ffc9",
+  "uid": "autem-earum-voluptatem",
+  "type": "book-now",
+  "data": {
+    "bookNowTitle": [
+      {
+        "type": "paragraph",
+        "text": "Officia adipisicing esse duis excepteur reprehenderit consequat.",
+        "spans": []
+      }
+    ]
+  }
+}

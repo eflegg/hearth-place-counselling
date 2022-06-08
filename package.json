@@ -1,18 +1,21 @@
 {
-  "name": "horlick-editorial",
+  "name": "hearthplace",
   "homepage": "http://hearthplace.erinflegg.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
-    "@prismicio/client": "^4.0.0",
+    "@prismicio/client": "^6.5.1",
+    "@prismicio/helpers": "^2.3.0",
+    "@prismicio/react": "^2.4.1",
+    "@prismicio/slice-simulator-react": "^0.2.2",
     "babel-plugin-styled-components": "^1.12.0",
     "next": "^10.0.0",
-    "prismic-javascript": "^3.0.2",
     "prismic-reactjs": "^1.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -23,5 +26,8 @@
     "sass": "^1.32.2",
     "styled-components": "^5.2.1",
     "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "slice-machine-ui": "^0.3.8"
   }
 }

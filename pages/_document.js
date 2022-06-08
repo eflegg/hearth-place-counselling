@@ -20,6 +20,20 @@ export default class MyDocument extends Document {
           <>
             {initialProps.styles}
             {sheet.getStyleElement()}
+
+            {/* <Head>
+              <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link
+                  rel="preconnect"
+                  href="https://fonts.gstatic.com"
+                  crossorigin
+                ></link>
+                <link
+                  href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&family=Shadows+Into+Light+Two&display=swap"
+                  rel="stylesheet"
+                ></link>
+              </link>
+            </Head> */}
           </>
         ),
       };

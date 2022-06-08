@@ -1,0 +1,37 @@
+{
+  "id": "74229b85-5f9c-4c1e-811b-7c41c87b1d8c",
+  "uid": "sit-cupiditate-tempore",
+  "type": "footer",
+  "data": {
+    "footerLogo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+    },
+    "phoneNumber": [
+      {
+        "type": "paragraph",
+        "text": "Amet tempor sit ex sit laboris cupidatat do tempor minim ut irure aliquip est. Ex velit nulla amet incididunt tempor.",
+        "spans": []
+      }
+    ],
+    "email": [
+      {
+        "type": "paragraph",
+        "text": "Cupidatat quis enim est sit excepteur sunt ut in. Ut do dolore veniam duis laborum quis velit esse ipsum ad pariatur aute ut deserunt. Ipsum non mollit qui elit velit officia.",
+        "spans": []
+      }
+    ],
+    "certificationText": [
+      {
+        "type": "paragraph",
+        "text": "Sit id exercitation mollit ad aliqua aliqua adipisicing proident. Pariatur est ut ex laboris adipisicing laboris consectetur aliqua elit. Anim excepteur et ea.",
+        "spans": []
+      }
+    ]
+  }
+}

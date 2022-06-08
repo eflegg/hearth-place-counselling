@@ -52,7 +52,7 @@ $xl: 1800px;
   }
 }
 
-@import url("https://use.typekit.net/lho3axg.css");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&family=Shadows+Into+Light+Two&display=swap");
 
 @mixin font-size($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
@@ -67,15 +67,16 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-$headerFont: "kings-caslon-display, serif;";
-$bodyFont: "jaf-bernina-sans-condensed";
+$headerFont: "Shadows Into Light Two", cursive;
+$bodyFont: "Raleway", sans-serif;
 
-$black: darkslategrey;
-$white: #ffffff;
-$blue: #026891;
-$yellowDark: #efb234;
-$yellow: #ffdc5e;
-$red: #c93928;
+$campfire: #57618b;
+$lichen: #cfd29f;
+$gold: #d79741;
+$stone: #b7aeb9;
+$clay: #e9e9e9;
+$plum: #5d3350;
+$river: #a8afbf;
 
 h1,
 h2,
@@ -83,7 +84,7 @@ h3,
 h4 {
   font-family: $headerFont;
   font-weight: 400;
-  color: $black;
+  color: $campfire;
   margin: 0;
 }
 p {
@@ -99,7 +100,7 @@ a {
   letter-spacing: 0.2rem;
   font-size: 16px;
   line-height: 150%;
-  color: $black;
+  color: $campfire;
   font-weight: 400;
   @include media-query-min($sm) {
     font-size: calc(16px + 2 * ((100vw - 320px) / 680));
@@ -113,7 +114,7 @@ h1 {
   letter-spacing: 0.2rem;
   font-size: 48px;
   line-height: 110%;
-  color: $blue;
+  color: $campfire;
   @include media-query-min($sm) {
     font-size: calc(48px + 12 * ((100vw - 320px) / 680));
   }
@@ -149,7 +150,7 @@ h4 {
   letter-spacing: 0.2rem;
   font-size: 16px;
   line-height: 150%;
-  color: $black;
+  color: $campfire;
   font-weight: 400;
   @include media-query-min($sm) {
     font-size: calc(16px + 2 * ((100vw - 320px) / 680));
@@ -163,14 +164,11 @@ h4 {
 li {
   list-style: none;
 }
+.accent {
+  font-weight: 100;
+}
 
 /***  Utilities  ***/
-
-.dots-reverse {
-  div {
-    margin-left: auto;
-  }
-}
 
 .text-center {
   text-align: center;
@@ -181,11 +179,23 @@ li {
 .text-right {
   text-align: right;
 }
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
 
 /***  Buttons  ***/
 
 .btn {
-  background-color: $yellow;
+  background-color: rebeccapurple;
   padding: 15px 30px;
   margin: 30px auto;
   border: 0px;

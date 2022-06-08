@@ -1,0 +1,90 @@
+{
+  "id": "c90dde0c-4cd8-43c8-a91a-4e863c147b4b",
+  "uid": "voluptatem-delectus-dolorum",
+  "type": "home-page",
+  "data": {
+    "heroLogo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
+    },
+    "heroText": [
+      {
+        "type": "paragraph",
+        "text": "Enim mollit qui ipsum veniam ullamco eu irure proident veniam duis eu dolor in. Sunt in cupidatat amet deserunt elit culpa exercitation nisi.",
+        "spans": []
+      }
+    ],
+    "heroButton": [
+      {
+        "heroButtonLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "HeroButtonText": [
+          {
+            "type": "paragraph",
+            "text": "Tempor duis minim voluptate eiusmod do tempor ut ullamco sit.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heroButtonLink": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "HeroButtonText": [
+          {
+            "type": "paragraph",
+            "text": "Non sit consequat quis anim.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heroButtonLink": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "HeroButtonText": [
+          {
+            "type": "paragraph",
+            "text": "Magna laborum velit minim. Dolore cupidatat fugiat cupidatat culpa proident aliqua ipsum excepteur Lorem ea ea qui.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heroButtonLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "HeroButtonText": [
+          {
+            "type": "paragraph",
+            "text": "Ad nostrud minim exercitation ipsum non aliqua et cupidatat est. Nostrud laboris amet non mollit sint culpa eiusmod nisi proident do ex mollit reprehenderit duis ex. Sit laboris culpa ad laborum qui amet nostrud eiusmod ea.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heroButtonLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "HeroButtonText": [
+          {
+            "type": "paragraph",
+            "text": "Deserunt qui fugiat sunt est nulla veniam est voluptate fugiat eiusmod sunt culpa. Amet adipisicing sint amet dolore sint proident consequat enim minim cillum ipsum id sit adipisicing elit.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}
