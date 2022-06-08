@@ -1,9 +1,4 @@
 import "../scss/typography.scss";
-import {
-  PrismicRichText,
-  useFirstPrismicDocument,
-  useSinglePrismicDocument,
-} from "@prismicio/react";
 import React from "react";
 import NextApp from "next/app";
 import { createClient } from "../prismic";

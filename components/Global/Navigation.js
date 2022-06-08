@@ -234,16 +234,7 @@ export default function Navigation(props) {
               <a className="nav-link">About</a>
             </ActiveLink>
           </li>
-          <li>
-            <ActiveLink activeClassName="active" href="/services">
-              <a className="nav-link">Services</a>
-            </ActiveLink>
-          </li>
-          {/* <li>
-            <ActiveLink activeClassName="active" href="/blog">
-              <a className="nav-link">Blog</a>
-            </ActiveLink>
-          </li> */}
+
           <li>
             <ActiveLink activeClassName="active" href="/contact">
               <a className="nav-link">Contact</a>

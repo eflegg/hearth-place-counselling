@@ -1,7 +1,49 @@
 {
   "_cts": {
-    "home-page": {},
-    "service": {},
+    "home-page": {
+      "homeAbout": {
+        "header": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      },
+      "heroText": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "service": {
+      "sectionOne": {
+        "subheadOne": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        },
+        "subheadTwo": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        },
+        "paraTwo": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      },
+      "serviceTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
     "about": {},
     "modalities": {},
     "book-now": {},

@@ -5,13 +5,20 @@
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
       "serviceTitle": {
         "type": "StructuredText",
         "config": {
           "label": "Service Title",
           "placeholder": "",
           "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "single": "heading1"
         }
       },
       "sectionOne": {
@@ -19,10 +26,10 @@
         "config": {
           "label": "Section One",
           "fields": {
-            "introText": {
+            "subheadOne": {
               "type": "StructuredText",
               "config": {
-                "label": "Intro Text",
+                "label": "Subhead One",
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -37,10 +44,28 @@
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
             },
+            "subheadTwo": {
+              "type": "StructuredText",
+              "config": {
+                "label": "SubheadTwo",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
             "paraTwo": {
               "type": "StructuredText",
               "config": {
                 "label": "Para Two",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "subheadThree": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Subhead Three",
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"

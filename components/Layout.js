@@ -10,7 +10,7 @@ const Layout = ({ pageTitle, children, footer }) => {
   return (
     <>
       <Hero pageTitle={pageTitle} />
-      <div className="layout-container">
+      <div className="">
         {children}
         <Footer footerData={footer} />
       </div>

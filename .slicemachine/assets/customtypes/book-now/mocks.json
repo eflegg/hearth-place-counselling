@@ -1,14 +1,6 @@
 {
-  "id": "a56c88ae-1bf6-4d64-a1ae-38b2fbc0ffc9",
-  "uid": "autem-earum-voluptatem",
+  "id": "f46775b9-7ab5-4a36-9e3b-96f9cc56460d",
+  "uid": "blanditiis-aut-mollitia",
   "type": "book-now",
-  "data": {
-    "bookNowTitle": [
-      {
-        "type": "paragraph",
-        "text": "Officia adipisicing esse duis excepteur reprehenderit consequat.",
-        "spans": []
-      }
-    ]
-  }
+  "data": {}
 }
