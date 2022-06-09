@@ -1,8 +1,8 @@
 import { css } from "styled-components";
 
 export const type = {
-  header: "Shadows Into",
-  body: "Shadows Into Light Two",
+  header: "Shadows Into Light Two",
+  body: "Raleway",
   accent: "",
 };
 

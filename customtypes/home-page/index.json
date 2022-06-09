@@ -22,31 +22,6 @@
           "single": "paragraph"
         }
       },
-      "heroButton": {
-        "type": "Group",
-        "config": {
-          "label": "Hero Button",
-          "fields": {
-            "heroButtonLink": {
-              "type": "Link",
-              "config": {
-                "label": "Hero Button Link",
-                "placeholder": "",
-                "select": null
-              }
-            },
-            "HeroButtonText": {
-              "type": "StructuredText",
-              "config": {
-                "label": "Hero Button Text",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            }
-          }
-        }
-      },
       "heroImage": {
         "type": "Image",
         "config": {
@@ -55,56 +30,63 @@
           "thumbnails": []
         }
       },
-      "homeAbout": {
-        "type": "Group",
+      "heroButtonText": {
+        "type": "Text",
         "config": {
-          "label": "Home About",
-          "fields": {
-            "header": {
-              "type": "StructuredText",
-              "config": {
-                "label": "Home About Header",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "paraOne": {
-              "type": "StructuredText",
-              "config": {
-                "label": "Para One",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "subheader": {
-              "type": "StructuredText",
-              "config": {
-                "label": "Subheader",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "paraTwo": {
-              "type": "StructuredText",
-              "config": {
-                "label": "Para Two",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "image": {
-              "type": "Image",
-              "config": {
-                "label": "Image",
-                "constraint": {},
-                "thumbnails": []
-              }
-            }
-          }
+          "label": "Hero Button Text",
+          "placeholder": ""
+        }
+      },
+      "heroButtonLink": {
+        "type": "Link",
+        "config": {
+          "label": "Hero Button Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "homeAboutHeader": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home About Header",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "homeAboutParaOne": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home About Para One",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "homeAboutSubhead": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home About Subhead",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "homeAboutParaTwo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home About Para Two",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "homeAboutImage": {
+        "type": "Image",
+        "config": {
+          "label": "Home About Image",
+          "constraint": {},
+          "thumbnails": []
         }
       }
     },

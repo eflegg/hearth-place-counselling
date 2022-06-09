@@ -27,7 +27,7 @@ export default function Contact({ doc, footer }) {
 }
 
 export async function getStaticProps() {
-  const doc = await createClient().getSingle("book-now");
+  const doc = await createClient().getSingle("booknow");
   return {
     props: { doc },
   };

@@ -62,11 +62,6 @@ $xl: 1800px;
 html {
   font-size: 62.5%;
 }
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 $headerFont: "Shadows Into Light Two", cursive;
 $bodyFont: "Raleway", sans-serif;
 
@@ -77,6 +72,12 @@ $stone: #b7aeb9;
 $clay: #e9e9e9;
 $plum: #5d3350;
 $river: #a8afbf;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: $clay;
+}
 
 h1,
 h2,
@@ -89,7 +90,7 @@ h4 {
 }
 p {
   font-family: $bodyFont;
-  font-weight: 300;
+  font-weight: 400;
 }
 a {
   text-decoration: none;
@@ -102,13 +103,13 @@ a {
   line-height: 150%;
   color: $campfire;
   font-weight: 100;
-  @include media-query-min($sm) {
-    font-size: calc(16px + 2 * ((100vw - 320px) / 680));
-  }
-  @include media-query-min($md) {
-    @include font-size(1.8);
-    line-height: 32px;
-  }
+  // @include media-query-min($sm) {
+  //   font-size: calc(16px + 2 * ((100vw - 320px) / 680));
+  // }
+  // @include media-query-min($md) {
+  //   @include font-size(1.8);
+  //   line-height: 32px;
+  // }
 }
 h1 {
   letter-spacing: 0.2rem;
@@ -210,16 +211,6 @@ li {
   text-align: center;
 }
 
-// Navigation
-
-.mobile-nav {
-  @include media-query-min($md) {
-    display: none;
-  }
-}
-.desktop-nav {
-  display: none;
-  @include media-query-min($md) {
-    display: block;
-  }
+img {
+  max-width: 100%;
 }

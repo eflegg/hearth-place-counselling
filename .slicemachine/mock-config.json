@@ -1,15 +1,31 @@
 {
   "_cts": {
     "home-page": {
-      "homeAbout": {
-        "header": {
-          "config": {
-            "patternType": "PARAGRAPH",
-            "blocks": 1
-          }
+      "heroText": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
         }
       },
-      "heroText": {
+      "homeAboutHeader": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "homeAboutParaOne": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "homeAboutSubhead": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "homeAboutParaTwo": {
         "config": {
           "patternType": "PARAGRAPH",
           "blocks": 1
@@ -47,6 +63,14 @@
     "about": {},
     "modalities": {},
     "book-now": {},
-    "footer": {}
+    "footer": {},
+    "booknow": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
   }
 }

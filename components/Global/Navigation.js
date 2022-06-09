@@ -3,30 +3,53 @@ import Head from "next/head";
 import styled from "styled-components";
 import theme from "../Theme";
 import Link from "next/link";
-import { useMediaQuery } from "react-responsive";
 import { Spring, config } from "react-spring/renderprops.cjs";
 import ActiveLink from "./ActiveLink";
 
 const MobileNav = styled.nav`
+  position: relative;
+  z-index: 3;
+
+  .menu-image {
+    width: 400px;
+    img {
+      max-width: 100%;
+    }
+  }
   .nav-active {
-    display: block;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    ${theme.mediaQuery.sm`
+    flex-direction: row;
+    align-items: center;
+    `}
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
+    height: 800px;
+    ${theme.mediaQuery.sm`
     height: 100vh;
-    width: 110vw;
-    background-color: ${theme.colours.yellow};
+    `}
+    width: 100%;
+    background-color: ${theme.colours.clay};
     ul {
       margin-top: 50px;
       padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+      ${theme.mediaQuery.sm`
+      align-items: flex-start;
+      `}
       .nav-link__mobile {
         a {
-          color: white;
-          font-size: 30px;
+          color: ${theme.colours.campfire};
+          font-family: ${theme.type.body};
+          font-size: 48px;
+          font-weight: 400;
           margin-top: 20px;
           line-height: 80px;
         }
@@ -34,6 +57,8 @@ const MobileNav = styled.nav`
     }
   }
   .btn-nav {
+    cursor: pointer;
+
     &:focus {
       outline: none;
     }
@@ -46,14 +71,15 @@ const MobileNav = styled.nav`
     background: transparent;
     border: 0px;
     position: absolute;
-    top: 5px;
-    right: 25px;
+    top: 18px;
+    right: 15px;
     span {
-      width: 50px;
+      width: 35px;
       height: 5px;
-      margin-bottom: 5px;
+      margin-bottom: 1px;
+      border-radius: 3px;
       margin-top: 5px;
-      background: ${theme.colours.blue};
+      background: ${theme.colours.gold};
       z-index: 2;
     }
     .burger-2 {
@@ -97,40 +123,7 @@ const MobileNav = styled.nav`
   }
 `;
 
-const DesktopNav = styled.nav`
-  position: absolute;
-  z-index: 1;
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    li {
-      list-style: none;
-      margin-right: 30px;
-      a {
-        color: ${theme.colours.blue};
-        &.active:after {
-          content: "";
-          display: block;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          margin: 0 auto;
-          background-color: ${theme.colours.blue};
-          position: relative;
-          top: 8px;
-        }
-      }
-    }
-  }
-`;
-
 export default function Navigation(props) {
-  const isDesktop = useMediaQuery({
-    query: `(min-device-width: ${theme.breakpoints.md})`,
-  });
-  const isMobile = useMediaQuery({
-    query: `(max-device-width: ${theme.breakpoints.md})`,
-  });
   const [navActive, toggleNav] = useState(false);
   return (
     <>
@@ -138,7 +131,6 @@ export default function Navigation(props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      {/* {isMobile ? ( */}
       <MobileNav className="mobile-nav" style={props}>
         <button
           className={`btn-nav ${navActive ? "nav-close" : "nav-open"}`}
@@ -160,10 +152,7 @@ export default function Navigation(props) {
         </button>
         {navActive ? (
           <>
-            <Spring
-              from={{ width: "0vw", height: "0vh" }}
-              to={{ width: "100vw", height: "100vh" }}
-            >
+            <Spring from={{ width: "0vw" }} to={{ width: "100vw" }}>
               {(props) => (
                 <nav
                   style={props}
@@ -172,6 +161,9 @@ export default function Navigation(props) {
                     props.className ? props.className : ""
                   }  nav-active`}
                 >
+                  <div className="menu-image">
+                    <img src="/Hearth-Place-moon-grass.png" alt="" />
+                  </div>
                   <ul>
                     <li
                       className="nav-link__mobile"
@@ -200,8 +192,8 @@ export default function Navigation(props) {
                         toggleNav(false);
                       }}
                     >
-                      <Link href="/contact">
-                        <a>Contact</a>
+                      <Link href="/bookNow">
+                        <a>Book Now</a>
                       </Link>
                     </li>
                     <li
@@ -219,30 +211,70 @@ export default function Navigation(props) {
               )}
             </Spring>
           </>
-        ) : null}
-      </MobileNav>
-      {/* ) : ( */}
-      <DesktopNav className="desktop-nav">
-        <ul className="nav">
-          <li>
-            <ActiveLink activeClassName="active" href="/">
-              <a className="nav-link">Home</a>
-            </ActiveLink>
-          </li>
-          <li>
-            <ActiveLink activeClassName="active" href="/about">
-              <a className="nav-link">About</a>
-            </ActiveLink>
-          </li>
+        ) : (
+          <Spring
+            from={{ width: "100vw", opacity: "1" }}
+            to={{ width: "0vw", opacity: "0" }}
+          >
+            {(props) => (
+              <nav
+                style={props}
+                id="navMenu"
+                className={`${
+                  props.className ? props.className : ""
+                }  nav-active`}
+              >
+                <div className="menu-image">
+                  <img src="/Hearth-Place-moon-grass.png" alt="" />
+                </div>
+                <ul>
+                  <li
+                    className="nav-link__mobile"
+                    onClick={() => {
+                      toggleNav(false);
+                    }}
+                  >
+                    <Link href="/about">
+                      <a>About</a>
+                    </Link>
+                  </li>
 
-          <li>
-            <ActiveLink activeClassName="active" href="/contact">
-              <a className="nav-link">Contact</a>
-            </ActiveLink>
-          </li>
-        </ul>
-      </DesktopNav>
-      {/* )} */}
+                  <li
+                    className="nav-link__mobile"
+                    onClick={() => {
+                      toggleNav(false);
+                    }}
+                  >
+                    <Link href="/services" activeClassName="active">
+                      Services
+                    </Link>
+                  </li>
+                  <li
+                    className="nav-link__mobile"
+                    onClick={() => {
+                      toggleNav(false);
+                    }}
+                  >
+                    <Link href="/bookNow">
+                      <a>Book Now</a>
+                    </Link>
+                  </li>
+                  <li
+                    className="nav-link__mobile"
+                    onClick={() => {
+                      toggleNav(false);
+                    }}
+                  >
+                    <Link href="/">
+                      <a>Home</a>
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            )}
+          </Spring>
+        )}
+      </MobileNav>
     </>
   );
 }
