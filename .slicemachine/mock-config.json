@@ -30,7 +30,20 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
-      }
+      },
+      "homeServicesTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "homeModalitiesTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "homeServices": {}
     },
     "service": {
       "sectionOne": {

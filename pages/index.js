@@ -125,13 +125,21 @@ const Hero = styled.section`
   }
 `;
 
+const ServiceCard = styled.div`
+  width: 30%;
+`;
+
+const HomeServices = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 export default function Home({ doc, footer }) {
   const props = useSpring({
     config: config.slow,
   });
   const home = doc.data;
-  console.log("home: ", doc.data);
-  console.log(home);
+  console.log("home services: ", home.homeServices);
 
   return (
     <HomeContainer>
@@ -189,6 +197,27 @@ export default function Home({ doc, footer }) {
           <PrismicRichText field={home.homeAboutSubhead} />
           <PrismicRichText field={home.homeAboutParaTwo} />
         </div>
+
+        <HomeServices className="home-services">
+          <PrismicRichText field={home.homeServicesTitle} />
+          <div className="d-flex">
+            {home.homeServices.map((homeService, index) => {
+              return (
+                <ServiceCard key={index}>
+                  <PrismicLink document={homeService.homeServicesLink}>
+                    My Link
+                  </PrismicLink>
+
+                  <img
+                    src={homeService.image.url}
+                    alt={homeService.image.alt}
+                  />
+                  <PrismicRichText field={homeService.title} />
+                </ServiceCard>
+              );
+            })}
+          </div>
+        </HomeServices>
       </Layout>
     </HomeContainer>
   );

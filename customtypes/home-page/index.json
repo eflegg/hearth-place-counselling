@@ -91,6 +91,15 @@
       }
     },
     "Home Services": {
+      "homeServicesTitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home Services Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
       "homeServices": {
         "type": "Group",
         "config": {
@@ -103,14 +112,6 @@
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "select": null
               }
             },
             "image": {
@@ -129,6 +130,13 @@
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
+            },
+            "homeServicesLink": {
+              "type": "Link",
+              "config": {
+                "label": "Home Services Link",
+                "select": "document"
+              }
             }
           }
         }
@@ -142,6 +150,15 @@
       }
     },
     "Home Modalities": {
+      "homeModalitiesTitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home Modalities Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
       "homeModality": {
         "type": "Group",
         "config": {
