@@ -1,7 +1,9 @@
 import "../scss/typography.scss";
 import React from "react";
 import NextApp from "next/app";
-import { createClient } from "../prismic";
+import { linkResolver, createClient } from "../prismic";
+import Link from "next/link";
+import { PrismicProvider } from "@prismicio/react";
 
 export default class App extends NextApp {
   static async getInitialProps(appCtx) {
@@ -21,7 +23,20 @@ export default class App extends NextApp {
     // console.log(props.footer);
     return (
       <>
-        <Component {...pageProps} footer={props.footer} />
+        {/* <Component {...pageProps} footer={props.footer} /> */}
+
+        <PrismicProvider
+          linkResolver={linkResolver}
+          internalLinkComponent={({ href, children, ...props }) => (
+            <Link href={href}>
+              <a {...props}>{children}</a>
+            </Link>
+          )}
+        >
+          {/* <PrismicPreview repositoryName={repositoryName}> */}
+          <Component {...pageProps} footer={props.footer} />
+          {/* </PrismicPreview> */}
+        </PrismicProvider>
       </>
     );
   }

@@ -125,13 +125,80 @@ const Hero = styled.section`
   }
 `;
 
-const ServiceCard = styled.div`
-  width: 30%;
+const HomeServices = styled.section`
+  border: 2px solid hotpink;
+  text-align: center;
+  margin: 180px auto 0;
+
+  position: relative;
+  h2 {
+    font-size: 56px;
+    margin-bottom: 90px;
+    width: 100%;
+    margin: 0 auto 90px;
+  }
+  .service-card--container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .gold-box {
+    background: ${theme.colours.gold};
+    height: 195px;
+    width: 100%;
+    position: absolute;
+    display: none;
+    ${theme.mediaQuery.md`
+    display: block;
+    `}
+    bottom: 0;
+    z-index: -1;
+  }
 `;
 
-const HomeServices = styled.section`
-  display: flex;
-  flex-wrap: wrap;
+const ServiceCard = styled.div`
+  width: 350px;
+  ${theme.mediaQuery.md`
+    width: 325px;
+    `}
+  ${theme.mediaQuery.lg`
+     width: 350px;
+    `}
+  img {
+    /* width: 300px;
+    height: 300px; */
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  p{
+    ${theme.mediaQuery.md`
+     color: ${theme.colours.clay};
+    `}
+    color: ${theme.colours.gold};
+  }
+  .service-block--title {
+    position: absolute;
+    width: 175px;
+    ${theme.mediaQuery.md`
+     width: 250px;
+    `}
+     ${theme.mediaQuery.lg`
+     width: 300px;
+    `}
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    background: ${theme.colours.clay};
+    padding: 4px 50px;
+    border-radius: 8px;
+    text-align: center;
+    p {
+      margin: 0;
+      font-family: ${theme.type.header};
+      font-size: 36px;
+      color: ${theme.colours.campfire};
+    }
+  }
+  .
 `;
 
 export default function Home({ doc, footer }) {
@@ -200,23 +267,27 @@ export default function Home({ doc, footer }) {
 
         <HomeServices className="home-services">
           <PrismicRichText field={home.homeServicesTitle} />
-          <div className="d-flex">
+          <div className="service-card--container d-flex">
             {home.homeServices.map((homeService, index) => {
               return (
                 <ServiceCard key={index}>
                   <PrismicLink document={homeService.homeServicesLink}>
-                    My Link
+                    <div className="position-relative">
+                      <img
+                        src={homeService.image.url}
+                        alt={homeService.image.alt}
+                      />
+                      <div className="service-block--title">
+                        <PrismicRichText field={homeService.title} />
+                      </div>
+                    </div>
                   </PrismicLink>
-
-                  <img
-                    src={homeService.image.url}
-                    alt={homeService.image.alt}
-                  />
-                  <PrismicRichText field={homeService.title} />
+                  <PrismicRichText field={homeService.excerpt} />
                 </ServiceCard>
               );
             })}
           </div>
+          <div className="gold-box"></div>
         </HomeServices>
       </Layout>
     </HomeContainer>
