@@ -125,11 +125,9 @@ const Hero = styled.section`
   }
 `;
 
-const HomeServices = styled.section`
-  border: 2px solid hotpink;
+const HomeCardContainer = styled.section`
   text-align: center;
   margin: 180px auto 0;
-
   position: relative;
   h2 {
     font-size: 56px;
@@ -153,6 +151,44 @@ const HomeServices = styled.section`
     bottom: 0;
     z-index: -1;
   }
+  .modalities-card--container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .book-now--inner {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    ${theme.mediaQuery.sm`
+    flex-direction: row;
+    align-items: stretch;
+    `}
+    .book-now--text {
+      background: ${theme.colours.stone};
+      border-radius: 12px;
+      width: 100%;
+      padding: 35px 5px;
+      p {
+        color: ${theme.colours.clay};
+      }
+      ${theme.mediaQuery.sm`
+      width: 50%;
+      padding: 70px;
+      `}
+    }
+    .book-now--img {
+      display: none;
+      height: 100%;
+      ${theme.mediaQuery.sm`
+      display: block;
+      `}
+    }
+  }
 `;
 
 const ServiceCard = styled.div`
@@ -164,8 +200,8 @@ const ServiceCard = styled.div`
      width: 350px;
     `}
   img {
-    /* width: 300px;
-    height: 300px; */
+    /* width: 300px; */
+    height: 300px;
     object-fit: cover;
     border-radius: 12px;
   }
@@ -200,13 +236,17 @@ const ServiceCard = styled.div`
   }
   .
 `;
+const ModalityCard = styled.div`
+  width: 200px;
+  margin-bottom: 100px;
+`;
 
 export default function Home({ doc, footer }) {
   const props = useSpring({
     config: config.slow,
   });
   const home = doc.data;
-  console.log("home services: ", home.homeServices);
+  console.log("home modalities: ", home.homeModality);
 
   return (
     <HomeContainer>
@@ -265,7 +305,7 @@ export default function Home({ doc, footer }) {
           <PrismicRichText field={home.homeAboutParaTwo} />
         </div>
 
-        <HomeServices className="home-services">
+        <HomeCardContainer className="home-services">
           <PrismicRichText field={home.homeServicesTitle} />
           <div className="service-card--container d-flex">
             {home.homeServices.map((homeService, index) => {
@@ -288,7 +328,46 @@ export default function Home({ doc, footer }) {
             })}
           </div>
           <div className="gold-box"></div>
-        </HomeServices>
+        </HomeCardContainer>
+
+        <HomeCardContainer className="home-services">
+          <PrismicRichText field={home.homeModalitiesTitle} />
+
+          <div className="modalities-card--container">
+            {home.homeModality.map((modality, index) => {
+              return (
+                <ModalityCard key={index}>
+                  <PrismicLink field={modality.link}>
+                    <PrismicRichText field={modality.title} />
+                    <img src={modality.image.url} alt={modality.image.alt} />
+                    <PrismicRichText field={modality.excerpt} />
+                    <Button
+                      dark
+                      colour={`${theme.colours.clay}`}
+                      value="Learn More"
+                    />
+                  </PrismicLink>
+                </ModalityCard>
+              );
+            })}
+          </div>
+        </HomeCardContainer>
+        <HomeCardContainer className="book-now">
+          <PrismicRichText field={home.bookNowTitle} />
+          <div className="book-now--inner">
+            <div className="book-now--text">
+              <PrismicRichText field={home.bookNowExcerpt} />
+              <Button
+                value={home.bookNowButtonText}
+                link="bookNow"
+                colour={`${theme.colours.gold}`}
+              />
+            </div>
+            <div className="book-now--img">
+              <img src={home.bookNowImage.url} alt={home.bookNowImage.alt} />
+            </div>
+          </div>
+        </HomeCardContainer>
       </Layout>
     </HomeContainer>
   );

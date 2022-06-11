@@ -11,7 +11,7 @@
           "label": "About Title",
           "placeholder": "",
           "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "single": "heading1"
         }
       },
       "imageOne": {
@@ -20,6 +20,198 @@
           "label": "Image One",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "paraOne": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Para One",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "paraTwo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Para Two",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "imageTwo": {
+        "type": "Image",
+        "config": {
+          "label": "Image Two",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "subHead": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Sub Head",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "paraThree": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Para Three",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      }
+    },
+    "Section 2": {
+      "fullWidthImage": {
+        "type": "Image",
+        "config": {
+          "label": "Full Width Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "imageThree": {
+        "type": "Image",
+        "config": {
+          "label": "Image Three",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "paraFour": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Para Four",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "paraFive": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Para Five",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "consultationText": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Consultation Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "buttonText": {
+        "type": "Text",
+        "config": {
+          "label": "Button Text",
+          "placeholder": ""
+        }
+      },
+      "buttonLink": {
+        "type": "Link",
+        "config": {
+          "label": "Button Link",
+          "select": "document"
+        }
+      }
+    },
+    "Credentials": {
+      "credentialsSubhead": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Credentials Subhead",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "credentialsHeader": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Credentials Header",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        }
+      },
+      "credentialsList": {
+        "type": "Group",
+        "config": {
+          "label": "Credentials List",
+          "fields": {
+            "credential": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Credential",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              }
+            }
+          }
+        }
+      },
+      "educationHeader": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Education Header",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        }
+      },
+      "educationList": {
+        "type": "Group",
+        "config": {
+          "label": "Education List",
+          "fields": {
+            "education": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Education",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              }
+            }
+          }
+        }
+      },
+      "additionalTrainingHeader": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Additional Training Header",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        }
+      },
+      "additionalTraining": {
+        "type": "Group",
+        "config": {
+          "label": "Additional Training",
+          "fields": {
+            "training": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Training",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              }
+            }
+          }
         }
       }
     }

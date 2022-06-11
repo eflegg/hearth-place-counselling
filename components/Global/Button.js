@@ -5,7 +5,8 @@ import theme from "../Theme";
 import Link from "next/link";
 
 const ButtonContainer = styled.button`
-  background: ${theme.colours.clay};
+  background: ${(props) =>
+    props.dark ? `${theme.colours.campfire}` : `${theme.colours.clay}`};
   color: ${(props) => props.colour};
   border-radius: 8px;
   padding: 5px 35px;
@@ -15,11 +16,18 @@ const ButtonContainer = styled.button`
   cursor: pointer;
 `;
 
-export default function Button({ value, colour, link, large, className }) {
+export default function Button({
+  value,
+  colour,
+  link,
+  large,
+  className,
+  dark,
+}) {
   return (
     <Link href={`/${link}`}>
       <a className={`${className ? className : ""}`}>
-        <ButtonContainer large={large} colour={colour}>
+        <ButtonContainer dark={dark} large={large} colour={colour}>
           {value}
         </ButtonContainer>
       </a>

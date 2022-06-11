@@ -170,15 +170,7 @@
                 "label": "Title",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "select": null
+                "single": "heading3"
               }
             },
             "image": {
@@ -197,61 +189,57 @@
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "select": "document"
+              }
             }
           }
         }
       }
     },
     "Book Now": {
-      "title": {
+      "bookNowTitle": {
         "type": "StructuredText",
         "config": {
-          "label": "Title",
+          "label": "Book Now Title",
           "placeholder": "",
           "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "single": "heading2"
         }
       },
-      "excerpt": {
+      "bookNowExcerpt": {
         "type": "StructuredText",
         "config": {
-          "label": "Excerpt",
+          "label": "Book Now Excerpt",
           "placeholder": "",
           "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "single": "paragraph"
         }
       },
-      "image": {
+      "bookNowImage": {
         "type": "Image",
         "config": {
-          "label": "Image",
+          "label": "Book Now Image",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "button": {
-        "type": "Group",
+      "bookNowButtonText": {
+        "type": "Text",
         "config": {
-          "label": "Button",
-          "fields": {
-            "buttonText": {
-              "type": "StructuredText",
-              "config": {
-                "label": "Button Text",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "buttonLink": {
-              "type": "Link",
-              "config": {
-                "label": "Button Link",
-                "placeholder": "",
-                "select": null
-              }
-            }
-          }
+          "label": "Book Now Button Text",
+          "placeholder": ""
+        }
+      },
+      "bookNowLink": {
+        "type": "Link",
+        "config": {
+          "label": "Book Now Link",
+          "select": "document"
         }
       }
     }

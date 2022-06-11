@@ -8,22 +8,24 @@ import { Spring, Transition, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
 import { RichText } from "prismic-reactjs";
 import { createClient } from "../prismic";
+import { PrismicRichText, PrismicLink } from "@prismicio/react";
 
-const AboutContainer = styled.section``;
+const modalitiesContainer = styled.section``;
 
-export default function About({ about, footer }) {
+export default function Modalities({ modalities, footer }) {
   return (
-    <Layout pageTitle={"About"} footer={footer}>
+    <Layout pageTitle={"Modalities"} footer={footer}>
       <Head>
-        <title> About</title>
+        <title>Modalities</title>
       </Head>
+      <PrismicRichText field={modalities.data.modalitiesTitle} />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const about = await createClient().getSingle("about");
+  const modalities = await createClient().getSingle("modalities");
   return {
-    props: { about },
+    props: { modalities },
   };
 }

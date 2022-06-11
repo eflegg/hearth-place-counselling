@@ -15,13 +15,11 @@ const ContactDescrip = styled.p`
 export default function Contact({ doc, footer }) {
   const contact = doc.data;
   return (
-    <Layout pageTitle={"Contact"} footer={footer}>
+    <Layout pageTitle={"Book Now"} footer={footer}>
       <Head>
         <title>Book Now</title>
         <meta property="og:title" content="Book Now" key="title" />
       </Head>
-
-      <ContactForm />
     </Layout>
   );
 }
