@@ -1,13 +1,207 @@
 {
-  "id": "4abfe813-8333-42c0-833d-6e8898cc7689",
-  "uid": "quae-enim-deleniti",
+  "id": "4be37b22-caa6-45b9-b363-d35058d4b382",
+  "uid": "quis-quos-quae",
   "type": "modalities",
   "data": {
     "modalitiesTitle": [
       {
         "type": "heading1",
-        "text": "Productize efficient experiences",
+        "text": "Utilize customized channels",
         "spans": []
+      }
+    ],
+    "modalities": [
+      {
+        "title": [
+          {
+            "type": "heading4",
+            "text": "Redefine global synergies",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Ullamco laboris aute cillum ex incididunt et in Lorem culpa velit sint quis veniam laboris. Sint ipsum mollit cillum velit enim ullamco veniam nulla. Aliquip culpa est Lorem.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading5",
+            "text": "Productize strategic eyeballs",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading4",
+            "text": "Streamline B2C infomediaries",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Nostrud incididunt ullamco eiusmod adipisicing quis cillum nulla culpa in laboris cillum et. Aute excepteur anim amet anim est ex.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading5",
+            "text": "Target integrated eyeballs",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading4",
+            "text": "Benchmark sexy solutions",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Ea veniam sit cillum aliquip eiusmod. Qui excepteur Lorem qui qui minim eu laborum consectetur sit eu amet veniam ipsum in. Do aliqua ut cillum nulla occaecat aliquip nostrud mollit qui nostrud et cupidatat.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading5",
+            "text": "Innovate global platforms",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading4",
+            "text": "Mesh plug-and-play channels",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "In proident laborum non velit.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading5",
+            "text": "Enable wireless metrics",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading4",
+            "text": "Enable bleeding-edge e-services",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Aute aute in ipsum cupidatat magna occaecat nulla est incididunt occaecat.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading5",
+            "text": "Exploit impactful synergies",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading4",
+            "text": "Iterate vertical supply-chains",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Fugiat reprehenderit elit anim.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading5",
+            "text": "Strategize integrated content",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+        }
       }
     ]
   }

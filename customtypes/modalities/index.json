@@ -13,6 +13,49 @@
           "allowTargetBlank": true,
           "single": "heading1"
         }
+      },
+      "modalities": {
+        "type": "Group",
+        "config": {
+          "label": "Modalities",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading4"
+              }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,strong"
+              }
+            },
+            "quote": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Quote",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading5"
+              }
+            },
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "Icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
       }
     }
   }
