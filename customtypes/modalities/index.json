@@ -25,7 +25,7 @@
                 "label": "Title",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "heading4"
+                "single": "heading3"
               }
             },
             "description": {
@@ -43,7 +43,7 @@
                 "label": "Quote",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "heading5"
+                "single": "heading4"
               }
             },
             "icon": {
