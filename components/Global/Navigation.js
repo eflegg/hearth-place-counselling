@@ -7,9 +7,10 @@ import { Spring, config } from "react-spring/renderprops.cjs";
 import ActiveLink from "./ActiveLink";
 
 const MobileNav = styled.nav`
-  position: relative;
+  position: absolute;
+  top: 0px;
+  right: 0px;
   z-index: 3;
-
   .menu-image {
     width: 400px;
     img {

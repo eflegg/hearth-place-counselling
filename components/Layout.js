@@ -5,6 +5,7 @@ import Navigation from "./Global/Navigation";
 import Hero from "./Global/Hero";
 import { createClient } from "../prismic";
 import styled from "styled-components";
+import theme from "../components/Theme";
 
 const MenuLogo = styled.div`
   position: absolute;
@@ -13,11 +14,24 @@ const MenuLogo = styled.div`
   z-index: 2;
   width: 80px;
 `;
+const LayoutContainer = styled.div`
+  .pageTitle--container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 100%;
+    text-align: center;
+    ${theme.mediaQuery.sm`
+  margin-top: 150px;
+  margin-bottom: 80px;
+  `}
+  }
+`;
 
 const Layout = ({ pageTitle, children, footer }) => {
   console.log(footer);
   return (
-    <>
+    <LayoutContainer>
+      <Navigation />
       <MenuLogo>
         <Link href="/">
           <a>
@@ -25,12 +39,12 @@ const Layout = ({ pageTitle, children, footer }) => {
           </a>
         </Link>
       </MenuLogo>
-      <Hero pageTitle={pageTitle} />
+      {pageTitle && <div className="pageTitle--container">{pageTitle}</div>}
       <div className="">
         {children}
         <Footer footerData={footer} />
       </div>
-    </>
+    </LayoutContainer>
   );
 };
 

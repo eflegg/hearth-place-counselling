@@ -26,7 +26,7 @@ const HomeContainer = styled.div`
   .home-about {
     margin: 100px auto;
     position: relative;
-    .smoke-box {
+    .stone-box {
       position: absolute;
       bottom: -50px;
       height: 195px;
@@ -298,7 +298,7 @@ export default function Home({ doc, footer }) {
               />
             </div>
           </div>
-          <div className="smoke-box"></div>
+          <div className="stone-box"></div>
         </div>
         <div className="para-two--mobile">
           <PrismicRichText field={home.homeAboutSubhead} />

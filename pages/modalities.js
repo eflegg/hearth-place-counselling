@@ -16,16 +16,29 @@ const ModalitiesContainer = styled.div`
   text-align: center;
 `;
 
-const ModalitySingle = styled.div``;
+const ModalitySingle = styled.div`
+  margin-bottom: 45px;
+  ${theme.mediaQuery.sm`
+  margin-bottom: 65px;
+  `}
+  ${theme.mediaQuery.md`
+  margin-bottom: 100px;
+  `}
+  p {
+    margin: 30px 0;
+  }
+`;
 
 export default function Modalities({ doc, footer }) {
   const modalities = doc.data;
   return (
-    <Layout pageTitle={"Modalities"} footer={footer}>
+    <Layout
+      pageTitle={<PrismicRichText field={modalities.modalitiesTitle} />}
+      footer={footer}
+    >
       <Head>
         <title>Modalities</title>
       </Head>
-      <PrismicRichText field={modalities.modalitiesTitle} />
 
       <ModalitiesContainer className="modalities--container">
         {modalities.modalities.map((modality, index) => {
