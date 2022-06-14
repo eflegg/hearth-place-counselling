@@ -251,15 +251,15 @@ export default function Home({ doc, footer }) {
   return (
     <HomeContainer>
       <Head>
-        <title>Hearthplace Counselling</title>
+        <title>Hearth Place Counselling</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Horlick Editorial" />
+        <meta name="description" content="Hearth Place Counselling" />
         <meta property="og:image" content="/about-photo.jpg" />
         <meta property="og:url" content="http://hearthplace.ca/"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <Layout hero={home} pageTitle={"Hearthplace Counselling"} footer={footer}>
+      <Layout hero={home} footer={footer}>
         <Hero className="hero--container">
           <div className="hero--img">
             <img src={home.heroImage.url} alt={home.heroImage.alt} />

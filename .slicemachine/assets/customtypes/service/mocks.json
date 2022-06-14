@@ -1,202 +1,83 @@
 {
-  "id": "c8af4eb9-41b8-4d79-b6c3-d632ab41bdc1",
-  "uid": "animi-sunt-sit",
+  "id": "aa4d3273-06d3-4aa3-b1a9-585fe662c133",
+  "uid": "aut-qui-quos",
   "type": "service",
   "data": {
     "serviceTitle": [
       {
         "type": "heading1",
-        "text": "Iterate extensible solutions",
+        "text": "Iterate vertical markets",
         "spans": []
       }
     ],
-    "sectionOne": [
+    "subheadOne": [
       {
-        "subheadOne": [
-          {
-            "type": "paragraph",
-            "text": "Commodo irure exercitation id laborum nostrud consequat nisi fugiat irure deserunt elit. Dolore laborum minim sint cupidatat quis eu nulla mollit do et eiusmod nulla. Enim incididunt veniam do duis voluptate occaecat ad anim pariatur.",
-            "spans": []
-          }
-        ],
-        "paraOne": [
-          {
-            "type": "paragraph",
-            "text": "Aliquip qui in exercitation mollit. Irure ea culpa nulla.",
-            "spans": []
-          }
-        ],
-        "subheadTwo": [
-          {
-            "type": "paragraph",
-            "text": "Do nisi anim cillum ex proident nulla. Eiusmod quis id officia eu magna eu duis consectetur irure velit amet aute cupidatat aliquip.",
-            "spans": []
-          }
-        ],
-        "paraTwo": [
-          {
-            "type": "paragraph",
-            "text": "Consectetur velit esse officia quis.",
-            "spans": []
-          }
-        ],
-        "subheadThree": [
-          {
-            "type": "paragraph",
-            "text": "Ullamco ipsum eu proident dolor laborum qui aute quis reprehenderit eiusmod.",
-            "spans": []
-          }
-        ],
-        "paraThree": [
-          {
-            "type": "paragraph",
-            "text": "Non excepteur anim amet excepteur non amet veniam voluptate enim nulla. Enim ipsum non consectetur velit proident nulla ullamco cillum aute deserunt elit. Non adipisicing aliqua aliqua pariatur nisi ex.",
-            "spans": []
-          }
-        ],
-        "iconOne": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
-        },
-        "iconTwo": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
-        }
-      },
-      {
-        "subheadOne": [
-          {
-            "type": "paragraph",
-            "text": "Tempor eiusmod consectetur officia laborum duis non anim. Velit commodo ut sint. Sit aute pariatur enim labore dolore est ad duis magna ipsum commodo.",
-            "spans": []
-          }
-        ],
-        "paraOne": [
-          {
-            "type": "paragraph",
-            "text": "Et ex magna enim veniam anim in Lorem.",
-            "spans": []
-          }
-        ],
-        "subheadTwo": [
-          {
-            "type": "paragraph",
-            "text": "Ullamco deserunt qui quis commodo incididunt. Velit adipisicing Lorem laboris laborum laborum non nulla nisi exercitation do ut occaecat reprehenderit.",
-            "spans": []
-          }
-        ],
-        "paraTwo": [
-          {
-            "type": "paragraph",
-            "text": "Et ad cupidatat eu nisi id consectetur laboris ea quis est sit laborum. Aliqua ex labore consectetur non adipisicing dolor duis.",
-            "spans": []
-          }
-        ],
-        "subheadThree": [
-          {
-            "type": "paragraph",
-            "text": "Qui occaecat deserunt proident incididunt id. Eiusmod esse sit nostrud ipsum sit laborum labore commodo eiusmod occaecat amet qui commodo officia. Aliqua dolor proident culpa veniam aute non labore ea labore commodo cupidatat irure nostrud dolore occaecat.",
-            "spans": []
-          }
-        ],
-        "paraThree": [
-          {
-            "type": "paragraph",
-            "text": "Minim qui labore qui velit deserunt quis sunt. Aliqua labore Lorem ut adipisicing dolor voluptate id officia culpa tempor fugiat nisi pariatur culpa deserunt.",
-            "spans": []
-          }
-        ],
-        "iconOne": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
-        },
-        "iconTwo": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
-        }
-      },
-      {
-        "subheadOne": [
-          {
-            "type": "paragraph",
-            "text": "Culpa ea labore enim laboris quis dolore aliquip sit nulla. Id amet enim labore.",
-            "spans": []
-          }
-        ],
-        "paraOne": [
-          {
-            "type": "paragraph",
-            "text": "Voluptate id sunt consectetur ex aute exercitation. Cupidatat aliquip excepteur consequat culpa eiusmod elit pariatur.",
-            "spans": []
-          }
-        ],
-        "subheadTwo": [
-          {
-            "type": "paragraph",
-            "text": "Consectetur Lorem minim aute laborum aliquip nostrud occaecat nulla elit eu occaecat nisi fugiat.",
-            "spans": []
-          }
-        ],
-        "paraTwo": [
-          {
-            "type": "paragraph",
-            "text": "Deserunt laborum ad quis elit aute id culpa Lorem sunt dolore.",
-            "spans": []
-          }
-        ],
-        "subheadThree": [
-          {
-            "type": "paragraph",
-            "text": "Adipisicing nisi aute mollit veniam proident dolor incididunt laboris eu consequat.",
-            "spans": []
-          }
-        ],
-        "paraThree": [
-          {
-            "type": "paragraph",
-            "text": "Adipisicing magna ut quis reprehenderit nisi.",
-            "spans": []
-          }
-        ],
-        "iconOne": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
-        },
-        "iconTwo": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
-        }
+        "type": "heading2",
+        "text": "Reintermediate cross-media communities",
+        "spans": []
       }
-    ]
+    ],
+    "paragraphOne": [
+      {
+        "type": "paragraph",
+        "text": "Consequat laborum velit in commodo amet esse sunt culpa do incididunt laboris dolore irure enim culpa. Sint exercitation commodo veniam anim anim ullamco excepteur.",
+        "spans": []
+      }
+    ],
+    "subheadTwo": [
+      {
+        "type": "heading2",
+        "text": "Optimize scalable e-commerce",
+        "spans": []
+      }
+    ],
+    "paragraphTwo": [
+      {
+        "type": "paragraph",
+        "text": "Magna laborum ullamco quis esse culpa magna eiusmod nulla pariatur qui nostrud Lorem sint. Irure culpa eiusmod proident nostrud consequat exercitation eiusmod anim dolore voluptate occaecat velit. Eu magna et magna adipisicing incididunt esse veniam qui proident elit non tempor ut consequat.",
+        "spans": []
+      }
+    ],
+    "subheadThree": [
+      {
+        "type": "heading2",
+        "text": "Implement web-enabled channels",
+        "spans": []
+      }
+    ],
+    "paragraphThree": [
+      {
+        "type": "paragraph",
+        "text": "Commodo proident mollit ut ullamco duis deserunt qui aliquip est proident fugiat. Magna anim aliquip commodo sit fugiat culpa.",
+        "spans": []
+      }
+    ],
+    "iconOne": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+    },
+    "iconTwo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+    },
+    "fullWidthImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+    }
   }
 }

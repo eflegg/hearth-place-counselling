@@ -66,27 +66,43 @@
       }
     },
     "service": {
-      "sectionOne": {
-        "subheadOne": {
-          "config": {
-            "patternType": "PARAGRAPH",
-            "blocks": 1
-          }
-        },
-        "subheadTwo": {
-          "config": {
-            "patternType": "PARAGRAPH",
-            "blocks": 1
-          }
-        },
-        "paraTwo": {
-          "config": {
-            "patternType": "PARAGRAPH",
-            "blocks": 1
-          }
+      "serviceTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
         }
       },
-      "serviceTitle": {
+      "paragraphOne": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "paragraphTwo": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "paragraphThree": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "subheadOne": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "subheadTwo": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "subheadThree": {
         "config": {
           "patternType": "HEADING",
           "blocks": 1

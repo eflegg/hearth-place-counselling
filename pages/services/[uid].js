@@ -1,15 +1,20 @@
 import { createClient, linkResolver } from "../../prismic";
 import { PrismicRichText } from "@prismicio/react";
-
+import styled from "styled-components";
+import theme from "../../components/Theme";
 import Layout from "../../components/Layout";
 
-export default function ServiceSingle({ service }) {
-  console.log("service: ", service.data.serviceTitle);
+const ServiceContainer = styled.div``;
+
+export default function ServiceSingle({ doc, footer }) {
+  const service = doc.data;
+  console.log("service: ", service.serviceTitle);
   return (
-    <Layout>
-      <h1>
-        i am a single <PrismicRichText field={service.data.serviceTitle} /> page
-      </h1>
+    <Layout
+      pageTitle={<PrismicRichText field={service.serviceTitle} />}
+      footer={footer}
+    >
+      <ServiceContainer></ServiceContainer>
     </Layout>
   );
 }
@@ -26,9 +31,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const service = await createClient().getByUID("service", params.uid);
+  const doc = await createClient().getByUID("service", params.uid);
 
   return {
-    props: { service },
+    props: { doc },
   };
 }

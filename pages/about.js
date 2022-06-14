@@ -7,7 +7,8 @@ import { Waypoint } from "react-waypoint";
 import { Spring, Transition, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
 import { createClient } from "../prismic";
-import { PrismicRichText, PrismicLink } from "@prismicio/react";
+import { PrismicRichText, PrismicLink, PrismicText } from "@prismicio/react";
+import Button from "../components/Global/Button";
 
 const AboutContainer = styled.section`
   margin: 0 auto;
@@ -104,6 +105,48 @@ const AboutContainer = styled.section`
       `}
     }
   }
+  .consultation-box {
+    background: ${theme.colours.stone};
+    margin: 0 auto;
+    padding: 50px 40px;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+    ${theme.mediaQuery.md`
+    width: 60%;
+    `}
+    p {
+      color: ${theme.colours.clay};
+      font-size: 24px;
+      ${theme.mediaQuery.md`
+font-size: 36;
+    `}
+    }
+  }
+  .credentials {
+    width: 80%;
+    margin: 100px auto;
+    h2 {
+      margin-bottom: 80px;
+    }
+    .credentials--lists {
+      .credentials--list {
+        padding: 0 10px;
+      }
+      h4 {
+        font-family: ${theme.type.body};
+        font-style: bold;
+      }
+      ul {
+        margin-top: 25px;
+        padding-left: 0;
+      }
+      ${theme.mediaQuery.md`
+      display: flex;
+      justify-content: space-between;
+      `}
+    }
+  }
 `;
 
 export default function About({ doc, footer }) {
@@ -157,6 +200,55 @@ export default function About({ doc, footer }) {
               <img src={about.imageThree.url} alt={about.imageThree.alt} />
             </div>
             <div className="gold-box position-absolute"></div>
+          </div>
+        </section>
+        <div className="consultation-box">
+          <PrismicRichText field={about.consultationText} />
+          <Button
+            value={about.buttonText}
+            colour={`${theme.colours.gold}`}
+            link="/booknow"
+          />
+        </div>
+        <section className="credentials">
+          <PrismicRichText field={about.credentialsSubhead} />
+          <div className="credentials--lists">
+            <div className="credentials--list">
+              <PrismicRichText field={about.credentialsHeader} />
+              <ul>
+                {about.credentialsList.map((credential, index) => {
+                  return (
+                    <li key={index}>
+                      <PrismicRichText field={credential.credential} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="credentials--list">
+              <PrismicRichText field={about.educationHeader} />
+              <ul>
+                {about.educationList.map((education, index) => {
+                  return (
+                    <li key={index}>
+                      <PrismicRichText field={education.education} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="credentials--list">
+              <PrismicRichText field={about.additionalTrainingHeader} />
+              <ul>
+                {about.additionalTraining.map((training, index) => {
+                  return (
+                    <li key={index}>
+                      <PrismicRichText field={training.training} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </section>
       </AboutContainer>

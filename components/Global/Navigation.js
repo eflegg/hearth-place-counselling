@@ -212,69 +212,7 @@ export default function Navigation(props) {
               )}
             </Spring>
           </>
-        ) : (
-          <Spring
-            from={{ width: "100vw", opacity: "1" }}
-            to={{ width: "0vw", opacity: "0" }}
-          >
-            {(props) => (
-              <nav
-                style={props}
-                id="navMenu"
-                className={`${
-                  props.className ? props.className : ""
-                }  nav-active`}
-              >
-                <div className="menu-image">
-                  <img src="/Hearth-Place-moon-grass.png" alt="" />
-                </div>
-                <ul>
-                  <li
-                    className="nav-link__mobile"
-                    onClick={() => {
-                      toggleNav(false);
-                    }}
-                  >
-                    <Link href="/about">
-                      <a>About</a>
-                    </Link>
-                  </li>
-
-                  <li
-                    className="nav-link__mobile"
-                    onClick={() => {
-                      toggleNav(false);
-                    }}
-                  >
-                    <Link href="/services" activeClassName="active">
-                      Services
-                    </Link>
-                  </li>
-                  <li
-                    className="nav-link__mobile"
-                    onClick={() => {
-                      toggleNav(false);
-                    }}
-                  >
-                    <Link href="/bookNow">
-                      <a>Book Now</a>
-                    </Link>
-                  </li>
-                  <li
-                    className="nav-link__mobile"
-                    onClick={() => {
-                      toggleNav(false);
-                    }}
-                  >
-                    <Link href="/">
-                      <a>Home</a>
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            )}
-          </Spring>
-        )}
+        ) : null}
       </MobileNav>
     </>
   );
