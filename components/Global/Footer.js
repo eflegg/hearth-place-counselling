@@ -6,6 +6,7 @@ import { PrismicRichText } from "@prismicio/react";
 const FooterContainer = styled.footer`
   background: ${theme.colours.plum};
   .footer--inner {
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,13 +27,18 @@ const FooterContainer = styled.footer`
     a {
       font-family: ${theme.type.body};
       color: ${theme.colours.clay};
-      font-size: 34px;
+      font-size: 32px;
     }
   }
   h3 {
     color: ${theme.colours.clay};
     margin-top: 30px;
     text-align: center;
+    font-size: 18px;
+    border-top: 1px solid ${theme.colours.clay};
+    width: 80%;
+    margin: 30px auto 0;
+    padding-bottom: 10px;
   }
   .footer-logo {
     margin: 0 auto;
@@ -55,8 +61,8 @@ const FooterContainer = styled.footer`
     p {
       color: ${theme.colours.clay};
       text-align: right;
-      font-size: 34px;
-      line-height: 34px;
+      font-size: 32px;
+      line-height: 32px;
       margin: 10px 0;
     }
     .footer-images {
@@ -80,7 +86,7 @@ export default function Footer({ footerData }) {
       link: "about",
     },
     {
-      label: "Retreas",
+      label: "Retreats",
       link: "services/retreats",
     },
     {
@@ -146,7 +152,7 @@ export default function Footer({ footerData }) {
           </div>
         </div>
       </div>
-      <h3>{year}</h3>
+      <h3>&copy;{year}</h3>
     </FooterContainer>
   );
 }
