@@ -1,6 +1,6 @@
 {
-  "id": "74229b85-5f9c-4c1e-811b-7c41c87b1d8c",
-  "uid": "sit-cupiditate-tempore",
+  "id": "eb57ce8f-9396-4770-8f11-18da1b489eb0",
+  "uid": "nesciunt-quidem-fugiat",
   "type": "footer",
   "data": {
     "footerLogo": {
@@ -10,28 +10,46 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
     },
     "phoneNumber": [
       {
         "type": "paragraph",
-        "text": "Amet tempor sit ex sit laboris cupidatat do tempor minim ut irure aliquip est. Ex velit nulla amet incididunt tempor.",
+        "text": "Exercitation reprehenderit nisi ipsum occaecat pariatur commodo esse in enim quis ipsum Lorem. Sunt ad cillum culpa. Ad incididunt magna labore ullamco anim proident dolor magna pariatur occaecat minim.",
         "spans": []
       }
     ],
     "email": [
       {
         "type": "paragraph",
-        "text": "Cupidatat quis enim est sit excepteur sunt ut in. Ut do dolore veniam duis laborum quis velit esse ipsum ad pariatur aute ut deserunt. Ipsum non mollit qui elit velit officia.",
+        "text": "Nostrud eiusmod minim cupidatat sint mollit.",
         "spans": []
       }
     ],
     "certificationText": [
       {
         "type": "paragraph",
-        "text": "Sit id exercitation mollit ad aliqua aliqua adipisicing proident. Pariatur est ut ex laboris adipisicing laboris consectetur aliqua elit. Anim excepteur et ea.",
+        "text": "Nostrud minim do incididunt pariatur elit veniam sint aute id nostrud ea id labore eiusmod est.",
         "spans": []
       }
-    ]
+    ],
+    "imageOne": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+    },
+    "imageTwo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+    }
   }
 }

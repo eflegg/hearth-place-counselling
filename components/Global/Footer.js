@@ -1,46 +1,151 @@
 import styled from "styled-components";
 import theme from "../Theme";
 import Link from "next/link";
+import { PrismicRichText } from "@prismicio/react";
 
 const FooterContainer = styled.footer`
-  border-top: 1px solid ${theme.colours.blue};
-  width: 80%;
-  margin: 100px auto 50px;
-  padding-top: 30px;
-  h3 {
-    color: ${theme.colours.black};
-    text-align: center;
-    font-size: 16px;
-  }
-  .footer-logos {
+  background: ${theme.colours.plum};
+  .footer--inner {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    ${theme.mediaQuery.sm`
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    `}
+    position: relative;
   }
-  .isc-logo {
-    margin: 25px 5px;
+  .footer-menu {
     text-align: center;
-    img {
-      width: 300px;
-      max-width: 100%;
+    ${theme.mediaQuery.sm`
+   
+    text-align: left;
+    `}
+    a {
+      font-family: ${theme.type.body};
+      color: ${theme.colours.clay};
+      font-size: 34px;
     }
   }
-  .wu-logo {
-    margin: 25px 5px;
+  h3 {
+    color: ${theme.colours.clay};
+    margin-top: 30px;
     text-align: center;
-    img {
-      width: 150px;
-      max-width: 100%;
+  }
+  .footer-logo {
+    margin: 0 auto;
+
+    width: 70%;
+    ${theme.mediaQuery.sm`
+  
+    width: 30%;
+    `}
+  }
+  .footer-contact {
+    .footer-contact--text {
+      ${theme.mediaQuery.sm`
+     
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      `}
+    }
+    p {
+      color: ${theme.colours.clay};
+      text-align: right;
+      font-size: 34px;
+      line-height: 34px;
+      margin: 10px 0;
+    }
+    .footer-images {
+      text-align: center;
+      img {
+        width: 130px;
+        margin: 10px;
+      }
     }
   }
 `;
 
 export default function Footer({ footerData }) {
+  const menuItems = [
+    {
+      label: "Home",
+      link: "home",
+    },
+    {
+      label: "About",
+      link: "about",
+    },
+    {
+      label: "Retreas",
+      link: "services/retreats",
+    },
+    {
+      label: "Counselling",
+      link: "services/counselling",
+    },
+    {
+      label: "Teachings",
+      link: "services/teachings",
+    },
+    {
+      label: "Modalities",
+      link: "modalities",
+    },
+    {
+      label: "Book Now",
+      link: "booknow",
+    },
+  ];
+  console.log("menu items ", menuItems);
   const year = new Date().toLocaleDateString("en-US", {
     year: "numeric",
   });
+  console.log("footerData: ", footerData);
   return (
     <FooterContainer>
+      <div className="footer--inner">
+        <div className="footer-menu">
+          <ul>
+            {menuItems.map((menuItem, index) => {
+              return (
+                <li key={index}>
+                  <Link href={`/${menuItem.link}`}>
+                    <a>{menuItem.label}</a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="footer-logo">
+          <img
+            src={footerData.data.footerLogo.url}
+            alt={footerData.data.footerLogo.alt}
+          />
+        </div>
+        <div className="footer-contact">
+          <div className="footer-contact--text">
+            <PrismicRichText field={footerData.data.phoneNumber} />
+            <PrismicRichText field={footerData.data.email} />
+            <PrismicRichText field={footerData.data.certificationText} />
+          </div>
+
+          <div className="footer-images">
+            <img
+              src={footerData.data.imageOne.url}
+              alt={footerData.data.imageOne.alt}
+            />
+            <img
+              src={footerData.data.imageTwo.url}
+              alt={footerData.data.imageTwo.alt}
+            />
+          </div>
+        </div>
+      </div>
       <h3>{year}</h3>
     </FooterContainer>
   );
