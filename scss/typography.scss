@@ -3,6 +3,7 @@
 // 1. Layout - 7
 // 2. Typography - 50
 // 3. Buttons - 152
+// 4. images - 228
 
 /***  Layout  ***/
 
@@ -224,6 +225,15 @@ li {
   text-align: center;
 }
 
+/***  Images  ***/
+
 img {
   max-width: 100%;
+}
+.img--full {
+  width: 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }

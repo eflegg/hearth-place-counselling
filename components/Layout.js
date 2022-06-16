@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Footer from "./Global/Footer";
 import Navigation from "./Global/Navigation";
-import Hero from "./Global/Hero";
+
 import { createClient } from "../prismic";
 import styled from "styled-components";
 import theme from "../components/Theme";

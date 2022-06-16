@@ -223,7 +223,7 @@ export default function Navigation(props) {
                         toggleNav(false);
                       }}
                     >
-                      <Link href="/bookNow">
+                      <Link href="/booknow">
                         <a>Book Now</a>
                       </Link>
                     </li>
