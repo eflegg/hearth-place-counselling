@@ -6,6 +6,7 @@ import Hero from "./Global/Hero";
 import { createClient } from "../prismic";
 import styled from "styled-components";
 import theme from "../components/Theme";
+import Button from "../components/Global/Button";
 
 const MenuLogo = styled.div`
   position: absolute;
@@ -15,6 +16,7 @@ const MenuLogo = styled.div`
   width: 80px;
 `;
 const LayoutContainer = styled.div`
+  overflow: hidden;
   .pageTitle--container {
     margin-top: 80px;
     margin-bottom: 80px;
@@ -24,10 +26,13 @@ const LayoutContainer = styled.div`
   margin-top: 150px;
   margin-bottom: 80px;
   `}
+    button {
+      margin-top: 50px;
+    }
   }
 `;
 
-const Layout = ({ pageTitle, children, footer }) => {
+const Layout = ({ pageTitle, children, footer, button }) => {
   console.log(footer);
   return (
     <LayoutContainer>
@@ -39,7 +44,19 @@ const Layout = ({ pageTitle, children, footer }) => {
           </a>
         </Link>
       </MenuLogo>
-      {pageTitle && <div className="pageTitle--container">{pageTitle}</div>}
+      {pageTitle && (
+        <div className="pageTitle--container">
+          {pageTitle}{" "}
+          {button && (
+            <Button
+              value="Book Now"
+              link="booknow"
+              dark
+              colour={`${theme.colours.clay}`}
+            />
+          )}{" "}
+        </div>
+      )}
       <div className="">
         {children}
         <Footer footerData={footer} />
