@@ -1,54 +1,54 @@
 {
-  "id": "aa4d3273-06d3-4aa3-b1a9-585fe662c133",
-  "uid": "aut-qui-quos",
+  "id": "4120e93c-2249-4db2-9d6a-9c14c7581529",
+  "uid": "ab-dicta-rerum",
   "type": "service",
   "data": {
     "serviceTitle": [
       {
         "type": "heading1",
-        "text": "Iterate vertical markets",
+        "text": "Engage magnetic relationships",
         "spans": []
       }
     ],
     "subheadOne": [
       {
         "type": "heading2",
-        "text": "Reintermediate cross-media communities",
+        "text": "Monetize virtual blockchains",
         "spans": []
       }
     ],
     "paragraphOne": [
       {
         "type": "paragraph",
-        "text": "Consequat laborum velit in commodo amet esse sunt culpa do incididunt laboris dolore irure enim culpa. Sint exercitation commodo veniam anim anim ullamco excepteur.",
+        "text": "Nulla culpa sunt amet eu ad.",
         "spans": []
       }
     ],
     "subheadTwo": [
       {
         "type": "heading2",
-        "text": "Optimize scalable e-commerce",
+        "text": "Maximize front-end content",
         "spans": []
       }
     ],
     "paragraphTwo": [
       {
         "type": "paragraph",
-        "text": "Magna laborum ullamco quis esse culpa magna eiusmod nulla pariatur qui nostrud Lorem sint. Irure culpa eiusmod proident nostrud consequat exercitation eiusmod anim dolore voluptate occaecat velit. Eu magna et magna adipisicing incididunt esse veniam qui proident elit non tempor ut consequat.",
+        "text": "Laborum aute non anim mollit ullamco. Id amet ad id proident laboris sit sint. Nulla eiusmod nulla irure laborum aute duis et adipisicing excepteur.",
         "spans": []
       }
     ],
     "subheadThree": [
       {
         "type": "heading2",
-        "text": "Implement web-enabled channels",
+        "text": "E-enable one-to-one paradigms",
         "spans": []
       }
     ],
     "paragraphThree": [
       {
         "type": "paragraph",
-        "text": "Commodo proident mollit ut ullamco duis deserunt qui aliquip est proident fugiat. Magna anim aliquip commodo sit fugiat culpa.",
+        "text": "Nulla enim et voluptate commodo incididunt mollit duis adipisicing dolore.",
         "spans": []
       }
     ],
@@ -59,7 +59,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
     },
     "iconTwo": {
       "dimensions": {
@@ -68,7 +68,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
     },
     "fullWidthImage": {
       "dimensions": {
@@ -77,7 +77,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
     }
   }
 }

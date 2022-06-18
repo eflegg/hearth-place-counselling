@@ -274,6 +274,23 @@
           "blocks": 1
         }
       }
+    },
+    "menu": {
+      "menuLinks": {
+        "linkLabel": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      }
+    }
+  },
+  "slices": {
+    "ButtonBlock": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

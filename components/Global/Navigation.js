@@ -5,6 +5,7 @@ import theme from "../Theme";
 import Link from "next/link";
 import { Spring, config } from "react-spring/renderprops.cjs";
 import ActiveLink from "./ActiveLink";
+import { PrismicLink, PrismicText } from "@prismicio/react";
 
 const MobileNav = styled.nav`
   position: absolute;
@@ -49,10 +50,9 @@ const MobileNav = styled.nav`
         a {
           color: ${theme.colours.campfire};
           font-family: ${theme.type.body};
-          font-size: 48px;
+          font-size: 40px;
           font-weight: 400;
-          margin-top: 20px;
-          line-height: 80px;
+          line-height: 70px;
         }
       }
     }
@@ -124,7 +124,7 @@ const MobileNav = styled.nav`
   }
 `;
 
-export default function Navigation(props) {
+export default function Navigation({ menuData }) {
   const [navActive, toggleNav] = useState(false);
   return (
     <>
@@ -132,7 +132,7 @@ export default function Navigation(props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <MobileNav className="mobile-nav" style={props}>
+      <MobileNav className="mobile-nav">
         <button
           className={`btn-nav ${navActive ? "nav-close" : "nav-open"}`}
           onClick={() => {
@@ -166,77 +166,24 @@ export default function Navigation(props) {
                     <img src="/Hearth-Place-moon-grass.png" alt="" />
                   </div>
                   <ul>
-                    <li
-                      className="nav-link__mobile"
-                      onClick={() => {
-                        toggleNav(false);
-                      }}
-                    >
-                      <Link href="/about">
-                        <a>About</a>
-                      </Link>
-                    </li>
-                    <li
-                      className="nav-link__mobile"
-                      onClick={() => {
-                        toggleNav(false);
-                      }}
-                    >
-                      <Link href="/services/counselling">
-                        <a>Counselling</a>
-                      </Link>
-                    </li>
-                    <li
-                      className="nav-link__mobile"
-                      onClick={() => {
-                        toggleNav(false);
-                      }}
-                    >
-                      <Link href="/services/retreats">
-                        <a>Retreats</a>
-                      </Link>
-                    </li>
-                    <li
-                      className="nav-link__mobile"
-                      onClick={() => {
-                        toggleNav(false);
-                      }}
-                    >
-                      <Link href="/services/teachings">
-                        <a>Teachings</a>
-                      </Link>
-                    </li>
-
-                    <li
-                      className="nav-link__mobile"
-                      onClick={() => {
-                        toggleNav(false);
-                      }}
-                    >
-                      <Link href="/services" activeClassName="active">
-                        Services
-                      </Link>
-                    </li>
-                    <li
-                      className="nav-link__mobile"
-                      onClick={() => {
-                        toggleNav(false);
-                      }}
-                    >
-                      <Link href="/booknow">
-                        <a>Book Now</a>
-                      </Link>
-                    </li>
-                    <li
-                      className="nav-link__mobile"
-                      onClick={() => {
-                        toggleNav(false);
-                      }}
-                    >
-                      <Link href="/">
-                        <a>Home</a>
-                      </Link>
-                    </li>
+                    {menuData.data.menuLinks.map((menuLink, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="nav-link__mobile"
+                          onClick={() => {
+                            toggleNav(false);
+                          }}
+                        >
+                          <PrismicLink
+                            field={menuLink.link}
+                            className="text-neutral-500"
+                          >
+                            <PrismicText field={menuLink.linkLabel} />
+                          </PrismicLink>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </nav>
               )}

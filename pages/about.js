@@ -149,12 +149,13 @@ font-size: 36;
   }
 `;
 
-export default function About({ doc, footer }) {
+export default function About({ doc, footer, menu }) {
   const about = doc.data;
   return (
     <Layout
       pageTitle={<PrismicRichText field={about.aboutTitle} />}
       footer={footer}
+      menu={menu}
     >
       <Head>
         <title> About</title>

@@ -5,8 +5,10 @@ import { PrismicRichText } from "@prismicio/react";
 
 const FooterContainer = styled.footer`
   background: ${theme.colours.plum};
+
   .footer--inner {
-    padding-top: 30px;
+    padding: 30px 10px 0px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,11 +108,11 @@ export default function Footer({ footerData }) {
       link: "booknow",
     },
   ];
-  console.log("menu items ", menuItems);
+
   const year = new Date().toLocaleDateString("en-US", {
     year: "numeric",
   });
-  console.log("footerData: ", footerData);
+
   return (
     <FooterContainer>
       <div className="footer--inner">

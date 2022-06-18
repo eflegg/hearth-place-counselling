@@ -8,19 +8,21 @@ import { PrismicProvider } from "@prismicio/react";
 export default class App extends NextApp {
   static async getInitialProps(appCtx) {
     const footer = (await createClient().getSingle("footer")) || null;
+    const menu = (await createClient().getSingle("menu")) || null;
 
-    console.log("FOOTER", footer);
+    console.log("MENU", menu);
 
     return {
       props: {
         footer: footer,
+        menu: menu,
       },
     };
   }
 
   render() {
     const { Component, pageProps, props } = this.props;
-    // console.log(props.footer);
+    console.log(props.menu);
     return (
       <>
         {/* <Component {...pageProps} footer={props.footer} /> */}
@@ -34,7 +36,7 @@ export default class App extends NextApp {
           )}
         >
           {/* <PrismicPreview repositoryName={repositoryName}> */}
-          <Component {...pageProps} footer={props.footer} />
+          <Component {...pageProps} footer={props.footer} menu={props.menu} />
           {/* </PrismicPreview> */}
         </PrismicProvider>
       </>

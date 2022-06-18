@@ -32,11 +32,10 @@ const LayoutContainer = styled.div`
   }
 `;
 
-const Layout = ({ pageTitle, children, footer, button }) => {
-  console.log(footer);
+const Layout = ({ pageTitle, children, footer, button, menu }) => {
   return (
     <LayoutContainer>
-      <Navigation />
+      <Navigation menuData={menu} />
       <MenuLogo>
         <Link href="/">
           <a>

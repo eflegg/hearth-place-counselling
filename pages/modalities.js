@@ -29,12 +29,13 @@ const ModalitySingle = styled.div`
   }
 `;
 
-export default function Modalities({ doc, footer }) {
+export default function Modalities({ doc, footer, menu }) {
   const modalities = doc.data;
   return (
     <Layout
       pageTitle={<PrismicRichText field={modalities.modalitiesTitle} />}
       footer={footer}
+      menu={menu}
     >
       <Head>
         <title>Modalities</title>

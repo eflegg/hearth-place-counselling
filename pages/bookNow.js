@@ -41,7 +41,7 @@ const BooknowContainer = styled.div`
   }
 `;
 
-export default function Contact({ doc, footer }) {
+export default function Contact({ doc, footer, menu }) {
   const booknow = doc.data;
   return (
     <>
@@ -52,6 +52,7 @@ export default function Contact({ doc, footer }) {
       <Layout
         pageTitle={<PrismicRichText field={booknow.title} />}
         footer={footer}
+        menu={menu}
       >
         <BooknowContainer>
           <div className="intro">

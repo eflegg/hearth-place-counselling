@@ -1,9 +1,10 @@
 import { createClient, linkResolver } from "../../prismic";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicRichText, SliceZone } from "@prismicio/react";
 import styled from "styled-components";
 import theme from "../../components/Theme";
 import Layout from "../../components/Layout";
 import Button from "../../components/Global/Button";
+import { components } from "../../slices";
 
 const ServiceContainer = styled.div`
   width: 100%;
@@ -64,6 +65,7 @@ const ServiceContainer = styled.div`
   
     display: block;
     position: absolute;
+    z-index: 2;
     right: -20px;
     top: -250px;
     img {
@@ -101,13 +103,14 @@ const ServiceContainer = styled.div`
   }
 `;
 
-export default function ServiceSingle({ doc, footer }) {
+export default function ServiceSingle({ doc, footer, menu }) {
   const service = doc.data;
-  console.log("service: ", service.serviceTitle);
+
   return (
     <Layout
       pageTitle={<PrismicRichText field={service.serviceTitle} />}
       footer={footer}
+      menu={menu}
       button
     >
       <ServiceContainer>
@@ -143,6 +146,8 @@ export default function ServiceSingle({ doc, footer }) {
             alt={service.fullWidthImage.alt}
           />
         </div>
+
+        <SliceZone slices={service.slices} components={components} />
       </ServiceContainer>
     </Layout>
   );

@@ -99,29 +99,35 @@ const Hero = styled.section`
     }
   }
   .hero-logo--container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    ${theme.mediaQuery.sm`
+    width: 400px;
+    `}
+    ${theme.mediaQuery.md`
+    width: 500px;
+    `}
     img {
     }
 
     p {
       color: white;
       text-align: right;
-
       font-size: 19px;
       position: relative;
-      top: -126px;
+      right: 0px;
+      margin-top: 0;
       ${theme.mediaQuery.sm`
-       top: -157px;
-    font-size: 25px;
-    `};
-    }
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    ${theme.mediaQuery.sm`
-    width: 35%;
+      font-size: 27px;
+      `};
+      ${theme.mediaQuery.md`
+       font-size: 34px;
     `}
+    }
   }
 `;
 
@@ -156,6 +162,9 @@ const HomeCardContainer = styled.section`
     justify-content: space-around;
     flex-wrap: wrap;
   }
+  &.book-now {
+    margin-bottom: 30px;
+  }
   .book-now--inner {
     display: flex;
     width: 90%;
@@ -178,14 +187,18 @@ const HomeCardContainer = styled.section`
       }
       ${theme.mediaQuery.sm`
       width: 50%;
-      padding: 70px;
+      padding: 56px;
       `}
     }
     .book-now--img {
       display: none;
-      height: 100%;
       ${theme.mediaQuery.sm`
       display: block;
+      img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+     }
       `}
     }
   }
@@ -241,12 +254,11 @@ const ModalityCard = styled.div`
   margin-bottom: 100px;
 `;
 
-export default function Home({ doc, footer }) {
+export default function Home({ doc, footer, menu }) {
   const props = useSpring({
     config: config.slow,
   });
   const home = doc.data;
-  console.log("home modalities: ", home.homeModality);
 
   return (
     <HomeContainer>
@@ -259,7 +271,7 @@ export default function Home({ doc, footer }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <Layout hero={home} footer={footer}>
+      <Layout footer={footer} menu={menu}>
         <Hero className="hero--container">
           <div className="hero--img">
             <img src={home.heroImage.url} alt={home.heroImage.alt} />
@@ -270,7 +282,7 @@ export default function Home({ doc, footer }) {
 
             <Button
               value={home.heroButtonText}
-              link="bookNow"
+              link="booknow"
               colour={`${theme.colours.gold}`}
             />
           </div>
@@ -337,16 +349,17 @@ export default function Home({ doc, footer }) {
             {home.homeModality.map((modality, index) => {
               return (
                 <ModalityCard key={index}>
-                  <PrismicLink field={modality.link}>
-                    <PrismicRichText field={modality.title} />
-                    <img src={modality.image.url} alt={modality.image.alt} />
-                    <PrismicRichText field={modality.excerpt} />
-                    <Button
-                      dark
-                      colour={`${theme.colours.clay}`}
-                      value="Learn More"
-                    />
-                  </PrismicLink>
+                  {/* <PrismicLink field={modality.link}> */}
+                  <PrismicRichText field={modality.title} />
+                  <img src={modality.image.url} alt={modality.image.alt} />
+                  <PrismicRichText field={modality.excerpt} />
+                  <Button
+                    dark
+                    colour={`${theme.colours.clay}`}
+                    value="Learn More"
+                    link={"modalities"}
+                  />
+                  {/* </PrismicLink> */}
                 </ModalityCard>
               );
             })}
@@ -359,7 +372,7 @@ export default function Home({ doc, footer }) {
               <PrismicRichText field={home.bookNowExcerpt} />
               <Button
                 value={home.bookNowButtonText}
-                link="bookNow"
+                link="booknow"
                 colour={`${theme.colours.gold}`}
               />
             </div>
