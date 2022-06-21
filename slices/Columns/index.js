@@ -4,24 +4,45 @@ import styled from "styled-components";
 import theme from "../../components/Theme";
 
 const ColumnsContainer = styled.div`
+  margin-bottom: 50px;
   h3 {
     color: ${theme.colours.gold};
+    text-align: center;
+    margin: 20px 0;
   }
   .columns--inner {
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    width: 90%;
     margin: 0 auto;
-    justify-content: center;
-    border: 2px solid magenta;
+    justify-content: space-around;
   }
 `;
 const Column = styled.div`
   width: 100%;
-  ${theme.mediaQuery.md`
-
-min-width: 25%;
-max-width: 45%;
+  ${theme.mediaQuery.sm`
+  padding: 0px 10px;
+  width: 45%;
 `}
+  ${theme.mediaQuery.md`
+  width: 27%;
+`}
+ ${theme.mediaQuery.lg`
+  width: 22%;
+`}
+.paragraph--bold {
+    ${theme.mediaQuery.sm`
+ height: 55px;
+//  border: 2px solid magenta;
+ margin-bottom: 0px;
+`}
+  }
+  .paragraph-container {
+    /* border: 2px solid slateblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
 
 const Columns = ({ slice }) => (
@@ -34,7 +55,9 @@ const Columns = ({ slice }) => (
       {slice?.items?.map((item, i) => (
         <Column key={i}>
           {item.subtitle && <p className="paragraph--bold">{item.subtitle}</p>}
-          {item.columnText && <PrismicRichText field={item.columnText} />}
+          <div className="paragraph-container">
+            {item.columnText && <PrismicRichText field={item.columnText} />}
+          </div>
         </Column>
       ))}
     </div>
