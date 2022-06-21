@@ -106,6 +106,18 @@
           "choices": {
             "button_block": {
               "type": "SharedSlice"
+            },
+            "large_text": {
+              "type": "SharedSlice"
+            },
+            "columns": {
+              "type": "SharedSlice"
+            },
+            "endorsement": {
+              "type": "SharedSlice"
+            },
+            "large_text_block": {
+              "type": "SharedSlice"
             }
           }
         }

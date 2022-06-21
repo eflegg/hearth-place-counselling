@@ -291,6 +291,48 @@
       "default": {
         "primary": {}
       }
+    },
+    "LargeText": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Columns": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "columnText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "LargeTextBlock": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Endorsement": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

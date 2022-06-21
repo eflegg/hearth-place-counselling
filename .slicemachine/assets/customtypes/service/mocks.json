@@ -1,54 +1,54 @@
 {
-  "id": "4120e93c-2249-4db2-9d6a-9c14c7581529",
-  "uid": "ab-dicta-rerum",
+  "id": "70a8ab40-a688-41b7-9ea4-54d3774768da",
+  "uid": "sit-eaque-in",
   "type": "service",
   "data": {
     "serviceTitle": [
       {
         "type": "heading1",
-        "text": "Engage magnetic relationships",
+        "text": "Incubate impactful web-readiness",
         "spans": []
       }
     ],
     "subheadOne": [
       {
         "type": "heading2",
-        "text": "Monetize virtual blockchains",
+        "text": "Leverage synergistic infomediaries",
         "spans": []
       }
     ],
     "paragraphOne": [
       {
         "type": "paragraph",
-        "text": "Nulla culpa sunt amet eu ad.",
+        "text": "Mollit occaecat in sunt aliqua nisi. Magna sunt magna pariatur amet irure commodo aute est minim fugiat pariatur duis ea esse dolore. Est nulla magna ex aliquip ad ex officia et Lorem ullamco.",
         "spans": []
       }
     ],
     "subheadTwo": [
       {
         "type": "heading2",
-        "text": "Maximize front-end content",
+        "text": "Reintermediate one-to-one e-tailers",
         "spans": []
       }
     ],
     "paragraphTwo": [
       {
         "type": "paragraph",
-        "text": "Laborum aute non anim mollit ullamco. Id amet ad id proident laboris sit sint. Nulla eiusmod nulla irure laborum aute duis et adipisicing excepteur.",
+        "text": "Mollit mollit velit occaecat duis eiusmod Lorem adipisicing ipsum. Officia eu ex do culpa sint cupidatat velit et occaecat minim exercitation quis.",
         "spans": []
       }
     ],
     "subheadThree": [
       {
         "type": "heading2",
-        "text": "E-enable one-to-one paradigms",
+        "text": "Incentivize enterprise systems",
         "spans": []
       }
     ],
     "paragraphThree": [
       {
         "type": "paragraph",
-        "text": "Nulla enim et voluptate commodo incididunt mollit duis adipisicing dolore.",
+        "text": "Deserunt pariatur proident ex occaecat deserunt officia enim. Amet magna reprehenderit ex exercitation pariatur Lorem nulla dolor esse culpa esse et voluptate cillum. Cupidatat reprehenderit qui proident eu.",
         "spans": []
       }
     ],
@@ -59,7 +59,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
     },
     "iconTwo": {
       "dimensions": {
@@ -68,7 +68,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
     },
     "fullWidthImage": {
       "dimensions": {
@@ -77,7 +77,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
     }
   }
 }

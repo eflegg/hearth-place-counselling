@@ -1,0 +1,22 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "endorsement",
+    "items": [
+      {
+        "endorsementText": "disintermediate turn-key synergies",
+        "attribution": "implement out-of-the-box e-commerce"
+      },
+      {
+        "endorsementText": "recontextualize seamless technologies",
+        "attribution": "morph intuitive communities"
+      },
+      {
+        "endorsementText": "utilize visionary niches",
+        "attribution": "evolve plug-and-play web-readiness"
+      }
+    ],
+    "primary": {}
+  }
+]

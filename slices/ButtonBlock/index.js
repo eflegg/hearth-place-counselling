@@ -39,9 +39,11 @@ const ButtonBlockContainer = styled.div`
 const ButtonBlock = ({ slice }) => (
   <ButtonBlockContainer className="book-now--text">
     <p>{slice.primary.text}</p>
-    <PrismicLink document={slice.primary.buttonLink}>
-      <button>{slice.primary.buttonText}</button>
-    </PrismicLink>
+    {slice.primary.buttonLink && (
+      <PrismicLink document={slice.primary.buttonLink}>
+        <button>{slice.primary.buttonText}</button>
+      </PrismicLink>
+    )}
   </ButtonBlockContainer>
 );
 
