@@ -19,6 +19,7 @@ const FooterContainer = styled.footer`
     justify-content: space-between;
     `}
     position: relative;
+    left: 0;
   }
   .footer-menu {
     text-align: center;
