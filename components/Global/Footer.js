@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../Theme";
 import Link from "next/link";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicRichText, PrismicLink, PrismicText } from "@prismicio/react";
 
 const FooterContainer = styled.footer`
   background: ${theme.colours.plum};
@@ -30,6 +30,11 @@ const FooterContainer = styled.footer`
       font-family: ${theme.type.body};
       color: ${theme.colours.clay};
       font-size: 32px;
+      transition: 0.25s all ease-in-out;
+      &:hover {
+        border-bottom: 1px solid ${theme.colours.clay};
+        transition: 0.25s all ease-in-out;
+      }
     }
   }
   h3 {
@@ -77,54 +82,26 @@ const FooterContainer = styled.footer`
   }
 `;
 
-export default function Footer({ footerData }) {
-  const menuItems = [
-    {
-      label: "Home",
-      link: "home",
-    },
-    {
-      label: "About",
-      link: "about",
-    },
-    {
-      label: "Retreats",
-      link: "services/retreats",
-    },
-    {
-      label: "Counselling",
-      link: "services/counselling",
-    },
-    {
-      label: "Teachings",
-      link: "services/teachings",
-    },
-    {
-      label: "Modalities",
-      link: "modalities",
-    },
-    {
-      label: "Book Now",
-      link: "booknow",
-    },
-  ];
-
+export default function Footer({ footerData, menu }) {
   const year = new Date().toLocaleDateString("en-US", {
     year: "numeric",
   });
 
+  console.log("menu prop: ", menu.data.menuLinks);
   return (
     <FooterContainer>
       <div className="footer--inner">
         <div className="footer-menu">
           <ul>
-            {menuItems.map((menuItem, index) => {
+            {menu.data.menuLinks.map((menuLink, index) => {
               return (
-                <li key={index}>
-                  <Link href={`/${menuItem.link}`}>
-                    <a>{menuItem.label}</a>
-                  </Link>
-                </li>
+                <>
+                  <li key={index}>
+                    <PrismicLink field={menuLink.link}>
+                      <PrismicText field={menuLink.linkLabel} />
+                    </PrismicLink>
+                  </li>
+                </>
               );
             })}
           </ul>

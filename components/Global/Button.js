@@ -14,6 +14,11 @@ const ButtonContainer = styled.button`
   font-family: ${theme.type.header};
   border: 0px;
   cursor: pointer;
+  transition: all 0.25s ease-in;
+  &:hover {
+    background: ${theme.colours.plum};
+    transition: all 0.25s ease-in;
+  }
 `;
 
 export default function Button({

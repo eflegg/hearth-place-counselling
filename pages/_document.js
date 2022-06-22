@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
@@ -20,20 +20,6 @@ export default class MyDocument extends Document {
           <>
             {initialProps.styles}
             {sheet.getStyleElement()}
-
-            {/* <Head>
-              <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link
-                  rel="preconnect"
-                  href="https://fonts.gstatic.com"
-                  crossorigin
-                ></link>
-                <link
-                  href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&family=Shadows+Into+Light+Two&display=swap"
-                  rel="stylesheet"
-                ></link>
-              </link>
-            </Head> */}
           </>
         ),
       };

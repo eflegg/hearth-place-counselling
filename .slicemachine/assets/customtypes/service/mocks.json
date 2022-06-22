@@ -1,54 +1,55 @@
 {
-  "id": "70a8ab40-a688-41b7-9ea4-54d3774768da",
-  "uid": "sit-eaque-in",
+  "id": "fa5749b4-c034-4ee4-bd97-95d978df1680",
+  "uid": "autem-distinctio-est",
   "type": "service",
   "data": {
+    "order": 2961,
     "serviceTitle": [
       {
         "type": "heading1",
-        "text": "Incubate impactful web-readiness",
+        "text": "Envisioneer clicks-and-mortar action-items",
         "spans": []
       }
     ],
     "subheadOne": [
       {
         "type": "heading2",
-        "text": "Leverage synergistic infomediaries",
+        "text": "E-enable sticky applications",
         "spans": []
       }
     ],
     "paragraphOne": [
       {
         "type": "paragraph",
-        "text": "Mollit occaecat in sunt aliqua nisi. Magna sunt magna pariatur amet irure commodo aute est minim fugiat pariatur duis ea esse dolore. Est nulla magna ex aliquip ad ex officia et Lorem ullamco.",
+        "text": "Esse laboris excepteur amet aliquip magna labore veniam proident ea culpa do minim adipisicing irure deserunt. Occaecat sint eu nostrud irure id sunt minim aliquip dolor veniam sit Lorem irure in esse.",
         "spans": []
       }
     ],
     "subheadTwo": [
       {
         "type": "heading2",
-        "text": "Reintermediate one-to-one e-tailers",
+        "text": "Repurpose cross-platform vortals",
         "spans": []
       }
     ],
     "paragraphTwo": [
       {
         "type": "paragraph",
-        "text": "Mollit mollit velit occaecat duis eiusmod Lorem adipisicing ipsum. Officia eu ex do culpa sint cupidatat velit et occaecat minim exercitation quis.",
+        "text": "Incididunt nulla culpa veniam amet officia cupidatat in officia sint adipisicing ad.",
         "spans": []
       }
     ],
     "subheadThree": [
       {
         "type": "heading2",
-        "text": "Incentivize enterprise systems",
+        "text": "Grow web-enabled eyeballs",
         "spans": []
       }
     ],
     "paragraphThree": [
       {
         "type": "paragraph",
-        "text": "Deserunt pariatur proident ex occaecat deserunt officia enim. Amet magna reprehenderit ex exercitation pariatur Lorem nulla dolor esse culpa esse et voluptate cillum. Cupidatat reprehenderit qui proident eu.",
+        "text": "Laboris nostrud anim amet ipsum ut in qui aliquip officia eiusmod ex in. Veniam adipisicing velit amet eiusmod magna incididunt ex irure. Exercitation non quis minim officia fugiat ipsum irure do voluptate sunt.",
         "spans": []
       }
     ],
@@ -59,7 +60,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
     },
     "iconTwo": {
       "dimensions": {
@@ -68,7 +69,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"
     },
     "fullWidthImage": {
       "dimensions": {
@@ -77,7 +78,17 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+    },
+    "nextServiceText": "grow visionary users",
+    "nextServiceLink": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    },
+    "prevServiceText": "reinvent impactful e-business",
+    "prevServiceLink": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
     }
   }
 }

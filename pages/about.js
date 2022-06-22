@@ -151,6 +151,7 @@ font-size: 36;
 
 export default function About({ doc, footer, menu }) {
   const about = doc.data;
+
   return (
     <Layout
       pageTitle={<PrismicRichText field={about.aboutTitle} />}

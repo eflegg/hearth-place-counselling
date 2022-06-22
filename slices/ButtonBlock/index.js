@@ -33,6 +33,11 @@ const ButtonBlockContainer = styled.div`
     border: 0px;
     cursor: pointer;
     margin: 0 auto;
+    transition: all 0.25s ease-in;
+    &:hover {
+      background: ${theme.colours.plum};
+      transition: all 0.25s ease-in;
+    }
   }
 `;
 

@@ -24,10 +24,19 @@ const EndorsementContainer = styled.div`
   }
 `;
 const EndorsementSingle = styled.div`
-  background: ${theme.colours.river};
+  &:nth-child(odd) {
+    background: ${theme.colours.river};
+  }
+  &:nth-child(even) {
+    background: ${theme.colours.gold};
+  }
+  /* width: 90%; */
+  margin: 0 auto;
+  ${theme.mediaQuery.md`
   width: 40%;
+  `}
   border-radius: 12px;
-  border: 2px solid pink;
+  margin: 2px;
   padding: 35px 25px;
   display: flex;
   flex-direction: column;

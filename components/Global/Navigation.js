@@ -50,9 +50,18 @@ const MobileNav = styled.nav`
         a {
           color: ${theme.colours.campfire};
           font-family: ${theme.type.body};
+          font-size: 24px;
+          line-height: 45px;
+          ${theme.mediaQuery.sm`
           font-size: 40px;
-          font-weight: 400;
           line-height: 70px;
+          `}
+          font-weight: 400;
+          transition: 0.25s all ease-in-out;
+          &:hover {
+            border-bottom: 1px solid ${theme.colours.gold};
+            transition: 0.25s all ease-in-out;
+          }
         }
       }
     }

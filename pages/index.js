@@ -3,11 +3,9 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import theme from "../components/Theme";
-
 import { useSpring, animated, config } from "react-spring";
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
-
 import { createClient } from "../prismic";
 import { PrismicRichText, PrismicLink } from "@prismicio/react";
 import Button from "../components/Global/Button";

@@ -58,7 +58,7 @@ const Layout = ({ pageTitle, children, footer, button, menu }) => {
       )}
       <div className="">
         {children}
-        <Footer footerData={footer} />
+        <Footer footerData={footer} menu={menu} />
       </div>
     </LayoutContainer>
   );

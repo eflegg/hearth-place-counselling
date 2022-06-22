@@ -10,7 +10,7 @@ export default class App extends NextApp {
     const footer = (await createClient().getSingle("footer")) || null;
     const menu = (await createClient().getSingle("menu")) || null;
 
-    console.log("MENU", menu);
+    // console.log("MENU", menu);
 
     return {
       props: {
@@ -22,7 +22,7 @@ export default class App extends NextApp {
 
   render() {
     const { Component, pageProps, props } = this.props;
-    console.log(props.menu);
+    // console.log(props.menu);
     return (
       <>
         {/* <Component {...pageProps} footer={props.footer} /> */}

@@ -1,14 +1,48 @@
-import { createClient, linkResolver } from "../../prismic";
-import { PrismicRichText, SliceZone } from "@prismicio/react";
+import { createClient, endpoint, linkResolver } from "../../prismic";
+import { PrismicRichText, SliceZone, PrismicLink } from "@prismicio/react";
+import Link from "next/link";
+import * as Prismic from "@prismicio/client";
+
 import styled from "styled-components";
 import theme from "../../components/Theme";
 import Layout from "../../components/Layout";
-import Button from "../../components/Global/Button";
 import { components } from "../../slices";
 
 const ServiceContainer = styled.div`
+  .next-prev {
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    a {
+      font-size: 24px;
+      .arrow--left {
+        position: relative;
+        right: 0;
+        transition: all 0.25s ease-in-out;
+      }
+      &:hover {
+        .arrow--left {
+          right: 10px;
+          transition: all 0.25s ease-in-out;
+        }
+      }
+      .arrow--right {
+        position: relative;
+        transition: all 0.25s ease-in-out;
+        left: 0;
+      }
+      &:nth-child(2) {
+        &:hover {
+          .arrow--right {
+            transition: all 0.25s ease-in-out;
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
   width: 100%;
-
   .img--full {
     width: 100%;
 
@@ -91,20 +125,34 @@ const ServiceContainer = styled.div`
     position: relative;
     left: -25px;
     top: -50px;
-    img {
-      max-width: 400px;
-    }
+
     ${theme.mediaQuery.sm`
       width: 70%;
       height: 100px;
       left: -45px;
     top: -100px;
+    img {
+      max-width: 400px;
+    }
     `}
   }
 `;
 
-export default function ServiceSingle({ doc, footer, menu }) {
+const Client = Prismic.createClient(endpoint);
+
+export default function ServiceSingle({
+  doc,
+  footer,
+  menu,
+  nextpost,
+  prevpost,
+  nextResponse,
+  prevResponse,
+}) {
+  console.log("doc result", doc.results);
   const service = doc.data;
+  console.log("prev ", prevResponse);
+  console.log("next ", nextResponse);
 
   return (
     <Layout
@@ -148,26 +196,114 @@ export default function ServiceSingle({ doc, footer, menu }) {
         </div>
 
         <SliceZone slices={service.slices} components={components} />
+
+        <div className="next-prev">
+          <PrismicLink document={service.prevServiceLink}>
+            <span className="arrow--left">&#60;____</span>{" "}
+            {service.prevServiceText}
+          </PrismicLink>
+          <PrismicLink document={service.nextServiceLink}>
+            {service.nextServiceText}{" "}
+            <span className="arrow--right">____&#62;</span>
+          </PrismicLink>
+          {/* {prevpost && <Link href={"/services/" + prevpost?.uid}>Back</Link>}
+          {nextpost && <Link href={"/services/" + nextpost?.uid}>Next</Link>} */}
+        </div>
       </ServiceContainer>
     </Layout>
   );
 }
 
-export async function getStaticPaths() {
-  const documents = await createClient().getAllByType("service");
+// export async function getStaticProps({ params }) {
+//   const doc = await createClient().getByUID("service", params.uid);
 
+//   const nextResponse = (
+//     await client.get(Prismic.predicates.at("document.type", "service"), {
+//       pageSize: 1,
+//       after: doc.id,
+//       orderings: "[my.service.date]",
+//     })
+//   ).results[5];
+
+//   const prevResponse = await createClient().get([
+//     Prismic.Predicates.at("document.type", "shutup"),
+//     {
+//       pageSize: 1,
+//       after: doc.uid,
+//       orderings: [{ field: "my.service.order" }],
+//     },
+//   ]);
+
+//   return {
+//     props: { doc, nextResponse, prevResponse },
+//   };
+// }
+
+export async function getStaticProps({ params }) {
+  const { uid } = params;
+
+  // Replace `article` with your doc type
+
+  const doc = await Client.getByUID("service", uid);
+  console.log({ doc });
+  const nextResponse = await Client.get(
+    // Replace `service` with your doc type
+    Prismic.Predicates.at("document.type", "service"),
+    {
+      pageSize: 1,
+      after: doc?.id,
+      orderings: "[document.first_publication_date desc]",
+    }
+  );
+  const prevResponse = await Client.get(
+    // Replace `service` with your doc type
+    Prismic.Predicates.at("document.type", "service"),
+    {
+      pageSize: 1,
+      after: doc?.id,
+      orderings: "[document.first_publication_date]",
+    }
+  );
+  const nextPost = nextResponse?.results[0] || null;
+  const prevPost = prevResponse?.results[0] || null;
   return {
-    paths: documents.map((doc) => {
-      return { params: { uid: doc.uid } };
-    }),
-    fallback: false,
+    props: {
+      doc,
+      nextPost,
+      prevPost,
+      nextResponse,
+      prevResponse,
+    },
   };
 }
 
-export async function getStaticProps({ params }) {
-  const doc = await createClient().getByUID("service", params.uid);
+// export async function getStaticPaths() {
+//   const documents = await createClient().getAllByType("service");
 
+//   return {
+//     paths: documents.map((doc) => {
+//       return { params: { uid: doc.uid } };
+//     }),
+//     fallback: false,
+//   };
+// }
+
+export async function getStaticPaths() {
+  const { results } = await Client.get(
+    Prismic.Predicates.at("document.type", "service"),
+    {
+      orderings: "[document.uid]",
+    }
+  );
+  const paths = results.map((result) => {
+    return {
+      params: {
+        uid: result.uid + "",
+      },
+    };
+  });
   return {
-    props: { doc },
+    paths,
+    fallback: false,
   };
 }

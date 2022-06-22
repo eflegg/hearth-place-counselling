@@ -12,6 +12,13 @@
           "placeholder": ""
         }
       },
+      "order": {
+        "type": "Number",
+        "config": {
+          "label": "Order",
+          "placeholder": ""
+        }
+      },
       "serviceTitle": {
         "type": "StructuredText",
         "config": {
@@ -120,6 +127,36 @@
               "type": "SharedSlice"
             }
           }
+        }
+      }
+    },
+    "Next/Previous Buttons": {
+      "nextServiceText": {
+        "type": "Text",
+        "config": {
+          "label": "Next Service Text",
+          "placeholder": ""
+        }
+      },
+      "nextServiceLink": {
+        "type": "Link",
+        "config": {
+          "label": "Next Service Link",
+          "select": "document"
+        }
+      },
+      "prevServiceText": {
+        "type": "Text",
+        "config": {
+          "label": "Prev Service Text",
+          "placeholder": ""
+        }
+      },
+      "prevServiceLink": {
+        "type": "Link",
+        "config": {
+          "label": "Prev Service Link",
+          "select": "document"
         }
       }
     }
