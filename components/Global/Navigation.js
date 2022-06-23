@@ -99,7 +99,7 @@ const MobileNav = styled.nav`
       .burger-1 {
         position: relative;
         transform: rotate(-45deg);
-        top: 15px;
+        top: 8px;
         transition: all 0.15s ease-in-out;
       }
       .burger-2 {
