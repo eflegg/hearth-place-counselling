@@ -1,0 +1,265 @@
+{
+  "id": "bc91260c-e8f6-4983-a9d8-ab8c20f63f46",
+  "uid": "perspiciatis-totam-itaque",
+  "type": "home-page",
+  "data": {
+    "heroLogo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+    },
+    "heroText": [
+      {
+        "type": "paragraph",
+        "text": "Ullamco nisi officia voluptate commodo enim ea sint sunt. Velit ex ullamco quis nostrud duis magna consectetur consectetur quis velit labore elit aliquip mollit. Fugiat fugiat elit ad sunt nostrud voluptate velit sint.",
+        "spans": []
+      }
+    ],
+    "heroImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+    },
+    "heroButtonText": "unleash web-enabled experiences",
+    "heroButtonLink": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "homeAboutHeader": [
+      {
+        "type": "heading1",
+        "text": "Engineer back-end models",
+        "spans": []
+      }
+    ],
+    "homeAboutParaOne": [
+      {
+        "type": "paragraph",
+        "text": "Occaecat amet ad aliquip incididunt velit cupidatat aliqua consequat commodo. Id id laboris laborum commodo do mollit non tempor occaecat ipsum id laborum deserunt. Irure Lorem Lorem excepteur aliquip irure est.",
+        "spans": []
+      }
+    ],
+    "homeAboutSubhead": [
+      {
+        "type": "heading2",
+        "text": "Benchmark out-of-the-box partnerships",
+        "spans": []
+      }
+    ],
+    "homeAboutParaTwo": [
+      {
+        "type": "paragraph",
+        "text": "Aliquip laboris adipisicing in duis aliquip magna ut occaecat et deserunt consectetur consequat. Fugiat voluptate consectetur proident eu esse mollit amet est dolor qui qui nisi et.",
+        "spans": []
+      }
+    ],
+    "homeAboutImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+    },
+    "homeServicesTitle": [
+      {
+        "type": "heading2",
+        "text": "Disintermediate impactful mindshare",
+        "spans": []
+      }
+    ],
+    "homeServices": [
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Aliqua mollit adipisicing esse Lorem eu ex amet cillum incididunt laborum.",
+            "spans": []
+          }
+        ],
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+        },
+        "excerpt": [
+          {
+            "type": "paragraph",
+            "text": "Nulla laboris eiusmod occaecat pariatur ex eiusmod ex sint est non.",
+            "spans": []
+          }
+        ],
+        "homeServicesLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Exercitation reprehenderit est ullamco proident. Et cillum eiusmod commodo proident do reprehenderit cillum dolor laboris Lorem cupidatat sint sunt consectetur amet.",
+            "spans": []
+          }
+        ],
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+        },
+        "excerpt": [
+          {
+            "type": "paragraph",
+            "text": "Tempor amet consectetur ad ad incididunt elit elit mollit ad non ut amet eiusmod est enim.",
+            "spans": []
+          }
+        ],
+        "homeServicesLink": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Et et Lorem consequat dolor exercitation cillum et dolor velit sunt culpa nulla veniam eu reprehenderit. Culpa amet excepteur nisi dolor.",
+            "spans": []
+          }
+        ],
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
+        },
+        "excerpt": [
+          {
+            "type": "paragraph",
+            "text": "Minim dolore eu id duis est ullamco cupidatat dolor ea nisi nostrud ipsum. Minim ad proident velit.",
+            "spans": []
+          }
+        ],
+        "homeServicesLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      }
+    ],
+    "homeModalitiesTitle": [
+      {
+        "type": "heading2",
+        "text": "Envisioneer scalable e-services",
+        "spans": []
+      }
+    ],
+    "homeModality": [
+      {
+        "title": [
+          {
+            "type": "heading3",
+            "text": "Utilize front-end portals",
+            "spans": []
+          }
+        ],
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
+        },
+        "excerpt": [
+          {
+            "type": "paragraph",
+            "text": "Eu quis eu eiusmod magna officia et proident consequat. Fugiat nulla nostrud dolor pariatur elit in consequat officia officia non occaecat magna non adipisicing ad. Ullamco dolore deserunt non ex velit id laboris.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading3",
+            "text": "Implement leading-edge niches",
+            "spans": []
+          }
+        ],
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
+        },
+        "excerpt": [
+          {
+            "type": "paragraph",
+            "text": "Consequat officia consectetur velit pariatur reprehenderit officia eiusmod aliqua elit reprehenderit elit excepteur amet fugiat tempor. Minim reprehenderit aliquip aute occaecat consequat amet veniam nostrud nostrud elit esse reprehenderit laboris esse adipisicing.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      }
+    ],
+    "bookNowTitle": [
+      {
+        "type": "heading2",
+        "text": "Enable collaborative ROI",
+        "spans": []
+      }
+    ],
+    "bookNowExcerpt": [
+      {
+        "type": "paragraph",
+        "text": "Culpa dolore adipisicing est adipisicing incididunt deserunt sint labore commodo ipsum sit. Enim ea ex amet cillum eu labore id eiusmod consequat tempor eu adipisicing excepteur elit sint.",
+        "spans": []
+      }
+    ],
+    "bookNowImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+    },
+    "bookNowButtonText": "strategize cross-media interfaces",
+    "bookNowLink": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    }
+  }
+}

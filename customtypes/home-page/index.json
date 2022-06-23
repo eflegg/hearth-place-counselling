@@ -1,0 +1,247 @@
+{
+  "id": "home-page",
+  "label": "Home Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "heroLogo": {
+        "type": "Image",
+        "config": {
+          "label": "Hero Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "heroText": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Hero Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "heroImage": {
+        "type": "Image",
+        "config": {
+          "label": "Hero Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "heroButtonText": {
+        "type": "Text",
+        "config": {
+          "label": "Hero Button Text",
+          "placeholder": ""
+        }
+      },
+      "heroButtonLink": {
+        "type": "Link",
+        "config": {
+          "label": "Hero Button Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "homeAboutHeader": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home About Header",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "homeAboutParaOne": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home About Para One",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "homeAboutSubhead": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home About Subhead",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "homeAboutParaTwo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home About Para Two",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "homeAboutImage": {
+        "type": "Image",
+        "config": {
+          "label": "Home About Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    },
+    "Home Services": {
+      "homeServicesTitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home Services Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "homeServices": {
+        "type": "Group",
+        "config": {
+          "label": "Home Services",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "excerpt": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Excerpt",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "homeServicesLink": {
+              "type": "Link",
+              "config": {
+                "label": "Home Services Link",
+                "select": "document"
+              }
+            }
+          }
+        }
+      },
+      "slices1": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "Home Modalities": {
+      "homeModalitiesTitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Home Modalities Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "homeModality": {
+        "type": "Group",
+        "config": {
+          "label": "Home Modality",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading3"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "excerpt": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Excerpt",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "select": "document"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Book Now": {
+      "bookNowTitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Book Now Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "bookNowExcerpt": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Book Now Excerpt",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "bookNowImage": {
+        "type": "Image",
+        "config": {
+          "label": "Book Now Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bookNowButtonText": {
+        "type": "Text",
+        "config": {
+          "label": "Book Now Button Text",
+          "placeholder": ""
+        }
+      },
+      "bookNowLink": {
+        "type": "Link",
+        "config": {
+          "label": "Book Now Link",
+          "select": "document"
+        }
+      }
+    }
+  }
+}

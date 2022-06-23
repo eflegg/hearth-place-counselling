@@ -1,0 +1,94 @@
+{
+  "id": "fa5749b4-c034-4ee4-bd97-95d978df1680",
+  "uid": "autem-distinctio-est",
+  "type": "service",
+  "data": {
+    "order": 2961,
+    "serviceTitle": [
+      {
+        "type": "heading1",
+        "text": "Envisioneer clicks-and-mortar action-items",
+        "spans": []
+      }
+    ],
+    "subheadOne": [
+      {
+        "type": "heading2",
+        "text": "E-enable sticky applications",
+        "spans": []
+      }
+    ],
+    "paragraphOne": [
+      {
+        "type": "paragraph",
+        "text": "Esse laboris excepteur amet aliquip magna labore veniam proident ea culpa do minim adipisicing irure deserunt. Occaecat sint eu nostrud irure id sunt minim aliquip dolor veniam sit Lorem irure in esse.",
+        "spans": []
+      }
+    ],
+    "subheadTwo": [
+      {
+        "type": "heading2",
+        "text": "Repurpose cross-platform vortals",
+        "spans": []
+      }
+    ],
+    "paragraphTwo": [
+      {
+        "type": "paragraph",
+        "text": "Incididunt nulla culpa veniam amet officia cupidatat in officia sint adipisicing ad.",
+        "spans": []
+      }
+    ],
+    "subheadThree": [
+      {
+        "type": "heading2",
+        "text": "Grow web-enabled eyeballs",
+        "spans": []
+      }
+    ],
+    "paragraphThree": [
+      {
+        "type": "paragraph",
+        "text": "Laboris nostrud anim amet ipsum ut in qui aliquip officia eiusmod ex in. Veniam adipisicing velit amet eiusmod magna incididunt ex irure. Exercitation non quis minim officia fugiat ipsum irure do voluptate sunt.",
+        "spans": []
+      }
+    ],
+    "iconOne": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+    },
+    "iconTwo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"
+    },
+    "fullWidthImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+    },
+    "nextServiceText": "grow visionary users",
+    "nextServiceLink": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    },
+    "prevServiceText": "reinvent impactful e-business",
+    "prevServiceLink": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    }
+  }
+}

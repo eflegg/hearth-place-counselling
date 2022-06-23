@@ -1,0 +1,68 @@
+{
+  "id": "562aafdc-2bbe-4cd6-8695-68bc7f931446",
+  "uid": "nesciunt-recusandae-ea",
+  "type": "booknow",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Innovate dot-com paradigms",
+        "spans": []
+      }
+    ],
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Aliquip labore sunt pariatur est aute officia officia anim ea minim eiusmod. Aute et enim fugiat incididunt dolor nostrud eiusmod aute consectetur esse. Minim pariatur ex nulla dolor ullamco labore.",
+        "spans": []
+      }
+    ],
+    "contact": "streamline granular e-markets",
+    "icon": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+    },
+    "subheadOne": [
+      {
+        "type": "heading2",
+        "text": "Seize sticky platforms",
+        "spans": []
+      }
+    ],
+    "textOne": [
+      {
+        "type": "paragraph",
+        "text": "Minim velit eiusmod mollit duis et ullamco veniam nisi Lorem. Tempor exercitation anim ea ad. Consequat velit cillum deserunt ipsum officia nisi proident Lorem mollit deserunt Lorem eiusmod est mollit.",
+        "spans": []
+      }
+    ],
+    "subheadTwo": [
+      {
+        "type": "heading2",
+        "text": "Unleash revolutionary models",
+        "spans": []
+      }
+    ],
+    "textTwo": [
+      {
+        "type": "paragraph",
+        "text": "Sit quis sint consectetur cillum cupidatat elit do. Et nulla ut consectetur eu Lorem officia non ad excepteur velit esse sit magna eu nisi.",
+        "spans": []
+      }
+    ],
+    "fullWidthImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop"
+    }
+  }
+}

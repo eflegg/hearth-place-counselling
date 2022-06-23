@@ -1,0 +1,164 @@
+{
+  "id": "service",
+  "label": "Service",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "order": {
+        "type": "Number",
+        "config": {
+          "label": "Order",
+          "placeholder": ""
+        }
+      },
+      "serviceTitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Service Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "subheadOne": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Subhead One",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "paragraphOne": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Paragraph One",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "subheadTwo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Subhead Two",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "paragraphTwo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Paragraph Two",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "subheadThree": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Subhead Three",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "paragraphThree": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Paragraph Three",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
+      "iconOne": {
+        "type": "Image",
+        "config": {
+          "label": "Icon One",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "iconTwo": {
+        "type": "Image",
+        "config": {
+          "label": "Icon Two",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "fullWidthImage": {
+        "type": "Image",
+        "config": {
+          "label": "Full Width Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "button_block": {
+              "type": "SharedSlice"
+            },
+            "large_text": {
+              "type": "SharedSlice"
+            },
+            "columns": {
+              "type": "SharedSlice"
+            },
+            "endorsement": {
+              "type": "SharedSlice"
+            },
+            "large_text_block": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Next/Previous Buttons": {
+      "nextServiceText": {
+        "type": "Text",
+        "config": {
+          "label": "Next Service Text",
+          "placeholder": ""
+        }
+      },
+      "nextServiceLink": {
+        "type": "Link",
+        "config": {
+          "label": "Next Service Link",
+          "select": "document"
+        }
+      },
+      "prevServiceText": {
+        "type": "Text",
+        "config": {
+          "label": "Prev Service Text",
+          "placeholder": ""
+        }
+      },
+      "prevServiceLink": {
+        "type": "Link",
+        "config": {
+          "label": "Prev Service Link",
+          "select": "document"
+        }
+      }
+    }
+  }
+}

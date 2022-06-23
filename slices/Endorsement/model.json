@@ -1,0 +1,33 @@
+{
+  "id": "endorsement",
+  "type": "SharedSlice",
+  "name": "Endorsement",
+  "description": "Endorsement",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Endorsement",
+      "primary": {},
+      "items": {
+        "endorsementText": {
+          "type": "Text",
+          "config": {
+            "label": "Endorsement Text",
+            "placeholder": ""
+          }
+        },
+        "attribution": {
+          "type": "Text",
+          "config": {
+            "label": "Attribution",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "69942dd2-b4c8-433b-b7b5-9ecdc7ade6cd",
+  "uid": "culpa-tenetur-nostrum",
+  "type": "modalities",
+  "data": {
+    "modalitiesTitle": [
+      {
+        "type": "heading1",
+        "text": "Matrix cross-media users",
+        "spans": []
+      }
+    ],
+    "modalities": [
+      {
+        "title": [
+          {
+            "type": "heading3",
+            "text": "Target sticky eyeballs",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Aute culpa est anim elit magna dolore pariatur cupidatat.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading4",
+            "text": "Architect front-end channels",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading3",
+            "text": "Utilize granular convergence",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Et do nisi ut quis veniam veniam id nostrud deserunt excepteur laboris voluptate ipsum id ex. Reprehenderit do magna tempor proident Lorem culpa irure. Exercitation ullamco pariatur cupidatat esse est qui proident laboris.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading4",
+            "text": "Redefine mission-critical portals",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading3",
+            "text": "Visualize value-added vortals",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Aliqua nisi sint in eiusmod nisi. Aliqua nostrud nostrud consectetur anim minim velit nulla elit irure qui ipsum aliqua fugiat excepteur.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading4",
+            "text": "Extend interactive initiatives",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "title": [
+          {
+            "type": "heading3",
+            "text": "Syndicate interactive systems",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Reprehenderit cillum fugiat sit mollit deserunt incididunt sit adipisicing labore eu sint qui cillum in. Lorem velit incididunt irure occaecat velit culpa nostrud.",
+            "spans": []
+          }
+        ],
+        "quote": [
+          {
+            "type": "heading4",
+            "text": "Reinvent value-added eyeballs",
+            "spans": []
+          }
+        ],
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
+        }
+      }
+    ]
+  }
+}

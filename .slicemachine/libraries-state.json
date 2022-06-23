@@ -1,0 +1,357 @@
+{
+  "slices": {
+    "components": {
+      "button_block": {
+        "library": "slices",
+        "id": "button_block",
+        "name": "ButtonBlock",
+        "description": "ButtonBlock",
+        "model": {
+          "id": "button_block",
+          "type": "SharedSlice",
+          "name": "ButtonBlock",
+          "description": "ButtonBlock",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ButtonBlock",
+              "primary": {
+                "text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": ""
+                  }
+                },
+                "buttonText": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "buttonLink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "select": "document"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "button_block",
+            "items": [],
+            "primary": {
+              "text": "implement bleeding-edge niches",
+              "buttonText": "seize B2B bandwidth",
+              "buttonLink": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "columns": {
+        "library": "slices",
+        "id": "columns",
+        "name": "Columns",
+        "description": "Columns",
+        "model": {
+          "id": "columns",
+          "type": "SharedSlice",
+          "name": "Columns",
+          "description": "Columns",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Columns",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading3"
+                  }
+                }
+              },
+              "items": {
+                "subtitle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": ""
+                  }
+                },
+                "columnText": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Column Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,strong"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "columns",
+            "items": [
+              {
+                "subtitle": "reintermediate virtual partnerships",
+                "columnText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Proident irure irure est est officia. Do do laborum ut ut consectetur. Proident cupidatat ex quis ad dolor est voluptate veniam officia.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "subtitle": "cultivate e-business interfaces",
+                "columnText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Consequat nisi ad aute esse. Nisi anim est esse do eiusmod.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "subtitle": "matrix plug-and-play deliverables",
+                "columnText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Dolore ullamco excepteur officia fugiat nulla cupidatat proident in velit ad cupidatat ipsum. Irure ad consequat sit occaecat aliqua nulla laborum laborum adipisicing.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "subtitle": "matrix viral content",
+                "columnText": [
+                  {
+                    "type": "paragraph",
+                    "text": "Officia magna occaecat eiusmod ad reprehenderit officia nulla est reprehenderit consequat elit tempor elit ipsum. Dolor magna sit amet sint.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading3",
+                  "text": "Innovate global communities",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "endorsement": {
+        "library": "slices",
+        "id": "endorsement",
+        "name": "Endorsement",
+        "description": "Endorsement",
+        "model": {
+          "id": "endorsement",
+          "type": "SharedSlice",
+          "name": "Endorsement",
+          "description": "Endorsement",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Endorsement",
+              "primary": {},
+              "items": {
+                "endorsementText": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Endorsement Text",
+                    "placeholder": ""
+                  }
+                },
+                "attribution": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Attribution",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "endorsement",
+            "items": [
+              {
+                "endorsementText": "disintermediate turn-key synergies",
+                "attribution": "implement out-of-the-box e-commerce"
+              },
+              {
+                "endorsementText": "recontextualize seamless technologies",
+                "attribution": "morph intuitive communities"
+              },
+              {
+                "endorsementText": "utilize visionary niches",
+                "attribution": "evolve plug-and-play web-readiness"
+              }
+            ],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "large_text": {
+        "library": "slices",
+        "id": "large_text",
+        "name": "LargeText",
+        "description": "LargeText",
+        "model": {
+          "id": "large_text",
+          "type": "SharedSlice",
+          "name": "LargeText",
+          "description": "LargeText",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LargeText",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "large_text",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Engage 24/7 communities",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "large_text_block": {
+        "library": "slices",
+        "id": "large_text_block",
+        "name": "LargeTextBlock",
+        "description": "LargeTextBlock",
+        "model": {
+          "id": "large_text_block",
+          "type": "SharedSlice",
+          "name": "LargeTextBlock",
+          "description": "LargeTextBlock",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "LargeTextBlock",
+              "primary": {
+                "text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "large_text_block",
+            "items": [],
+            "primary": {
+              "text": "matrix value-added markets"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "book-now",
+  "label": "Book Now",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

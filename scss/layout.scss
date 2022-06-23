@@ -1,0 +1,38 @@
+@mixin media-query-min($value, $operator: "min-width", $query: "screen") {
+  @media #{$query} and (#{$operator}: #{$value}) {
+    @content;
+  }
+}
+
+@mixin media-query-max($value, $operator: "max-width", $query: "screen") {
+  @media #{$query} and (#{$operator}: #{$value}) {
+    @content;
+  }
+}
+
+/* ##usage##
+    @include media-query-min(500px) {
+    }
+  */
+$xs: 400px;
+$sm: 768px;
+$md: 1000px;
+$lg: 1250px;
+$xl: 1800px;
+
+.layout-container {
+  max-width: 300px;
+  width: 90%;
+  margin: auto;
+  @include media-query-max($xs) {
+    max-width: 498px;
+    width: 80%;
+  }
+  @include media-query-max($sm) {
+    max-width: 800px;
+    width: 80%;
+  }
+  @include media-query-max($md) {
+    max-width: 1050px;
+  }
+}
