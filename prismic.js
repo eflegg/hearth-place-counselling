@@ -19,7 +19,7 @@ export function linkResolver(doc) {
     case "service":
       return `/services/${doc.uid}`;
     default:
-      return null;
+      return "/";
   }
 }
 

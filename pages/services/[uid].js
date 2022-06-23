@@ -203,34 +203,53 @@ export default function ServiceSingle({ doc, footer, menu }) {
 }
 
 export async function getStaticProps({ params }) {
-  const { uid } = params;
-
-  const doc = await Client.getByUID("service", uid);
-  console.log({ doc });
+  const doc = await createClient().getByUID("service", params.uid);
 
   return {
-    props: {
-      doc,
-    },
+    props: { doc },
   };
 }
 
 export async function getStaticPaths() {
-  const { results } = await Client.get(
-    Prismic.Predicates.at("document.type", "service"),
-    {
-      orderings: "[document.uid]",
-    }
-  );
-  const paths = results.map((result) => {
-    return {
-      params: {
-        uid: result.uid + "",
-      },
-    };
-  });
+  const documents = await createClient().getAllByType("service");
+
   return {
-    paths,
+    paths: documents.map((doc) => {
+      return { params: { uid: doc.uid } };
+    }),
     fallback: false,
   };
 }
+
+// export async function getStaticProps({ params }) {
+//   const { uid } = params;
+
+//   const doc = await Client.getByUID("service", uid);
+//   console.log({ doc });
+
+//   return {
+//     props: {
+//       doc,
+//     },
+//   };
+// }
+
+// export async function getStaticPaths() {
+//   const { results } = await Client.get(
+//     Prismic.Predicates.at("document.type", "service"),
+//     {
+//       orderings: "[document.uid]",
+//     }
+//   );
+//   const paths = results.map((result) => {
+//     return {
+//       params: {
+//         uid: result.uid + "",
+//       },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }

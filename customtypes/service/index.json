@@ -23,7 +23,7 @@
         "type": "StructuredText",
         "config": {
           "label": "Service Title",
-          "placeholder": "",
+          "placeholder": "Services",
           "allowTargetBlank": true,
           "single": "heading1"
         }
@@ -32,7 +32,7 @@
         "type": "StructuredText",
         "config": {
           "label": "Subhead One",
-          "placeholder": "",
+          "placeholder": " ",
           "allowTargetBlank": true,
           "single": "heading2"
         }
@@ -41,7 +41,7 @@
         "type": "StructuredText",
         "config": {
           "label": "Paragraph One",
-          "placeholder": "",
+          "placeholder": " ",
           "allowTargetBlank": true,
           "single": "paragraph"
         }
@@ -50,7 +50,7 @@
         "type": "StructuredText",
         "config": {
           "label": "Subhead Two",
-          "placeholder": "",
+          "placeholder": " ",
           "allowTargetBlank": true,
           "single": "heading2"
         }
@@ -59,7 +59,7 @@
         "type": "StructuredText",
         "config": {
           "label": "Paragraph Two",
-          "placeholder": "",
+          "placeholder": " ",
           "allowTargetBlank": true,
           "single": "paragraph"
         }
@@ -68,7 +68,7 @@
         "type": "StructuredText",
         "config": {
           "label": "Subhead Three",
-          "placeholder": "",
+          "placeholder": " ",
           "allowTargetBlank": true,
           "single": "heading2"
         }
@@ -77,7 +77,7 @@
         "type": "StructuredText",
         "config": {
           "label": "Paragraph Three",
-          "placeholder": "",
+          "placeholder": " ",
           "allowTargetBlank": true,
           "single": "paragraph"
         }
@@ -135,28 +135,34 @@
         "type": "Text",
         "config": {
           "label": "Next Service Text",
-          "placeholder": ""
+          "placeholder": "Next service"
         }
       },
       "nextServiceLink": {
         "type": "Link",
         "config": {
           "label": "Next Service Link",
-          "select": "document"
+          "select": "document",
+          "customtypes": [
+            "service"
+          ]
         }
       },
       "prevServiceText": {
         "type": "Text",
         "config": {
           "label": "Prev Service Text",
-          "placeholder": ""
+          "placeholder": "Previous service"
         }
       },
       "prevServiceLink": {
         "type": "Link",
         "config": {
           "label": "Prev Service Link",
-          "select": "document"
+          "select": "document",
+          "customtypes": [
+            "service"
+          ]
         }
       }
     }
