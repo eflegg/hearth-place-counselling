@@ -140,19 +140,9 @@ const ServiceContainer = styled.div`
 
 const Client = Prismic.createClient(endpoint);
 
-export default function ServiceSingle({
-  doc,
-  footer,
-  menu,
-  nextpost,
-  prevpost,
-  nextResponse,
-  prevResponse,
-}) {
+export default function ServiceSingle({ doc, footer, menu }) {
   console.log("doc result", doc.results);
   const service = doc.data;
-  console.log("prev ", prevResponse);
-  console.log("next ", nextResponse);
 
   return (
     <Layout
@@ -206,87 +196,24 @@ export default function ServiceSingle({
             {service.nextServiceText}{" "}
             <span className="arrow--right">____&#62;</span>
           </PrismicLink>
-          {/* {prevpost && <Link href={"/services/" + prevpost?.uid}>Back</Link>}
-          {nextpost && <Link href={"/services/" + nextpost?.uid}>Next</Link>} */}
         </div>
       </ServiceContainer>
     </Layout>
   );
 }
 
-// export async function getStaticProps({ params }) {
-//   const doc = await createClient().getByUID("service", params.uid);
-
-//   const nextResponse = (
-//     await client.get(Prismic.predicates.at("document.type", "service"), {
-//       pageSize: 1,
-//       after: doc.id,
-//       orderings: "[my.service.date]",
-//     })
-//   ).results[5];
-
-//   const prevResponse = await createClient().get([
-//     Prismic.Predicates.at("document.type", "shutup"),
-//     {
-//       pageSize: 1,
-//       after: doc.uid,
-//       orderings: [{ field: "my.service.order" }],
-//     },
-//   ]);
-
-//   return {
-//     props: { doc, nextResponse, prevResponse },
-//   };
-// }
-
 export async function getStaticProps({ params }) {
   const { uid } = params;
 
-  // Replace `article` with your doc type
-
   const doc = await Client.getByUID("service", uid);
   console.log({ doc });
-  const nextResponse = await Client.get(
-    // Replace `service` with your doc type
-    Prismic.Predicates.at("document.type", "service"),
-    {
-      pageSize: 1,
-      after: doc?.id,
-      orderings: "[document.first_publication_date desc]",
-    }
-  );
-  const prevResponse = await Client.get(
-    // Replace `service` with your doc type
-    Prismic.Predicates.at("document.type", "service"),
-    {
-      pageSize: 1,
-      after: doc?.id,
-      orderings: "[document.first_publication_date]",
-    }
-  );
-  const nextPost = nextResponse?.results[0] || null;
-  const prevPost = prevResponse?.results[0] || null;
+
   return {
     props: {
       doc,
-      nextPost,
-      prevPost,
-      nextResponse,
-      prevResponse,
     },
   };
 }
-
-// export async function getStaticPaths() {
-//   const documents = await createClient().getAllByType("service");
-
-//   return {
-//     paths: documents.map((doc) => {
-//       return { params: { uid: doc.uid } };
-//     }),
-//     fallback: false,
-//   };
-// }
 
 export async function getStaticPaths() {
   const { results } = await Client.get(
