@@ -186,6 +186,9 @@ const HomeCardContainer = styled.section`
       ${theme.mediaQuery.sm`
       width: 50%;
       padding: 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       `}
     }
     .book-now--img {
@@ -203,14 +206,14 @@ const HomeCardContainer = styled.section`
 `;
 
 const ServiceCard = styled.div`
+.img--container {
+  height: 305px;
+}
 &:hover {
   img {
-
-    -webkit-box-shadow: 5px 5px 66px -18px rgba(0,0,0,0.43);
-  -moz-box-shadow: 5px 5px 66px -18px rgba(0,0,0,0.43);
   box-shadow: 5px 5px 66px -18px rgba(0,0,0,0.43);
-  transition: .25s all ease-in-out;
-  height: 310px;
+  transition: .5s all ease-in-out;
+  height: 305px;
   }
 }
   width: 350px;
@@ -222,8 +225,7 @@ const ServiceCard = styled.div`
      width: 350px;
     `}
   img {
-    /* width: 300px; */
-    transition: .25s all ease-in-out;
+    transition: .5s all ease-in-out;
     height: 300px;
     object-fit: cover;
     border-radius: 12px;
@@ -261,19 +263,35 @@ const ServiceCard = styled.div`
 `;
 const ModalityCard = styled.div`
   width: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
+  padding-bottom: 10px;
+  transition: 0.5s all ease-in-out;
+  border-radius: 12px;
+  &:hover {
+    width: 205px;
+    box-shadow: 5px 5px 66px -18px rgba(0, 0, 0, 0.13);
+    transition: 0.5s all ease-in-out;
+  }
 `;
 
 export default function Home({ doc, footer, menu }) {
-  const [visible, setVisible] = useState(false);
-  console.log("visible? ", visible);
-  const props = useSpring({
-    config: config.slow,
-    opacity: visible ? 1 : 0,
-    delay: 2000,
-    transform: visible ? "translateY(0)" : "translateY(-20px)",
-  });
+  const [visibleOdd, setVisibleOdd] = useState(false);
+  const [visibleEven, setVisibleEven] = useState(false);
 
+  const visibleOne = useSpring({
+    config: config.slow,
+    opacity: visibleOdd ? 1 : 0,
+    transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
+    delay: 200,
+  });
+  const visibleTwo = useSpring({
+    config: config.slow,
+    opacity: visibleEven ? 1 : 0,
+    transform: visibleEven ? "translateY(0px)" : "translateY(-20px)",
+    delay: 200,
+  });
+  console.log("visible odd ", visibleOdd);
+  console.log("visible even", visibleEven);
   const home = doc.data;
 
   return (
@@ -303,8 +321,16 @@ export default function Home({ doc, footer, menu }) {
             />
           </div>
         </Hero>
+
         <div className="home-about">
-          <PrismicRichText field={home.homeAboutHeader} />
+          <Waypoint
+            onEnter={() => setVisibleOdd(true)}
+            onLeave={() => setVisibleOdd(false)}
+          >
+            <animated.div style={visibleOne}>
+              <PrismicRichText field={home.homeAboutHeader} />
+            </animated.div>
+          </Waypoint>
           <div className="home-about--inner">
             <div className="about-text">
               <PrismicRichText field={home.homeAboutParaOne} />
@@ -335,12 +361,12 @@ export default function Home({ doc, footer, menu }) {
 
         <HomeCardContainer className="home-services">
           <Waypoint
-            onEnter={() => setVisible(true)}
-            onLeave={() => setVisible(false)}
+            onEnter={() => setVisibleEven(true)}
+            onLeave={() => setVisibleEven(false)}
           >
-            <div style={props}>
+            <animated.div style={visibleTwo}>
               <PrismicRichText field={home.homeServicesTitle} />
-            </div>
+            </animated.div>
           </Waypoint>
 
           <div className="service-card--container d-flex">
@@ -348,7 +374,7 @@ export default function Home({ doc, footer, menu }) {
               return (
                 <ServiceCard key={index}>
                   <PrismicLink document={homeService.homeServicesLink}>
-                    <div className="position-relative">
+                    <div className="position-relative img--container">
                       <img
                         src={homeService.image.url}
                         alt={homeService.image.alt}
@@ -367,7 +393,14 @@ export default function Home({ doc, footer, menu }) {
           <div className="gold-box"></div>
         </HomeCardContainer>
         <HomeCardContainer className="home-services">
-          <PrismicRichText field={home.homeModalitiesTitle} />
+          <Waypoint
+            onEnter={() => setVisibleOdd(true)}
+            onLeave={() => setVisibleOdd(false)}
+          >
+            <animated.div style={visibleOne}>
+              <PrismicRichText field={home.homeModalitiesTitle} />
+            </animated.div>
+          </Waypoint>
 
           <div className="modalities-card--container">
             {home.homeModality.map((modality, index) => {
@@ -388,7 +421,14 @@ export default function Home({ doc, footer, menu }) {
           </div>
         </HomeCardContainer>
         <HomeCardContainer className="book-now">
-          <PrismicRichText field={home.bookNowTitle} />
+          <Waypoint
+            onEnter={() => setVisibleEven(true)}
+            onLeave={() => setVisibleEven(false)}
+          >
+            <animated.div style={visibleTwo}>
+              <PrismicRichText field={home.bookNowTitle} />
+            </animated.div>
+          </Waypoint>
           <div className="book-now--inner">
             <div className="book-now--text">
               <PrismicRichText field={home.bookNowExcerpt} />

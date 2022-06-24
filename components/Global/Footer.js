@@ -87,7 +87,6 @@ export default function Footer({ footerData, menu }) {
     year: "numeric",
   });
 
-  console.log("menu prop: ", menu.data.menuLinks);
   return (
     <FooterContainer>
       <div className="footer--inner">
