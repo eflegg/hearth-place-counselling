@@ -220,36 +220,3 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-
-// export async function getStaticProps({ params }) {
-//   const { uid } = params;
-
-//   const doc = await Client.getByUID("service", uid);
-//   console.log({ doc });
-
-//   return {
-//     props: {
-//       doc,
-//     },
-//   };
-// }
-
-// export async function getStaticPaths() {
-//   const { results } = await Client.get(
-//     Prismic.Predicates.at("document.type", "service"),
-//     {
-//       orderings: "[document.uid]",
-//     }
-//   );
-//   const paths = results.map((result) => {
-//     return {
-//       params: {
-//         uid: result.uid + "",
-//       },
-//     };
-//   });
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }

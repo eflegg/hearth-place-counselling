@@ -3,7 +3,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import theme from "../components/Theme";
-import { useSpring, animated, config } from "react-spring";
+import { useSpring, useTrail, animated, config } from "react-spring";
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { createClient } from "../prismic";
@@ -203,7 +203,18 @@ const HomeCardContainer = styled.section`
 `;
 
 const ServiceCard = styled.div`
+&:hover {
+  img {
+
+    -webkit-box-shadow: 5px 5px 66px -18px rgba(0,0,0,0.43);
+  -moz-box-shadow: 5px 5px 66px -18px rgba(0,0,0,0.43);
+  box-shadow: 5px 5px 66px -18px rgba(0,0,0,0.43);
+  transition: .25s all ease-in-out;
+  height: 310px;
+  }
+}
   width: 350px;
+
   ${theme.mediaQuery.md`
     width: 325px;
     `}
@@ -212,6 +223,7 @@ const ServiceCard = styled.div`
     `}
   img {
     /* width: 300px; */
+    transition: .25s all ease-in-out;
     height: 300px;
     object-fit: cover;
     border-radius: 12px;
@@ -253,9 +265,15 @@ const ModalityCard = styled.div`
 `;
 
 export default function Home({ doc, footer, menu }) {
+  const [visible, setVisible] = useState(false);
+  console.log("visible? ", visible);
   const props = useSpring({
     config: config.slow,
+    opacity: visible ? 1 : 0,
+    delay: 2000,
+    transform: visible ? "translateY(0)" : "translateY(-20px)",
   });
+
   const home = doc.data;
 
   return (
@@ -316,7 +334,15 @@ export default function Home({ doc, footer, menu }) {
         </div>
 
         <HomeCardContainer className="home-services">
-          <PrismicRichText field={home.homeServicesTitle} />
+          <Waypoint
+            onEnter={() => setVisible(true)}
+            onLeave={() => setVisible(false)}
+          >
+            <div style={props}>
+              <PrismicRichText field={home.homeServicesTitle} />
+            </div>
+          </Waypoint>
+
           <div className="service-card--container d-flex">
             {home.homeServices.map((homeService, index) => {
               return (
@@ -337,9 +363,9 @@ export default function Home({ doc, footer, menu }) {
               );
             })}
           </div>
+
           <div className="gold-box"></div>
         </HomeCardContainer>
-
         <HomeCardContainer className="home-services">
           <PrismicRichText field={home.homeModalitiesTitle} />
 
@@ -347,7 +373,6 @@ export default function Home({ doc, footer, menu }) {
             {home.homeModality.map((modality, index) => {
               return (
                 <ModalityCard key={index}>
-                  {/* <PrismicLink field={modality.link}> */}
                   <PrismicRichText field={modality.title} />
                   <img src={modality.image.url} alt={modality.image.alt} />
                   <PrismicRichText field={modality.excerpt} />
@@ -357,7 +382,6 @@ export default function Home({ doc, footer, menu }) {
                     value="Learn More"
                     link={"modalities"}
                   />
-                  {/* </PrismicLink> */}
                 </ModalityCard>
               );
             })}
