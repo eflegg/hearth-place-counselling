@@ -1,12 +1,13 @@
-import { createClient, endpoint, linkResolver } from "../../prismic";
+import { createClient, endpoint } from "../../prismic";
 import { PrismicRichText, SliceZone, PrismicLink } from "@prismicio/react";
-import Link from "next/link";
 import * as Prismic from "@prismicio/client";
-
 import styled from "styled-components";
 import theme from "../../components/Theme";
 import Layout from "../../components/Layout";
 import { components } from "../../slices";
+import { useSpring, animated, config } from "react-spring";
+import { useState } from "react";
+import { Waypoint } from "react-waypoint";
 
 const ServiceContainer = styled.div`
   .next-prev {
@@ -15,6 +16,12 @@ const ServiceContainer = styled.div`
     display: flex;
     justify-content: space-between;
     a {
+      &:nth-child(1) {
+        text-align: left;
+      }
+      &:nth-child(2) {
+        text-align: right;
+      }
       font-size: 24px;
       .arrow--left {
         position: relative;
@@ -138,11 +145,23 @@ const ServiceContainer = styled.div`
   }
 `;
 
-const Client = Prismic.createClient(endpoint);
-
 export default function ServiceSingle({ doc, footer, menu }) {
-  console.log("doc result", doc.results);
   const service = doc.data;
+  const [visibleOdd, setVisibleOdd] = useState(false);
+  const [visibleEven, setVisibleEven] = useState(false);
+
+  const visibleOne = useSpring({
+    config: config.slow,
+    opacity: visibleOdd ? 1 : 0,
+    transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
+    delay: 200,
+  });
+  const visibleTwo = useSpring({
+    config: config.slow,
+    opacity: visibleEven ? 1 : 0,
+    transform: visibleEven ? "translateY(0px)" : "translateY(-20px)",
+    delay: 200,
+  });
 
   return (
     <Layout
@@ -154,36 +173,58 @@ export default function ServiceSingle({ doc, footer, menu }) {
       <ServiceContainer>
         <section className="section-1">
           <div className="text-block text-block__one">
-            <div className="icon--one__desktop">
-              <img src={service.iconOne.url} alt={service.iconOne.alt} />
-            </div>
+            <Waypoint
+              onEnter={() => setVisibleOdd(true)}
+              onLeave={() => setVisibleOdd(false)}
+            >
+              <animated.div style={visibleOne} className="icon--one__desktop">
+                <img src={service.iconOne.url} alt={service.iconOne.alt} />
+              </animated.div>
+            </Waypoint>
             <PrismicRichText field={service.subheadOne} />
             <PrismicRichText field={service.paragraphOne} />
             <div className="position-relative">
               <div className="stone-box position-absolute"></div>
             </div>
-            <div className="icon--one__mobile">
-              <img src={service.iconOne.url} alt={service.iconOne.alt} />
-            </div>
+            <Waypoint
+              onEnter={() => setVisibleOdd(true)}
+              onLeave={() => setVisibleOdd(false)}
+            >
+              <animated.div style={visibleOne} className="icon--one__mobile">
+                <img src={service.iconOne.url} alt={service.iconOne.alt} />
+              </animated.div>
+            </Waypoint>
           </div>
           <div className="text-block text-block__two">
             <PrismicRichText field={service.subheadTwo} />
             <PrismicRichText field={service.paragraphTwo} />
           </div>
-          <div className="icon--two">
-            <img src={service.iconTwo.url} alt={service.iconTwo.alt} />
-          </div>
+
+          <Waypoint
+            onEnter={() => setVisibleEven(true)}
+            onLeave={() => setVisibleEven(false)}
+          >
+            <animated.div style={visibleTwo} className="icon--two">
+              <img src={service.iconTwo.url} alt={service.iconTwo.alt} />
+            </animated.div>
+          </Waypoint>
           <div className=" text-block text-block__three">
             <PrismicRichText field={service.subheadThree} />
             <PrismicRichText field={service.paragraphThree} />
           </div>
         </section>
-        <div className="img--full">
-          <img
-            src={service.fullWidthImage.url}
-            alt={service.fullWidthImage.alt}
-          />
-        </div>
+
+        <Waypoint
+          onEnter={() => setVisibleOdd(true)}
+          onLeave={() => setVisibleOdd(false)}
+        >
+          <animated.div style={visibleOne} className="img--full">
+            <img
+              src={service.fullWidthImage.url}
+              alt={service.fullWidthImage.alt}
+            />
+          </animated.div>
+        </Waypoint>
 
         <SliceZone slices={service.slices} components={components} />
 

@@ -210,11 +210,18 @@ export default function About({ doc, footer, menu }) {
           </div>
         </div>
         <section className="section-2">
-          <img
-            className="img--full"
-            src={about.fullWidthImage.url}
-            alt={about.fullWidthImage.alt}
-          />
+          <Waypoint
+            onEnter={() => setVisibleEven(true)}
+            onLeave={() => setVisibleEven(false)}
+          >
+            <animated.div style={visibleTwo}>
+              <img
+                className="img--full"
+                src={about.fullWidthImage.url}
+                alt={about.fullWidthImage.alt}
+              />
+            </animated.div>
+          </Waypoint>
           <div className="paragraph--group">
             <div className="paragraph">
               <PrismicRichText field={about.paraFour} />
@@ -231,7 +238,7 @@ export default function About({ doc, footer, menu }) {
           <Button
             value={about.buttonText}
             colour={`${theme.colours.gold}`}
-            link="/booknow"
+            link="bookNow"
           />
         </div>
         <section className="credentials">

@@ -84,12 +84,18 @@ export default function Contact({ doc, footer, menu }) {
             <PrismicRichText field={booknow.subheadTwo} />
             <PrismicRichText field={booknow.textTwo} />
           </div>
-          <div className="img--full">
-            <img
-              src={booknow.fullWidthImage.url}
-              alt={booknow.fullWidthImage.alt}
-            />
-          </div>
+
+          <Waypoint
+            onEnter={() => setVisibleOdd(true)}
+            onLeave={() => setVisibleOdd(false)}
+          >
+            <animated.div style={visibleOne} className="img--full">
+              <img
+                src={booknow.fullWidthImage.url}
+                alt={booknow.fullWidthImage.alt}
+              />
+            </animated.div>
+          </Waypoint>
         </BooknowContainer>
       </Layout>
     </>
