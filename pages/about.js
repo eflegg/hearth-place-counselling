@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import styled from "styled-components";
 import theme from "../components/Theme";
 import { Waypoint } from "react-waypoint";
-import { Spring, Transition, config } from "react-spring/renderprops.cjs";
+import { useSpring, animated, config } from "react-spring";
 import { useState } from "react";
 import { createClient } from "../prismic";
 import { PrismicRichText, PrismicLink, PrismicText } from "@prismicio/react";
@@ -151,6 +151,20 @@ font-size: 36;
 
 export default function About({ doc, footer, menu }) {
   const about = doc.data;
+  const [visibleOdd, setVisibleOdd] = useState(false);
+  const [visibleEven, setVisibleEven] = useState(false);
+  const visibleOne = useSpring({
+    config: config.slow,
+    opacity: visibleOdd ? 1 : 0,
+    transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
+    delay: 200,
+  });
+  const visibleTwo = useSpring({
+    config: config.slow,
+    opacity: visibleEven ? 1 : 0,
+    transform: visibleEven ? "translateY(0px)" : "translateY(-20px)",
+    delay: 200,
+  });
 
   return (
     <Layout
@@ -183,7 +197,15 @@ export default function About({ doc, footer, menu }) {
             <img src={about.imageTwo.url} alt={about.imageTwo.alt} />
           </div>
           <div className="paragraph">
-            <PrismicRichText field={about.subHead} />
+            <Waypoint
+              onEnter={() => setVisibleOdd(true)}
+              onLeave={() => setVisibleOdd(false)}
+            >
+              <animated.div style={visibleOne}>
+                <PrismicRichText field={about.subHead} />
+              </animated.div>
+            </Waypoint>
+
             <PrismicRichText field={about.paraThree} />
           </div>
         </div>
@@ -213,7 +235,14 @@ export default function About({ doc, footer, menu }) {
           />
         </div>
         <section className="credentials">
-          <PrismicRichText field={about.credentialsSubhead} />
+          <Waypoint
+            onEnter={() => setVisibleOdd(true)}
+            onLeave={() => setVisibleOdd(false)}
+          >
+            <animated.div style={visibleOne}>
+              <PrismicRichText field={about.credentialsSubhead} />
+            </animated.div>
+          </Waypoint>
           <div className="credentials--lists">
             <div className="credentials--list">
               <PrismicRichText field={about.credentialsHeader} />

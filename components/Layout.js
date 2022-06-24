@@ -2,11 +2,13 @@ import Head from "next/head";
 import Link from "next/link";
 import Footer from "./Global/Footer";
 import Navigation from "./Global/Navigation";
-
 import { createClient } from "../prismic";
 import styled from "styled-components";
 import theme from "../components/Theme";
 import Button from "../components/Global/Button";
+import { useSpring, animated, config } from "react-spring";
+import { useState } from "react";
+import { Waypoint } from "react-waypoint";
 
 const MenuLogo = styled.div`
   position: absolute;
@@ -33,6 +35,13 @@ const LayoutContainer = styled.div`
 `;
 
 const Layout = ({ pageTitle, children, footer, button, menu }) => {
+  const [visibleOdd, setVisibleOdd] = useState(false);
+  const visibleOne = useSpring({
+    config: config.slow,
+    opacity: visibleOdd ? 1 : 0,
+    transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
+    delay: 200,
+  });
   return (
     <LayoutContainer>
       <Navigation menuData={menu} />
@@ -44,17 +53,22 @@ const Layout = ({ pageTitle, children, footer, button, menu }) => {
         </Link>
       </MenuLogo>
       {pageTitle && (
-        <div className="pageTitle--container">
-          {pageTitle}{" "}
-          {button && (
-            <Button
-              value="Book Now"
-              link="booknow"
-              dark
-              colour={`${theme.colours.clay}`}
-            />
-          )}{" "}
-        </div>
+        <Waypoint
+          onEnter={() => setVisibleOdd(true)}
+          onLeave={() => setVisibleOdd(false)}
+        >
+          <animated.div style={visibleOne} className="pageTitle--container">
+            {pageTitle}{" "}
+            {button && (
+              <Button
+                value="Book Now"
+                link="booknow"
+                dark
+                colour={`${theme.colours.clay}`}
+              />
+            )}{" "}
+          </animated.div>
+        </Waypoint>
       )}
       <div className="">
         {children}

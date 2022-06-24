@@ -4,6 +4,9 @@ import styled from "styled-components";
 import theme from "../components/Theme";
 import { createClient } from "../prismic";
 import { PrismicRichText, PrismicText } from "@prismicio/react";
+import { useSpring, animated, config } from "react-spring";
+import { useState } from "react";
+import { Waypoint } from "react-waypoint";
 
 const BooknowContainer = styled.div`
   .intro {
@@ -43,6 +46,13 @@ const BooknowContainer = styled.div`
 
 export default function Contact({ doc, footer, menu }) {
   const booknow = doc.data;
+  const [visibleOdd, setVisibleOdd] = useState(false);
+  const visibleOne = useSpring({
+    config: config.slow,
+    opacity: visibleOdd ? 1 : 0,
+    transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
+    delay: 200,
+  });
   return (
     <>
       <Head>
@@ -58,9 +68,14 @@ export default function Contact({ doc, footer, menu }) {
           <div className="intro">
             <PrismicRichText field={booknow.intro} />
             <p className="contact-info">{booknow.contact}</p>
-            <div className="icon--one">
-              <img src={booknow.icon.url} alt={booknow.icon.alt} />
-            </div>
+            <Waypoint
+              onEnter={() => setVisibleOdd(true)}
+              onLeave={() => setVisibleOdd(false)}
+            >
+              <animated.div style={visibleOne} className="icon--one">
+                <img src={booknow.icon.url} alt={booknow.icon.alt} />
+              </animated.div>
+            </Waypoint>
           </div>
           <div className="policies">
             <PrismicRichText field={booknow.subheadOne} />
