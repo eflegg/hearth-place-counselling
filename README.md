@@ -1,3 +1,3 @@
-# horlick-editorial
+# hearth-place-counselling
 
-Marketing website for Leah Horlick's editing and indexing services
+Marketing website for Dean Diamond's therapy practice
