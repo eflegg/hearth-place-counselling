@@ -3,7 +3,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import theme from "../components/Theme";
-import { useSpring, useTrail, animated, config } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { createClient } from "../prismic";
