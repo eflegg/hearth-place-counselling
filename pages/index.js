@@ -316,7 +316,7 @@ export default function Home({ doc, footer, menu }) {
 
             <Button
               value={home.heroButtonText}
-              link="booknow"
+              link="bookNow"
               colour={`${theme.colours.gold}`}
             />
           </div>
@@ -434,7 +434,7 @@ export default function Home({ doc, footer, menu }) {
               <PrismicRichText field={home.bookNowExcerpt} />
               <Button
                 value={home.bookNowButtonText}
-                link="booknow"
+                link="bookNow"
                 colour={`${theme.colours.gold}`}
               />
             </div>

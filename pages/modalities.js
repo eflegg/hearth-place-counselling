@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import styled from "styled-components";
 import theme from "../components/Theme";
 import { Waypoint } from "react-waypoint";
-import { Spring, Transition, config } from "react-spring/renderprops.cjs";
+import { useSpring, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
 import { RichText } from "prismic-reactjs";
 import { createClient } from "../prismic";
@@ -18,6 +18,12 @@ const ModalitiesContainer = styled.div`
 
 const ModalitySingle = styled.div`
   margin-bottom: 45px;
+  opacity: 0;
+  transition: 0.25s all ease-in-out;
+  &.visible {
+    opacity: 1;
+    transition: 0.25s all ease-in-out;
+  }
   ${theme.mediaQuery.sm`
   margin-bottom: 65px;
   `}
@@ -31,6 +37,15 @@ const ModalitySingle = styled.div`
 
 export default function Modalities({ doc, footer, menu }) {
   const modalities = doc.data;
+  const [visible, setVisible] = useState(false);
+  console.log("visible: ", visible);
+  // const visibleOne = useSpring({
+  //   config: config.slow,
+  //   opacity: visibleOdd ? 1 : 0,
+  //   transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
+  //   delay: 200,
+  // });
+
   return (
     <Layout
       pageTitle={<PrismicRichText field={modalities.modalitiesTitle} />}
@@ -44,12 +59,17 @@ export default function Modalities({ doc, footer, menu }) {
       <ModalitiesContainer className="modalities--container">
         {modalities.modalities.map((modality, index) => {
           return (
-            <ModalitySingle key={index} className="modality-card">
-              <PrismicRichText field={modality.title} />
-              <PrismicRichText field={modality.description} />
-              <PrismicRichText field={modality.quote} />
-              <img src={modality.icon.url} alt={modality.icon.alt} />
-            </ModalitySingle>
+            <Waypoint onEnter={() => setVisible(true)}>
+              <ModalitySingle
+                key={index}
+                className={`${visible ? "visible" : ""} modality-card`}
+              >
+                <PrismicRichText field={modality.title} />
+                <PrismicRichText field={modality.description} />
+                <PrismicRichText field={modality.quote} />
+                <img src={modality.icon.url} alt={modality.icon.alt} />
+              </ModalitySingle>
+            </Waypoint>
           );
         })}
       </ModalitiesContainer>
