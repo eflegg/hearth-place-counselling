@@ -47,12 +47,6 @@ $xl: 1800px;
   }
 }
 
-.dots-reverse {
-  div {
-    margin-left: auto;
-  }
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Shadows+Into+Light+Two&display=swap");
 
 @mixin font-size($sizeValue: 1.6) {
@@ -245,5 +239,47 @@ img {
   img {
     width: 100%;
     object-fit: cover;
+  }
+}
+
+.theme--btn {
+  position: absolute;
+  border: 2px solid orange;
+  right: 10px;
+  top: 75px;
+  z-index: 2;
+}
+
+//// Dark Theme Styles //
+
+.dark-theme {
+  background: $campfire;
+  a,
+  p,
+  h1,
+  h2,
+  h4 {
+    color: $clay;
+  }
+  h3 {
+    color: $gold;
+  }
+  .stone-box {
+    background: $plum !important;
+  }
+
+  .btn--container > button {
+    background: $clay;
+    color: $campfire;
+    transition: all 0.25s ease-in;
+    &:hover {
+      background: $plum;
+      color: $gold;
+    }
+  }
+  .menu-logo {
+    background: rgba(233, 233, 233, 0.1);
+    border-radius: 50%;
+    padding: 5px;
   }
 }

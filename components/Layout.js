@@ -16,6 +16,7 @@ const MenuLogo = styled.div`
   left: 22px;
   z-index: 2;
   width: 80px;
+  height: 80px;
 `;
 const LayoutContainer = styled.div`
   overflow: hidden;
@@ -35,6 +36,7 @@ const LayoutContainer = styled.div`
 `;
 
 const Layout = ({ pageTitle, children, footer, button, menu }) => {
+  const [darkTheme, setDarkTheme] = useState(false);
   const [visibleOdd, setVisibleOdd] = useState(false);
   const visibleOne = useSpring({
     config: config.slow,
@@ -43,9 +45,17 @@ const Layout = ({ pageTitle, children, footer, button, menu }) => {
     delay: 200,
   });
   return (
-    <LayoutContainer>
+    <LayoutContainer
+      className={`${darkTheme ? "dark-theme" : "default-theme"}`}
+    >
       <Navigation menuData={menu} />
-      <MenuLogo>
+      {/* <Button
+        colour={`${theme.colours.gold}`}
+        value={darkTheme ? "Change to light" : "Change to dark"}
+        className="theme--btn"
+        onClick={() => setDarkTheme(!darkTheme)}
+      ></Button> */}
+      <MenuLogo className="menu-logo">
         <Link href="/">
           <a>
             <img src="/Hearth-Place-logo-final-no-words.png" alt="" />
@@ -62,7 +72,7 @@ const Layout = ({ pageTitle, children, footer, button, menu }) => {
             {button && (
               <Button
                 value="Book Now"
-                link="booknow"
+                link="bookNow"
                 dark
                 colour={`${theme.colours.clay}`}
               />

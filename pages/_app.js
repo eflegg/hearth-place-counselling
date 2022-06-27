@@ -4,13 +4,13 @@ import NextApp from "next/app";
 import { linkResolver, createClient } from "../prismic";
 import Link from "next/link";
 import { PrismicProvider } from "@prismicio/react";
+import theme from "../components/Theme";
+import Button from "../components/Global/Button";
 
 export default class App extends NextApp {
   static async getInitialProps(appCtx) {
     const footer = (await createClient().getSingle("footer")) || null;
     const menu = (await createClient().getSingle("menu")) || null;
-
-    // console.log("MENU", menu);
 
     return {
       props: {
@@ -19,14 +19,32 @@ export default class App extends NextApp {
       },
     };
   }
+  constructor(props) {
+    super(props);
+    this.state = { theme: "light" };
+  }
 
   render() {
     const { Component, pageProps, props } = this.props;
-    // console.log(props.menu);
+
+    const toggleTheme = () => {
+      if (this.state.theme === "light") {
+        this.setState({ theme: "dark" });
+      } else {
+        this.setState({ theme: "light" });
+      }
+    };
+
     return (
       <>
-        {/* <Component {...pageProps} footer={props.footer} /> */}
-
+        <Button
+          colour={`${theme.colours.gold}`}
+          value={
+            this.state.theme == "dark" ? "Change to light" : "Change to dark"
+          }
+          className="theme--btn"
+          onClick={toggleTheme}
+        ></Button>
         <PrismicProvider
           linkResolver={linkResolver}
           internalLinkComponent={({ href, children, ...props }) => (
@@ -35,8 +53,14 @@ export default class App extends NextApp {
             </Link>
           )}
         >
-          {/* <PrismicPreview repositoryName={repositoryName}> */}
-          <Component {...pageProps} footer={props.footer} menu={props.menu} />
+          {/* <PrismicPreview repositoryName={hearthplace}> */}
+          <div
+            className={
+              this.state.theme == "dark" ? "dark-theme" : "default-theme"
+            }
+          >
+            <Component {...pageProps} footer={props.footer} menu={props.menu} />
+          </div>
           {/* </PrismicPreview> */}
         </PrismicProvider>
       </>

@@ -135,7 +135,7 @@ font-size: 36;
       }
       h4 {
         font-family: ${theme.type.body};
-        font-style: bold;
+        font-weight: 700;
       }
       ul {
         margin-top: 25px;

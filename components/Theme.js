@@ -35,12 +35,27 @@ export const colours = {
   plum: "#5d3350",
   river: "#a8afbf",
 };
+export const lightTheme = {
+  body: "#E2E2E2",
+  text: "#363537",
+  toggleBorder: "#FFF",
+  gradient: "linear-gradient(#39598A, #79D7ED)",
+};
+
+export const darkTheme = {
+  body: "#363537",
+  text: "#FAFAFA",
+  toggleBorder: "#6B8096",
+  gradient: "linear-gradient(#091236, #1E215D)",
+};
 
 const theme = {
   mediaQuery,
   breakpoints,
   colours,
   type,
+  lightTheme,
+  darkTheme,
 };
 
 export default theme;

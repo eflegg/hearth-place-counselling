@@ -28,14 +28,29 @@ export default function Button({
   large,
   className,
   dark,
+  onClick,
 }) {
   return (
-    <Link href={`/${link}`}>
-      <a className={`${className ? className : ""}`}>
-        <ButtonContainer dark={dark} large={large} colour={colour}>
+    <>
+      {link ? (
+        <Link href={`/${link}`}>
+          <a className={`${className ? className : ""} btn--container`}>
+            <ButtonContainer dark={dark} large={large} colour={colour}>
+              {value}
+            </ButtonContainer>
+          </a>
+        </Link>
+      ) : (
+        <ButtonContainer
+          className={`${className ? className : ""} btn--container`}
+          onClick={onClick}
+          dark={dark}
+          large={large}
+          colour={colour}
+        >
           {value}
         </ButtonContainer>
-      </a>
-    </Link>
+      )}
+    </>
   );
 }
