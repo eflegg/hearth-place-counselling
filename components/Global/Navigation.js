@@ -81,6 +81,7 @@ const MobileNav = styled.nav`
     background: transparent;
     border: 0px;
     position: absolute;
+    position: fixed;
     top: 18px;
     right: 15px;
     span {

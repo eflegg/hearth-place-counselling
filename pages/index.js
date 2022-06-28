@@ -26,7 +26,7 @@ const HomeContainer = styled.div`
     position: relative;
     .stone-box {
       position: absolute;
-      bottom: -50px;
+      bottom: -15px;
       height: 195px;
       width: 100%;
       background: ${theme.colours.stone};

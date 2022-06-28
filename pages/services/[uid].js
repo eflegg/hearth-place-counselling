@@ -75,6 +75,9 @@ const ServiceContainer = styled.div`
     margin: 30px auto;
 
     &.text-block__one {
+      h2 {
+        margin-bottom: 30px;
+      }
       h2,
       p {
         position: relative;
@@ -132,6 +135,10 @@ const ServiceContainer = styled.div`
     position: relative;
     left: -25px;
     top: -50px;
+    ${theme.mediaQuery.xs`
+     left: -45px;
+    top: -80px; 
+    `}
 
     ${theme.mediaQuery.sm`
       width: 70%;
@@ -142,6 +149,10 @@ const ServiceContainer = styled.div`
       max-width: 400px;
     }
     `}
+    ${theme.mediaQuery.md`
+ top: -155px;
+ height: 45px;
+`}
   }
 `;
 
