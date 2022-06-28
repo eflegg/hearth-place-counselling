@@ -1,54 +1,33 @@
 {
-  "id": "5bc79d94-ea4f-4b92-997f-43811f2df652",
-  "uid": "officia-alias-suscipit",
+  "id": "d5be8e60-9aa3-4da7-b306-a4326fb75547",
+  "uid": "enim-incidunt-ut",
   "type": "menu",
   "data": {
-    "title": "reintermediate global experiences",
+    "title": "whiteboard dot-com eyeballs",
+    "logoLight": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+    },
+    "logoDark": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+    },
     "menuLinks": [
       {
         "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Minim pariatur deserunt consectetur irure pariatur ipsum ut proident cupidatat.",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "linkLabel": [
-          {
-            "type": "paragraph",
-            "text": "Aliqua id ut et cupidatat ipsum consectetur duis.",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "linkLabel": [
-          {
-            "type": "paragraph",
-            "text": "Ad aute laboris sit ad sunt cupidatat tempor ipsum sit sunt dolore. Excepteur consequat pariatur labore amet tempor. Anim deserunt laboris deserunt eiusmod.",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        }
-      },
-      {
-        "linkLabel": [
-          {
-            "type": "paragraph",
-            "text": "Adipisicing cupidatat commodo mollit Lorem ad pariatur excepteur in.",
+            "text": "Minim nisi elit est cillum ut cillum reprehenderit dolore do ipsum sunt proident dolore aliquip cupidatat. Sint anim id officia commodo in qui nulla quis cillum tempor. Nisi voluptate minim labore eiusmod culpa fugiat dolore amet consequat cupidatat dolore ad sint in incididunt.",
             "spans": []
           }
         ],
@@ -61,13 +40,13 @@
         "linkLabel": [
           {
             "type": "paragraph",
-            "text": "Do sint sit consequat. Qui nostrud nostrud veniam consequat nisi magna veniam. Cillum ut laborum proident veniam et incididunt eu anim irure Lorem eu duis nostrud ipsum qui.",
+            "text": "Nostrud anim nisi culpa laborum do ex excepteur dolor do nisi labore pariatur anim sint eu. Irure ad voluptate magna esse irure proident. Labore proident dolor sunt pariatur.",
             "spans": []
           }
         ],
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "https://prismic.io"
         }
       }
     ]

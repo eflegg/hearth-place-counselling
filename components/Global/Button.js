@@ -18,6 +18,7 @@ const ButtonContainer = styled.button`
   &:hover {
     background: ${theme.colours.plum};
     transition: all 0.25s ease-in;
+    color: ${theme.colours.clay};
   }
 `;
 

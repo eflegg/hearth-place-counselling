@@ -21,7 +21,7 @@ const MenuLogo = styled.div`
 const LayoutContainer = styled.div`
   overflow: hidden;
   .pageTitle--container {
-    margin-top: 80px;
+    margin-top: 140px;
     margin-bottom: 80px;
     width: 100%;
     text-align: center;
@@ -36,7 +36,7 @@ const LayoutContainer = styled.div`
 `;
 
 const Layout = ({ pageTitle, children, footer, button, menu }) => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  // const [darkTheme, setDarkTheme] = useState(false);
   const [visibleOdd, setVisibleOdd] = useState(false);
   const visibleOne = useSpring({
     config: config.slow,
@@ -44,21 +44,28 @@ const Layout = ({ pageTitle, children, footer, button, menu }) => {
     transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
     delay: 200,
   });
+
+  console.log("menu ", menu);
   return (
     <LayoutContainer
-      className={`${darkTheme ? "dark-theme" : "default-theme"}`}
+    // className={`${darkTheme ? "dark-theme" : "default-theme"}`}
     >
       <Navigation menuData={menu} />
-      {/* <Button
-        colour={`${theme.colours.gold}`}
-        value={darkTheme ? "Change to light" : "Change to dark"}
-        className="theme--btn"
-        onClick={() => setDarkTheme(!darkTheme)}
-      ></Button> */}
+
       <MenuLogo className="menu-logo">
         <Link href="/">
           <a>
-            <img src="/Hearth-Place-logo-final-no-words.png" alt="" />
+            <img
+              className="logo__light-theme"
+              src={menu.data.logoLight.url}
+              alt={menu.data.logoLight.alt}
+            />
+
+            <img
+              className="logo__dark-theme"
+              src={menu.data.logoDark.url}
+              alt={menu.data.logoDark.alt}
+            />
           </a>
         </Link>
       </MenuLogo>

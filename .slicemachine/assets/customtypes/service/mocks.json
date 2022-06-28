@@ -1,55 +1,55 @@
 {
-  "id": "720c24fc-b11b-4ca9-aeb1-ebad6ea9bbc7",
-  "uid": "optio-autem-modi",
+  "id": "04576926-1287-4d2f-b650-0394734a35d7",
+  "uid": "qui-quas-nesciunt",
   "type": "service",
   "data": {
-    "order": 7993,
+    "order": 747,
     "serviceTitle": [
       {
         "type": "heading1",
-        "text": "Reintermediate out-of-the-box communities",
+        "text": "Innovate dot-com niches",
         "spans": []
       }
     ],
     "subheadOne": [
       {
         "type": "heading2",
-        "text": "Maximize revolutionary channels",
+        "text": "Strategize front-end e-services",
         "spans": []
       }
     ],
     "paragraphOne": [
       {
         "type": "paragraph",
-        "text": "Nostrud consectetur nisi Lorem ut enim consequat veniam aute laborum velit ipsum in.",
+        "text": "Consectetur commodo labore ex laborum reprehenderit officia mollit adipisicing tempor aliqua labore ipsum consectetur Lorem.",
         "spans": []
       }
     ],
     "subheadTwo": [
       {
         "type": "heading2",
-        "text": "Cultivate interactive synergies",
+        "text": "Innovate world-class architectures",
         "spans": []
       }
     ],
     "paragraphTwo": [
       {
         "type": "paragraph",
-        "text": "Excepteur occaecat exercitation nostrud amet excepteur dolor ipsum consectetur qui quis excepteur eu ea. Exercitation id eiusmod sit. Nostrud reprehenderit consequat ad ea.",
+        "text": "Labore occaecat elit commodo elit enim amet excepteur magna commodo dolore eiusmod voluptate laborum aliqua.",
         "spans": []
       }
     ],
     "subheadThree": [
       {
         "type": "heading2",
-        "text": "Synthesize proactive web services",
+        "text": "Integrate plug-and-play ROI",
         "spans": []
       }
     ],
     "paragraphThree": [
       {
         "type": "paragraph",
-        "text": "Fugiat sint eu anim aliqua aute elit reprehenderit irure sint dolore aute anim nostrud. Magna ullamco duis et consectetur voluptate tempor consequat aute. Nisi ex laborum labore excepteur ut dolor voluptate deserunt eu magna est sunt proident.",
+        "text": "Ex id elit elit ad.",
         "spans": []
       }
     ],
@@ -60,7 +60,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
     },
     "iconTwo": {
       "dimensions": {
@@ -69,7 +69,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
     },
     "fullWidthImage": {
       "dimensions": {
@@ -78,17 +78,19 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
     },
-    "nextServiceText": "utilize sexy vortals",
+    "nextServiceText": "optimize distributed models",
     "nextServiceLink": {
       "link_type": "Web",
       "url": "https://prismic.io"
     },
-    "prevServiceText": "exploit proactive methodologies",
+    "prevServiceText": "enable virtual architectures",
     "prevServiceLink": {
       "link_type": "Web",
       "url": "http://twitter.com"
-    }
+    },
+    "isVideo": true,
+    "videoLink": "optimize impactful channels"
   }
 }

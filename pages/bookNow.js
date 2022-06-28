@@ -20,7 +20,10 @@ const BooknowContainer = styled.div`
       text-align: center;
       &.contact-info {
         color: ${theme.colours.gold};
-        font-size: 30px;
+        ${theme.mediaQuery.sm`
+         font-size: 30px;
+        `}
+        font-size: 22px;
       }
     }
   }

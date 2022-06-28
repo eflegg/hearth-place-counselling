@@ -31,7 +31,8 @@ const MobileNav = styled.nav`
     top: 0;
     left: 0;
     z-index: 2;
-    height: 800px;
+    min-height: 800px;
+    height: 100vh;
     ${theme.mediaQuery.sm`
     height: 100vh;
     `}

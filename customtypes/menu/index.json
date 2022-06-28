@@ -12,6 +12,22 @@
           "placeholder": "Menu"
         }
       },
+      "logoLight": {
+        "type": "Image",
+        "config": {
+          "label": "Logo Light",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "logoDark": {
+        "type": "Image",
+        "config": {
+          "label": "Logo Dark",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "menuLinks": {
         "type": "Group",
         "config": {

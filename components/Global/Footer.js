@@ -68,7 +68,11 @@ const FooterContainer = styled.footer`
     p {
       color: ${theme.colours.clay};
       text-align: right;
-      font-size: 32px;
+      ${theme.mediaQuery.sm`
+        font-size: 32px;
+      `}
+      font-size: 24px;
+
       line-height: 32px;
       margin: 10px 0;
     }
@@ -114,7 +118,9 @@ export default function Footer({ footerData, menu }) {
         <div className="footer-contact">
           <div className="footer-contact--text">
             <PrismicRichText field={footerData.data.phoneNumber} />
-            <PrismicRichText field={footerData.data.email} />
+            <a href="mailto:dean@hearthplace.ca">
+              <PrismicRichText field={footerData.data.email} />
+            </a>
             <PrismicRichText field={footerData.data.certificationText} />
           </div>
 

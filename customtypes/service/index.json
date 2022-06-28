@@ -165,6 +165,24 @@
           ]
         }
       }
+    },
+    "Image/Video": {
+      "isVideo": {
+        "type": "Boolean",
+        "config": {
+          "label": "Is Video",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "videoLink": {
+        "type": "Text",
+        "config": {
+          "label": "Video Link",
+          "placeholder": ""
+        }
+      }
     }
   }
 }

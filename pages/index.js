@@ -216,8 +216,10 @@ const ServiceCard = styled.div`
   height: 305px;
   }
 }
-  width: 350px;
-
+  width: 90%;
+  ${theme.mediaQuery.xs`
+    width: 350px;
+    `}
   ${theme.mediaQuery.md`
     width: 325px;
     `}

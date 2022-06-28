@@ -8,6 +8,7 @@ import { components } from "../../slices";
 import { useSpring, animated, config } from "react-spring";
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
+import ReactPlayer from "react-player/vimeo";
 
 const ServiceContainer = styled.div`
   .next-prev {
@@ -230,10 +231,25 @@ export default function ServiceSingle({ doc, footer, menu }) {
           onLeave={() => setVisibleOdd(false)}
         >
           <animated.div style={visibleOne} className="img--full">
-            <img
+            {service.isVideo ? (
+              <>
+                <ReactPlayer
+                  url={service.videoLink}
+                  controls={true}
+                  width={"100%"}
+                />
+              </>
+            ) : (
+              <img
+                src={service.fullWidthImage.url}
+                alt={service.fullWidthImage.alt}
+              />
+            )}
+
+            {/* <img
               src={service.fullWidthImage.url}
               alt={service.fullWidthImage.alt}
-            />
+            /> */}
           </animated.div>
         </Waypoint>
 
