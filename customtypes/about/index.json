@@ -214,6 +214,24 @@
           }
         }
       }
+    },
+    "Video": {
+      "isVideo": {
+        "type": "Boolean",
+        "config": {
+          "label": "Is Video?",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": false
+        }
+      },
+      "videoLink": {
+        "type": "Text",
+        "config": {
+          "label": "Video Link",
+          "placeholder": ""
+        }
+      }
     }
   }
 }

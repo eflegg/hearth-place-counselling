@@ -215,11 +215,24 @@ export default function About({ doc, footer, menu }) {
             onLeave={() => setVisibleEven(false)}
           >
             <animated.div style={visibleTwo}>
-              <img
-                className="img--full"
-                src={about.fullWidthImage.url}
-                alt={about.fullWidthImage.alt}
-              />
+              {about.isVideo ? (
+                <>
+                  <iframe
+                    src={about.videoLink}
+                    width="100%"
+                    height="500px"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </>
+              ) : (
+                <img
+                  className="img--full"
+                  src={about.fullWidthImage.url}
+                  alt={about.fullWidthImage.alt}
+                />
+              )}
             </animated.div>
           </Waypoint>
           <div className="paragraph--group">

@@ -69,7 +69,6 @@ const MobileNav = styled.nav`
   }
   .btn-nav {
     cursor: pointer;
-
     &:focus {
       outline: none;
     }
