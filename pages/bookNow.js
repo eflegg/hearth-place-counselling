@@ -32,7 +32,7 @@ const BooknowContainer = styled.div`
     text-align: center;
     img {
       margin: 50px auto;
-      width: 60px;
+      width: 100px;
     }
   }
   .policies {
