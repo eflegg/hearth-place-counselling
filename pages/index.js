@@ -201,6 +201,7 @@ const HomeCardContainer = styled.section`
     .book-now--img {
       display: none;
       ${theme.mediaQuery.sm`
+      width: 60%;
       display: block;
       img {
         height: 100%;
