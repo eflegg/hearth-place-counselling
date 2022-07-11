@@ -104,6 +104,12 @@ const AboutContainer = styled.section`
     position: relative;
     .img--full {
       width: 100%;
+      height: 600px;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
     .gold-box {
       background: ${theme.colours.gold};
