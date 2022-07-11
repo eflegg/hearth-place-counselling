@@ -65,6 +65,7 @@ const HomeContainer = styled.div`
     .about-text {
       ${theme.mediaQuery.md`
       width: 60%;
+      padding-left: 10px;
     
       `}
     }
@@ -76,6 +77,7 @@ const HomeContainer = styled.div`
       width: 420px;
       border-radius: 8px;
       overflow: hidden;
+
       .home-about--btn {
         position: absolute;
         bottom: 50px;

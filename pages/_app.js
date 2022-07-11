@@ -39,9 +39,7 @@ export default class App extends NextApp {
       <>
         <Button
           colour={`${theme.colours.gold}`}
-          value={
-            this.state.theme == "dark" ? "Change to light" : "Change to dark"
-          }
+          value={this.state.theme == "dark" ? "Light Theme" : "Dark Theme"}
           className="theme--btn"
           onClick={toggleTheme}
         ></Button>
