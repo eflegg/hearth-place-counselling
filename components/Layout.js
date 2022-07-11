@@ -45,7 +45,6 @@ const Layout = ({ pageTitle, children, footer, button, menu }) => {
     delay: 200,
   });
 
-  console.log("menu ", menu);
   return (
     <LayoutContainer
     // className={`${darkTheme ? "dark-theme" : "default-theme"}`}

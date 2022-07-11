@@ -71,6 +71,11 @@ const HomeContainer = styled.div`
     .home-about--img {
       text-align: center;
       position: relative;
+      margin: 0 auto;
+      height: 420px;
+      width: 420px;
+      border-radius: 8px;
+      overflow: hidden;
       .home-about--btn {
         position: absolute;
         bottom: 50px;
@@ -292,8 +297,7 @@ export default function Home({ doc, footer, menu }) {
     transform: visibleEven ? "translateY(0px)" : "translateY(-20px)",
     delay: 200,
   });
-  console.log("visible odd ", visibleOdd);
-  console.log("visible even", visibleEven);
+
   const home = doc.data;
 
   return (

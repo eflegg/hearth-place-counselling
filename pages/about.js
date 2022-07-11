@@ -70,6 +70,17 @@ const AboutContainer = styled.section`
 
   .about-image {
     text-align: center;
+    width: 420px;
+    height: 420px;
+    overflow: hidden;
+
+    img {
+      border-radius: 12px;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 2;
+      /* width: 80%; */
+    }
   }
 
   .stone-box {
@@ -83,12 +94,12 @@ const AboutContainer = styled.section`
       width: 120%;
       `}
   }
-  img {
+  /* img {
     position: relative;
     z-index: 2;
     width: 80%;
     margin-bottom: 50px;
-  }
+  } */
   .section-2 {
     position: relative;
     .img--full {
