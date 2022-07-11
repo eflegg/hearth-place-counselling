@@ -20,6 +20,9 @@ const ModalitySingle = styled.div`
   margin-bottom: 45px;
   opacity: 0;
   transition: 0.25s all ease-in-out;
+  img {
+    width: 258px;
+  }
   &.visible {
     opacity: 1;
     transition: 0.25s all ease-in-out;
@@ -38,7 +41,7 @@ const ModalitySingle = styled.div`
 export default function Modalities({ doc, footer, menu }) {
   const modalities = doc.data;
   const [visible, setVisible] = useState(false);
-  console.log("visible: ", visible);
+
   // const visibleOne = useSpring({
   //   config: config.slow,
   //   opacity: visibleOdd ? 1 : 0,
