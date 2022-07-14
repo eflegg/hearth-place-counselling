@@ -39,6 +39,7 @@ const FooterContainer = styled.footer`
   }
   h3 {
     color: ${theme.colours.clay};
+    font-family: ${theme.type.body};
     margin-top: 30px;
     text-align: center;
     font-size: 18px;

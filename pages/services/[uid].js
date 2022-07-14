@@ -147,13 +147,13 @@ const ServiceContainer = styled.div`
       width: 70%;
       height: 100px;
       left: -45px;
-    top: -100px;
+    top: -188px;
     img {
       max-width: 400px;
     }
     `}
     ${theme.mediaQuery.md`
- top: -155px;
+//  top: -155px;
  height: 45px;
 `}
   }
@@ -168,7 +168,7 @@ export default function ServiceSingle({ doc, footer, menu }) {
     config: config.slow,
     opacity: visibleOdd ? 1 : 0,
     transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
-    delay: 200,
+    delay: 50,
   });
   const visibleTwo = useSpring({
     config: config.slow,
