@@ -42,6 +42,12 @@ const Column = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    a {
+      font-weight: bold;
+      &:hover {
+        color: ${theme.colours.gold};
+      }
+    }
   }
 `;
 

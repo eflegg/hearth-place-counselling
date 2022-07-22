@@ -35,7 +35,7 @@
             "label": "Column Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong"
+            "multi": "paragraph,strong,hyperlink"
           }
         }
       },

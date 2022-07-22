@@ -110,7 +110,7 @@
                     "label": "Column Text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "paragraph,strong"
+                    "multi": "paragraph,strong,hyperlink"
                   }
                 }
               },
@@ -125,41 +125,41 @@
             "slice_type": "columns",
             "items": [
               {
-                "subtitle": "reintermediate virtual partnerships",
+                "subtitle": "synthesize one-to-one web-readiness",
                 "columnText": [
                   {
                     "type": "paragraph",
-                    "text": "Proident irure irure est est officia. Do do laborum ut ut consectetur. Proident cupidatat ex quis ad dolor est voluptate veniam officia.",
+                    "text": "Irure cillum ullamco culpa magna aliquip mollit velit aute veniam sit id incididunt esse dolore. Id qui duis anim in.",
                     "spans": []
                   }
                 ]
               },
               {
-                "subtitle": "cultivate e-business interfaces",
+                "subtitle": "utilize visionary e-markets",
                 "columnText": [
                   {
                     "type": "paragraph",
-                    "text": "Consequat nisi ad aute esse. Nisi anim est esse do eiusmod.",
+                    "text": "Sint voluptate quis commodo. Consequat esse qui elit id eu proident elit ullamco sit laborum ex. Adipisicing proident reprehenderit ut magna qui aute deserunt culpa veniam.",
                     "spans": []
                   }
                 ]
               },
               {
-                "subtitle": "matrix plug-and-play deliverables",
+                "subtitle": "syndicate B2C communities",
                 "columnText": [
                   {
                     "type": "paragraph",
-                    "text": "Dolore ullamco excepteur officia fugiat nulla cupidatat proident in velit ad cupidatat ipsum. Irure ad consequat sit occaecat aliqua nulla laborum laborum adipisicing.",
+                    "text": "Proident adipisicing proident anim ut minim eu eiusmod laboris non. Ad nostrud Lorem nostrud id dolore tempor et in velit.",
                     "spans": []
                   }
                 ]
               },
               {
-                "subtitle": "matrix viral content",
+                "subtitle": "innovate user-centric relationships",
                 "columnText": [
                   {
                     "type": "paragraph",
-                    "text": "Officia magna occaecat eiusmod ad reprehenderit officia nulla est reprehenderit consequat elit tempor elit ipsum. Dolor magna sit amet sint.",
+                    "text": "Sit incididunt anim magna non fugiat amet nulla consectetur. Lorem ad esse aute commodo culpa proident minim quis exercitation ipsum excepteur.",
                     "spans": []
                   }
                 ]
@@ -169,7 +169,7 @@
               "title": [
                 {
                   "type": "heading3",
-                  "text": "Innovate global communities",
+                  "text": "Optimize world-class eyeballs",
                   "spans": []
                 }
               ]

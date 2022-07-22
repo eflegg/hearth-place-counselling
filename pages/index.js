@@ -214,6 +214,7 @@ const HomeCardContainer = styled.section`
 `;
 
 const ServiceCard = styled.div`
+
 .img--container {
   height: 305px;
 }
@@ -239,6 +240,7 @@ const ServiceCard = styled.div`
     height: 300px;
     object-fit: cover;
     border-radius: 12px;
+    width: 100%;
   }
   p{
     ${theme.mediaQuery.md`
