@@ -161,20 +161,41 @@ const ServiceContainer = styled.div`
 
 export default function ServiceSingle({ doc, footer, menu }) {
   const service = doc.data;
-  const [visibleOdd, setVisibleOdd] = useState(false);
-  const [visibleEven, setVisibleEven] = useState(false);
+  const [visibleOne, setVisibleOne] = useState(false);
 
-  const visibleOne = useSpring({
+  const [visibleTwo, setVisibleTwo] = useState(false);
+  const [visibleThree, setVisibleThree] = useState(false);
+  const [visibleFour, setVisibleFour] = useState(false);
+
+  // console.log("visible odd ", visibleOdd);
+  // console.log("visible even ", visibleEven);
+  // console.log("visible three ", visibleThree);
+  // console.log("visible four ", visibleFour);
+
+  const visible1 = useSpring({
     config: config.slow,
-    opacity: visibleOdd ? 1 : 0,
-    transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
+    opacity: visibleOne ? 1 : 0,
+    transform: visibleOne ? "translateY(0px)" : "translateY(-20px)",
     delay: 50,
   });
-  const visibleTwo = useSpring({
+  const visible2 = useSpring({
     config: config.slow,
-    opacity: visibleEven ? 1 : 0,
-    transform: visibleEven ? "translateY(0px)" : "translateY(-20px)",
-    delay: 200,
+    opacity: visibleTwo ? 1 : 0,
+    transform: visibleTwo ? "translateY(0px)" : "translateY(-20px)",
+    delay: 50,
+  });
+
+  const visible3 = useSpring({
+    config: config.slow,
+    opacity: visibleThree ? 1 : 0,
+    transform: visibleThree ? "translateY(0px)" : "translateY(-20px)",
+    delay: 50,
+  });
+  const visible4 = useSpring({
+    config: config.slow,
+    opacity: visibleFour ? 1 : 0,
+    transform: visibleFour ? "translateY(0px)" : "translateY(-20px)",
+    delay: 50,
   });
 
   return (
@@ -188,10 +209,10 @@ export default function ServiceSingle({ doc, footer, menu }) {
         <section className="section-1">
           <div className="text-block text-block__one">
             <Waypoint
-              onEnter={() => setVisibleOdd(true)}
-              onLeave={() => setVisibleOdd(false)}
+              onEnter={() => setVisibleOne(true)}
+              onLeave={() => setVisibleOne(false)}
             >
-              <animated.div style={visibleOne} className="icon--one__desktop">
+              <animated.div style={visible1} className="icon--one__desktop">
                 <img src={service.iconOne.url} alt={service.iconOne.alt} />
               </animated.div>
             </Waypoint>
@@ -201,10 +222,10 @@ export default function ServiceSingle({ doc, footer, menu }) {
               <div className="stone-box position-absolute"></div>
             </div>
             <Waypoint
-              onEnter={() => setVisibleOdd(true)}
-              onLeave={() => setVisibleOdd(false)}
+              onEnter={() => setVisibleTwo(true)}
+              onLeave={() => setVisibleTwo(false)}
             >
-              <animated.div style={visibleOne} className="icon--one__mobile">
+              <animated.div style={visible2} className="icon--one__mobile">
                 <img src={service.iconOne.url} alt={service.iconOne.alt} />
               </animated.div>
             </Waypoint>
@@ -215,10 +236,10 @@ export default function ServiceSingle({ doc, footer, menu }) {
           </div>
 
           <Waypoint
-            onEnter={() => setVisibleEven(true)}
-            onLeave={() => setVisibleEven(false)}
+            onEnter={() => setVisibleThree(true)}
+            onLeave={() => setVisibleThree(false)}
           >
-            <animated.div style={visibleTwo} className="icon--two">
+            <animated.div style={visible3} className="icon--two">
               <img src={service.iconTwo.url} alt={service.iconTwo.alt} />
             </animated.div>
           </Waypoint>
@@ -229,10 +250,10 @@ export default function ServiceSingle({ doc, footer, menu }) {
         </section>
 
         <Waypoint
-          onEnter={() => setVisibleOdd(true)}
-          onLeave={() => setVisibleOdd(false)}
+          onEnter={() => setVisibleFour(true)}
+          onLeave={() => setVisibleFour(false)}
         >
-          <animated.div style={visibleOne} className="img--full">
+          <animated.div style={visible4} className="img--full">
             {service.isVideo ? (
               <>
                 <iframe
