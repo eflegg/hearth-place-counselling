@@ -103,6 +103,7 @@ const Hero = styled.section`
       width: 100%;
       object-fit: cover;
       height: 100%;
+      border-radius: 0px;
     }
   }
   .hero-logo--container {
