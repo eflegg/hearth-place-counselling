@@ -1,5 +1,10 @@
 import { createClient, endpoint } from "../../prismic";
-import { PrismicRichText, SliceZone, PrismicLink } from "@prismicio/react";
+import {
+  PrismicRichText,
+  SliceZone,
+  PrismicLink,
+  PrismicText,
+} from "@prismicio/react";
 import * as Prismic from "@prismicio/client";
 import styled from "styled-components";
 import theme from "../../components/Theme";

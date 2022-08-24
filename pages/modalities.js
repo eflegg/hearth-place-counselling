@@ -8,7 +8,7 @@ import { useSpring, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
 import { RichText } from "prismic-reactjs";
 import { createClient } from "../prismic";
-import { PrismicRichText, PrismicLink } from "@prismicio/react";
+import { PrismicRichText, PrismicText, PrismicLink } from "@prismicio/react";
 
 const ModalitiesContainer = styled.div`
   width: 60%;
@@ -54,11 +54,8 @@ export default function Modalities({ doc, footer, menu }) {
       pageTitle={<PrismicRichText field={modalities.modalitiesTitle} />}
       footer={footer}
       menu={menu}
+      metadescription={<PrismicText field={modalities.metadescription} />}
     >
-      <Head>
-        <title>Modalities</title>
-      </Head>
-
       <ModalitiesContainer className="modalities--container">
         {modalities.modalities.map((modality, index) => {
           return (

@@ -7,7 +7,7 @@ import { useSpring, animated, config } from "react-spring";
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { createClient } from "../prismic";
-import { PrismicRichText, PrismicLink } from "@prismicio/react";
+import { PrismicRichText, PrismicText, PrismicLink } from "@prismicio/react";
 import Button from "../components/Global/Button";
 
 const HomeContainer = styled.div`
