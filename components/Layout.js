@@ -35,7 +35,14 @@ const LayoutContainer = styled.div`
   }
 `;
 
-const Layout = ({ pageTitle, children, footer, button, menu }) => {
+const Layout = ({
+  pageTitle,
+  children,
+  footer,
+  button,
+  menu,
+  metadescription,
+}) => {
   // const [darkTheme, setDarkTheme] = useState(false);
   const [visibleOdd, setVisibleOdd] = useState(false);
   const visibleOne = useSpring({
@@ -46,51 +53,61 @@ const Layout = ({ pageTitle, children, footer, button, menu }) => {
   });
 
   return (
-    <LayoutContainer
-    // className={`${darkTheme ? "dark-theme" : "default-theme"}`}
-    >
-      <Navigation menuData={menu} />
+    <>
+      <Head>
+        <meta name="description" content={metadescription} />
+        <title>Hearth Place Counselling</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="/about-photo.jpg" />
+        <meta property="og:url" content="http://hearthplace.ca/"></meta>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <LayoutContainer
+      // className={`${darkTheme ? "dark-theme" : "default-theme"}`}
+      >
+        <Navigation menuData={menu} />
 
-      <MenuLogo className="menu-logo">
-        <Link href="/">
-          <a>
-            <img
-              className="logo__light-theme"
-              src={menu.data.logoLight.url}
-              alt={menu.data.logoLight.alt}
-            />
-
-            <img
-              className="logo__dark-theme"
-              src={menu.data.logoDark.url}
-              alt={menu.data.logoDark.alt}
-            />
-          </a>
-        </Link>
-      </MenuLogo>
-      {pageTitle && (
-        <Waypoint
-          onEnter={() => setVisibleOdd(true)}
-          onLeave={() => setVisibleOdd(false)}
-        >
-          <animated.div style={visibleOne} className="pageTitle--container">
-            {pageTitle}{" "}
-            {button && (
-              <Button
-                value="Book Now"
-                link="bookNow"
-                dark
-                colour={`${theme.colours.clay}`}
+        <MenuLogo className="menu-logo">
+          <Link href="/">
+            <a>
+              <img
+                className="logo__light-theme"
+                src={menu.data.logoLight.url}
+                alt={menu.data.logoLight.alt}
               />
-            )}{" "}
-          </animated.div>
-        </Waypoint>
-      )}
-      <div className="">
-        {children}
-        <Footer footerData={footer} menu={menu} />
-      </div>
-    </LayoutContainer>
+
+              <img
+                className="logo__dark-theme"
+                src={menu.data.logoDark.url}
+                alt={menu.data.logoDark.alt}
+              />
+            </a>
+          </Link>
+        </MenuLogo>
+        {pageTitle && (
+          <Waypoint
+            onEnter={() => setVisibleOdd(true)}
+            onLeave={() => setVisibleOdd(false)}
+          >
+            <animated.div style={visibleOne} className="pageTitle--container">
+              {pageTitle}{" "}
+              {button && (
+                <Button
+                  value="Book Now"
+                  link="bookNow"
+                  dark
+                  colour={`${theme.colours.clay}`}
+                />
+              )}{" "}
+            </animated.div>
+          </Waypoint>
+        )}
+        <div className="">
+          {children}
+          <Footer footerData={footer} menu={menu} />
+        </div>
+      </LayoutContainer>
+    </>
   );
 };
 

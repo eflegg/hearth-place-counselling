@@ -58,14 +58,11 @@ export default function Contact({ doc, footer, menu }) {
   });
   return (
     <>
-      <Head>
-        <title>Book Now</title>
-        <meta property="og:title" content="Book Now" key="title" />
-      </Head>
       <Layout
         pageTitle={<PrismicRichText field={booknow.title} />}
         footer={footer}
         menu={menu}
+        metadescription={<PrismicText field={booknow.metadescription} />}
       >
         <BooknowContainer>
           <div className="intro">

@@ -204,6 +204,7 @@ export default function ServiceSingle({ doc, footer, menu }) {
       footer={footer}
       menu={menu}
       button
+      metadescription={<PrismicText field={service.metadescription} />}
     >
       <ServiceContainer>
         <section className="section-1">

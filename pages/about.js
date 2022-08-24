@@ -73,7 +73,7 @@ const AboutContainer = styled.section`
     width: 420px;
     height: 420px;
     overflow: hidden;
-
+    border-radius: 12px;
     img {
       border-radius: 12px;
       margin-bottom: 50px;
@@ -188,6 +188,7 @@ export default function About({ doc, footer, menu }) {
       pageTitle={<PrismicRichText field={about.aboutTitle} />}
       footer={footer}
       menu={menu}
+      metadescription={<PrismicText field={about.metadescription} />}
     >
       <Head>
         <title> About</title>

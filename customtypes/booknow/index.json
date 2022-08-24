@@ -82,6 +82,15 @@
           "thumbnails": []
         }
       }
+    },
+    "SEO": {
+      "metadescription": {
+        "type": "Text",
+        "config": {
+          "label": "Metadescription",
+          "placeholder": ""
+        }
+      }
     }
   }
 }

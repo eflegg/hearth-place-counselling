@@ -77,7 +77,9 @@ const HomeContainer = styled.div`
       width: 420px;
       border-radius: 8px;
       overflow: hidden;
-
+      img {
+        border-radius: 8px;
+      }
       .home-about--btn {
         position: absolute;
         bottom: 50px;
@@ -307,16 +309,20 @@ export default function Home({ doc, footer, menu }) {
 
   return (
     <HomeContainer>
-      <Head>
+      {/* <Head>
         <title>Hearth Place Counselling</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Hearth Place Counselling" />
         <meta property="og:image" content="/about-photo.jpg" />
         <meta property="og:url" content="http://hearthplace.ca/"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      </Head> */}
 
-      <Layout footer={footer} menu={menu}>
+      <Layout
+        footer={footer}
+        menu={menu}
+        metadescription={<PrismicText field={home.metadescription} />}
+      >
         <Hero className="hero--container">
           <div className="hero--img">
             <img src={home.heroImage.url} alt={home.heroImage.alt} />

@@ -8,7 +8,6 @@ const FooterContainer = styled.footer`
 
   .footer--inner {
     padding: 30px 10px 0px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;

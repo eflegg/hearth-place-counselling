@@ -1,55 +1,55 @@
 {
-  "id": "04576926-1287-4d2f-b650-0394734a35d7",
-  "uid": "qui-quas-nesciunt",
+  "id": "3d3b3550-9fa4-44cd-8dc8-15c7b0865bc4",
+  "uid": "eaque-fugit-et",
   "type": "service",
   "data": {
-    "order": 747,
+    "order": 5577,
     "serviceTitle": [
       {
         "type": "heading1",
-        "text": "Innovate dot-com niches",
+        "text": "Utilize cross-media deliverables",
         "spans": []
       }
     ],
     "subheadOne": [
       {
         "type": "heading2",
-        "text": "Strategize front-end e-services",
+        "text": "Monetize clicks-and-mortar experiences",
         "spans": []
       }
     ],
     "paragraphOne": [
       {
         "type": "paragraph",
-        "text": "Consectetur commodo labore ex laborum reprehenderit officia mollit adipisicing tempor aliqua labore ipsum consectetur Lorem.",
+        "text": "Dolore dolore anim cupidatat nostrud ipsum reprehenderit eiusmod amet non ipsum. Officia occaecat voluptate veniam adipisicing tempor nulla magna sit commodo anim et.",
         "spans": []
       }
     ],
     "subheadTwo": [
       {
         "type": "heading2",
-        "text": "Innovate world-class architectures",
+        "text": "Whiteboard strategic platforms",
         "spans": []
       }
     ],
     "paragraphTwo": [
       {
         "type": "paragraph",
-        "text": "Labore occaecat elit commodo elit enim amet excepteur magna commodo dolore eiusmod voluptate laborum aliqua.",
+        "text": "Occaecat esse occaecat fugiat amet duis ullamco dolor. Ea anim laboris laborum proident exercitation excepteur consequat dolor officia dolor dolore elit sint ut ut. Fugiat incididunt cillum eiusmod.",
         "spans": []
       }
     ],
     "subheadThree": [
       {
         "type": "heading2",
-        "text": "Integrate plug-and-play ROI",
+        "text": "Extend customized architectures",
         "spans": []
       }
     ],
     "paragraphThree": [
       {
         "type": "paragraph",
-        "text": "Ex id elit elit ad.",
+        "text": "Ut et ad eu eu proident deserunt aute ea laborum. Ipsum ex cupidatat id mollit commodo adipisicing qui dolore enim culpa. Non non nulla nostrud dolore sint reprehenderit laboris in cillum.",
         "spans": []
       }
     ],
@@ -60,7 +60,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
     },
     "iconTwo": {
       "dimensions": {
@@ -69,7 +69,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
     },
     "fullWidthImage": {
       "dimensions": {
@@ -78,19 +78,20 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
     },
-    "nextServiceText": "optimize distributed models",
+    "nextServiceText": "enhance real-time platforms",
     "nextServiceLink": {
       "link_type": "Web",
       "url": "https://prismic.io"
     },
-    "prevServiceText": "enable virtual architectures",
+    "prevServiceText": "incentivize one-to-one web-readiness",
     "prevServiceLink": {
       "link_type": "Web",
       "url": "http://twitter.com"
     },
-    "isVideo": true,
-    "videoLink": "optimize impactful channels"
+    "isVideo": false,
+    "videoLink": "enable innovative eyeballs",
+    "metadescription": "syndicate dot-com applications"
   }
 }
