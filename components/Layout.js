@@ -43,7 +43,7 @@ const Layout = ({
   menu,
   metadescription,
 }) => {
-  // const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(false);
   const [visibleOdd, setVisibleOdd] = useState(false);
   const visibleOne = useSpring({
     config: config.slow,
@@ -56,16 +56,14 @@ const Layout = ({
     <>
       <Head>
         <meta name="description" content={metadescription} />
-        <title>
-          Hearth Place Counselling | Counselling | Retreats | Teachings |{" "}
-        </title>
+        <title>Hearth Place | Counselling | Retreats | Teachings</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:image" content="/about-photo.jpg" />
         <meta property="og:url" content="http://hearthplace.ca/"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <LayoutContainer
-      // className={`${darkTheme ? "dark-theme" : "default-theme"}`}
+        className={`${darkTheme ? "dark-theme" : "default-theme"}`}
       >
         <Navigation menuData={menu} />
 
