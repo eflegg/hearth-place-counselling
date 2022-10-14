@@ -307,6 +307,7 @@ export default function Home({ doc, footer, menu }) {
   });
 
   const home = doc.data;
+  console.log("home ", home.metadescription);
 
   return (
     <HomeContainer>
@@ -322,7 +323,8 @@ export default function Home({ doc, footer, menu }) {
       <Layout
         footer={footer}
         menu={menu}
-        metadescription={<PrismicText field={home.metadescription} />}
+        // metadescription={<PrismicText field={home.metadescription} />}
+        metadescription={home.metadescription}
       >
         <Hero className="hero--container">
           <div className="hero--img">

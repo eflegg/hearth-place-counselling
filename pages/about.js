@@ -188,7 +188,7 @@ export default function About({ doc, footer, menu }) {
       pageTitle={<PrismicRichText field={about.aboutTitle} />}
       footer={footer}
       menu={menu}
-      metadescription={<PrismicText field={about.metadescription} />}
+      metadescription={about.metadescription}
     >
       <Head>
         <title> About</title>

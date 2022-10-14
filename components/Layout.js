@@ -52,6 +52,7 @@ const Layout = ({
     delay: 200,
   });
 
+  console.log("metadescrip ", metadescription);
   return (
     <>
       <Head>

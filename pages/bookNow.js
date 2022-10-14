@@ -62,7 +62,7 @@ export default function Contact({ doc, footer, menu }) {
         pageTitle={<PrismicRichText field={booknow.title} />}
         footer={footer}
         menu={menu}
-        metadescription={<PrismicText field={booknow.metadescription} />}
+        metadescription={booknow.metadescription}
       >
         <BooknowContainer>
           <div className="intro">
