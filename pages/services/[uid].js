@@ -166,16 +166,13 @@ const ServiceContainer = styled.div`
 
 export default function ServiceSingle({ doc, footer, menu }) {
   const service = doc.data;
+  console.log("service: ", service);
+
   const [visibleOne, setVisibleOne] = useState(false);
 
   const [visibleTwo, setVisibleTwo] = useState(false);
   const [visibleThree, setVisibleThree] = useState(false);
   const [visibleFour, setVisibleFour] = useState(false);
-
-  // console.log("visible odd ", visibleOdd);
-  // console.log("visible even ", visibleEven);
-  // console.log("visible three ", visibleThree);
-  // console.log("visible four ", visibleFour);
 
   const visible1 = useSpring({
     config: config.slow,
@@ -203,13 +200,21 @@ export default function ServiceSingle({ doc, footer, menu }) {
     delay: 50,
   });
 
+  const fallbackImage =
+    "https://images.prismic.io/hearthplace/b1e2ea09-87e0-478d-8c40-da72dc23f23e_Hearth-Place-logo.png?auto=compress,format";
+  const fallBackTitle = `Hearth Place - ${doc.uid}`;
+  // const fallBackTitle = "Counselling";
+
+  console.log("doc uid: ", doc.uid);
   return (
     <Layout
       pageTitle={<PrismicRichText field={service.serviceTitle} />}
       footer={footer}
       menu={menu}
-      button
       metadescription={service.metadescription}
+      ogImage={service.ogImage ? service.ogImage : fallbackImage}
+      ogUrl={`https://www.hearthplace.ca/services/${doc.uid}`}
+      ogTitle={service.ogTitle ? service.ogTitle : fallBackTitle}
     >
       <ServiceContainer>
         <section className="section-1">

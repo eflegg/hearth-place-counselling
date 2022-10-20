@@ -42,6 +42,9 @@ const Layout = ({
   button,
   menu,
   metadescription,
+  ogImage,
+  ogUrl,
+  ogTitle,
 }) => {
   const [darkTheme, setDarkTheme] = useState(false);
   const [visibleOdd, setVisibleOdd] = useState(false);
@@ -52,15 +55,15 @@ const Layout = ({
     delay: 200,
   });
 
-  console.log("metadescrip ", metadescription);
   return (
     <>
       <Head>
         <meta name="description" content={metadescription} />
-        <title>Hearth Place | Counselling | Retreats | Teachings</title>
+        {/* <title>Hearth Place | Counselling | Retreats | Teachings</title> */}
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="/about-photo.jpg" />
-        <meta property="og:url" content="http://hearthplace.ca/"></meta>
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl}></meta>
+        <meta property="og:title" content={ogTitle}></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <LayoutContainer

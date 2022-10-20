@@ -49,12 +49,19 @@ export default function Modalities({ doc, footer, menu }) {
   //   delay: 200,
   // });
 
+  const fallbackImage =
+    "https://images.prismic.io/hearthplace/b1e2ea09-87e0-478d-8c40-da72dc23f23e_Hearth-Place-logo.png?auto=compress,format";
+  const fallBackTitle = "Hearth Place - Modalities";
+
   return (
     <Layout
       pageTitle={<PrismicRichText field={modalities.modalitiesTitle} />}
       footer={footer}
       menu={menu}
       metadescription={modalities.metadescription}
+      ogImage={modalities.ogImage ? modalities.ogImage : fallbackImage}
+      ogUrl="https://www.hearthplace.ca/modalities"
+      ogTitle={modalities.ogTitle ? modalities.ogTitle : fallBackTitle}
     >
       <ModalitiesContainer className="modalities--container">
         {modalities.modalities.map((modality, index) => {

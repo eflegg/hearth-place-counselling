@@ -1,55 +1,55 @@
 {
-  "id": "3d3b3550-9fa4-44cd-8dc8-15c7b0865bc4",
-  "uid": "eaque-fugit-et",
+  "id": "7262f97a-2f36-41c1-acc6-90362e8760a6",
+  "uid": "eum-nesciunt-error",
   "type": "service",
   "data": {
-    "order": 5577,
+    "order": 1045,
     "serviceTitle": [
       {
         "type": "heading1",
-        "text": "Utilize cross-media deliverables",
+        "text": "Brand rich e-commerce",
         "spans": []
       }
     ],
     "subheadOne": [
       {
         "type": "heading2",
-        "text": "Monetize clicks-and-mortar experiences",
+        "text": "Recontextualize interactive bandwidth",
         "spans": []
       }
     ],
     "paragraphOne": [
       {
         "type": "paragraph",
-        "text": "Dolore dolore anim cupidatat nostrud ipsum reprehenderit eiusmod amet non ipsum. Officia occaecat voluptate veniam adipisicing tempor nulla magna sit commodo anim et.",
+        "text": "Nisi deserunt irure enim est qui cillum eiusmod culpa duis minim sint tempor nisi.",
         "spans": []
       }
     ],
     "subheadTwo": [
       {
         "type": "heading2",
-        "text": "Whiteboard strategic platforms",
+        "text": "Target interactive technologies",
         "spans": []
       }
     ],
     "paragraphTwo": [
       {
         "type": "paragraph",
-        "text": "Occaecat esse occaecat fugiat amet duis ullamco dolor. Ea anim laboris laborum proident exercitation excepteur consequat dolor officia dolor dolore elit sint ut ut. Fugiat incididunt cillum eiusmod.",
+        "text": "Culpa minim amet minim cupidatat ex pariatur laboris velit ad cillum veniam.",
         "spans": []
       }
     ],
     "subheadThree": [
       {
         "type": "heading2",
-        "text": "Extend customized architectures",
+        "text": "Incubate collaborative paradigms",
         "spans": []
       }
     ],
     "paragraphThree": [
       {
         "type": "paragraph",
-        "text": "Ut et ad eu eu proident deserunt aute ea laborum. Ipsum ex cupidatat id mollit commodo adipisicing qui dolore enim culpa. Non non nulla nostrud dolore sint reprehenderit laboris in cillum.",
+        "text": "Sit anim occaecat laborum aliqua non sint cillum ea id incididunt duis pariatur. In sunt non laboris velit ad sint culpa duis veniam ex officia deserunt.",
         "spans": []
       }
     ],
@@ -60,7 +60,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
     },
     "iconTwo": {
       "dimensions": {
@@ -69,7 +69,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118?w=900&h=500&fit=crop"
     },
     "fullWidthImage": {
       "dimensions": {
@@ -78,20 +78,30 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
     },
-    "nextServiceText": "enhance real-time platforms",
+    "nextServiceText": "engineer bleeding-edge initiatives",
     "nextServiceLink": {
       "link_type": "Web",
-      "url": "https://prismic.io"
+      "url": "http://google.com"
     },
-    "prevServiceText": "incentivize one-to-one web-readiness",
+    "prevServiceText": "utilize integrated applications",
     "prevServiceLink": {
       "link_type": "Web",
       "url": "http://twitter.com"
     },
-    "isVideo": false,
-    "videoLink": "enable innovative eyeballs",
-    "metadescription": "syndicate dot-com applications"
+    "isVideo": true,
+    "videoLink": "drive robust ROI",
+    "metadescription": "streamline intuitive partnerships",
+    "ogImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
+    },
+    "ogTitle": "revolutionize dot-com metrics"
   }
 }

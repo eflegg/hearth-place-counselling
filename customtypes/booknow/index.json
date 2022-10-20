@@ -90,6 +90,21 @@
           "label": "Metadescription",
           "placeholder": ""
         }
+      },
+      "ogImage": {
+        "type": "Image",
+        "config": {
+          "label": "Og Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "ogTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Og Title",
+          "placeholder": ""
+        }
       }
     }
   }

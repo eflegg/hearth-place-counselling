@@ -74,7 +74,6 @@ const AboutContainer = styled.section`
     margin: 0 auto;
     max-width: 420px;
     max-height: 420px;
-
     border-radius: 12px;
     img {
       border-radius: 12px;
@@ -182,6 +181,9 @@ export default function About({ doc, footer, menu }) {
     transform: visibleEven ? "translateY(0px)" : "translateY(-20px)",
     delay: 200,
   });
+  const fallbackImage =
+    "https://images.prismic.io/hearthplace/b1e2ea09-87e0-478d-8c40-da72dc23f23e_Hearth-Place-logo.png?auto=compress,format";
+  const fallBackTitle = "Hearth Place - About";
 
   return (
     <Layout
@@ -189,6 +191,9 @@ export default function About({ doc, footer, menu }) {
       footer={footer}
       menu={menu}
       metadescription={about.metadescription}
+      ogImage={about.ogImage ? about.ogImage : fallbackImage}
+      ogUrl="https://www.hearthplace.ca/about"
+      ogTitle={about.ogTitle ? about.ogTitle : fallBackTitle}
     >
       <Head>
         <title> About</title>

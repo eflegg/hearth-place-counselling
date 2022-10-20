@@ -56,6 +56,11 @@ export default function Contact({ doc, footer, menu }) {
     transform: visibleOdd ? "translateY(0px)" : "translateY(-20px)",
     delay: 200,
   });
+
+  const fallbackImage =
+    "https://images.prismic.io/hearthplace/b1e2ea09-87e0-478d-8c40-da72dc23f23e_Hearth-Place-logo.png?auto=compress,format";
+  const fallBackTitle = "Hearth Place - Book Now";
+
   return (
     <>
       <Layout
@@ -63,6 +68,9 @@ export default function Contact({ doc, footer, menu }) {
         footer={footer}
         menu={menu}
         metadescription={booknow.metadescription}
+        ogImage={booknow.ogImage ? booknow.ogImage : fallbackImage}
+        ogUrl="https://www.hearthplace.ca/bookNow"
+        ogTitle={booknow.ogTitle ? booknow.ogTitle : fallBackTitle}
       >
         <BooknowContainer>
           <div className="intro">
