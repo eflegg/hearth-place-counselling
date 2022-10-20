@@ -311,19 +311,9 @@ export default function Home({ doc, footer, menu }) {
 
   return (
     <HomeContainer>
-      {/* <Head>
-        <title>Hearth Place Counselling</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Hearth Place Counselling" />
-        <meta property="og:image" content="/about-photo.jpg" />
-        <meta property="og:url" content="http://hearthplace.ca/"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head> */}
-
       <Layout
         footer={footer}
         menu={menu}
-        // metadescription={<PrismicText field={home.metadescription} />}
         metadescription={home.metadescription}
       >
         <Hero className="hero--container">

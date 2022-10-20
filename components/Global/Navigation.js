@@ -3,7 +3,7 @@ import Head from "next/head";
 import styled from "styled-components";
 import theme from "../Theme";
 import Link from "next/link";
-import { Spring, config } from "react-spring/renderprops.cjs";
+import { useSpring, config, animated } from "react-spring";
 import ActiveLink from "./ActiveLink";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 
@@ -136,6 +136,13 @@ const MobileNav = styled.nav`
 
 export default function Navigation({ menuData }) {
   const [navActive, toggleNav] = useState(false);
+
+  const navAnim = useSpring({
+    // config: config.slow,
+    opacity: navActive ? 1 : 0,
+    width: navActive ? "100vw" : "0vw",
+  });
+
   return (
     <>
       <Head>
@@ -163,41 +170,35 @@ export default function Navigation({ menuData }) {
         </button>
         {navActive ? (
           <>
-            <Spring from={{ width: "0vw" }} to={{ width: "100vw" }}>
-              {(props) => (
-                <nav
-                  style={props}
-                  id="navMenu"
-                  className={`${
-                    props.className ? props.className : ""
-                  }  nav-active`}
-                >
-                  <div className="menu-image">
-                    <img src="/Hearth-Place-moon-grass.png" alt="" />
-                  </div>
-                  <ul>
-                    {menuData.data.menuLinks.map((menuLink, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="nav-link__mobile"
-                          onClick={() => {
-                            toggleNav(false);
-                          }}
-                        >
-                          <PrismicLink
-                            field={menuLink.link}
-                            className="text-neutral-500"
-                          >
-                            <PrismicText field={menuLink.linkLabel} />
-                          </PrismicLink>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </nav>
-              )}
-            </Spring>
+            <animated.nav
+              style={navAnim}
+              id="navMenu"
+              className={`  nav-active`}
+            >
+              <div className="menu-image">
+                <img src="/Hearth-Place-moon-grass.png" alt="" />
+              </div>
+              <ul>
+                {menuData.data.menuLinks.map((menuLink, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="nav-link__mobile"
+                      onClick={() => {
+                        toggleNav(false);
+                      }}
+                    >
+                      <PrismicLink
+                        field={menuLink.link}
+                        className="text-neutral-500"
+                      >
+                        <PrismicText field={menuLink.linkLabel} />
+                      </PrismicLink>
+                    </li>
+                  );
+                })}
+              </ul>
+            </animated.nav>
           </>
         ) : null}
       </MobileNav>
