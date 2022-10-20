@@ -78,6 +78,7 @@ const FooterContainer = styled.footer`
     }
     a.sx-verified-seal {
       margin-right: 0px;
+      margin-left: auto;
     }
     .footer-images {
       text-align: center;
@@ -121,17 +122,24 @@ export default function Footer({ footerData, menu }) {
         <div className="footer-contact">
           <div className="footer-contact--text">
             <a href="tel:2365083200">
-            <PrismicRichText field={footerData.data.phoneNumber} />
+              <PrismicRichText field={footerData.data.phoneNumber} />
             </a>
             <a href="mailto:dean@hearthplace.ca">
               <PrismicRichText field={footerData.data.email} />
             </a>
             <PrismicRichText field={footerData.data.certificationText} />
-           
-<a href="https://www.psychologytoday.com/profile/1019467" className="sx-verified-seal"></a> 
-<script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13" data-id="1019467" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="></script> 
 
-
+            <a
+              href="https://www.psychologytoday.com/profile/1019467"
+              className="sx-verified-seal"
+            ></a>
+            <script
+              type="text/javascript"
+              src="https://member.psychologytoday.com/verified-seal.js"
+              data-badge="13"
+              data-id="1019467"
+              data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="
+            ></script>
           </div>
 
           <div className="footer-images">
