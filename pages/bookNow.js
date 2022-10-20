@@ -18,14 +18,15 @@ const BooknowContainer = styled.div`
     p {
       font-size: 24px;
       text-align: center;
-      &.contact-info {
-        color: ${theme.colours.gold};
-        ${theme.mediaQuery.sm`
-         font-size: 30px;
-        `}
-        font-size: 22px;
-      }
+     
     }
+  }
+  .contact-info p{
+    color: ${theme.colours.gold};
+    ${theme.mediaQuery.sm`
+     font-size: 30px;
+    `}
+    font-size: 22px;
   }
   .icon--one {
     width: 100%;

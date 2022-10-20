@@ -205,7 +205,7 @@ export default function ServiceSingle({ doc, footer, menu }) {
   const fallBackTitle = `Hearth Place - ${doc.uid}`;
   // const fallBackTitle = "Counselling";
 
-  console.log("doc uid: ", doc.uid);
+  console.log("serviceTitle: ", service.serviceTitle);
   return (
     <Layout
       pageTitle={<PrismicRichText field={service.serviceTitle} />}

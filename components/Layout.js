@@ -60,7 +60,7 @@ const Layout = ({
       <Head>
         <meta name="description" content={metadescription} />
         <meta property="og:description" content={metadescription} />
-        {/* <title>Hearth Place | Counselling | Retreats | Teachings</title> */}
+        <title>{ogTitle}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={ogUrl}></meta>

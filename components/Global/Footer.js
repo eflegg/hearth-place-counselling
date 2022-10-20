@@ -133,7 +133,8 @@ export default function Footer({ footerData, menu }) {
             </a>
             <PrismicRichText field={footerData.data.certificationText} />
 
-            <a
+
+            <a 
               href="https://www.psychologytoday.com/profile/1019467"
               className="sx-verified-seal"
             ></a>
