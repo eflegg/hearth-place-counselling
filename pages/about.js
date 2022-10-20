@@ -70,7 +70,9 @@ const AboutContainer = styled.section`
 
   .about-image {
     text-align: center;
-    width: 420px;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 420px;
     height: 420px;
     overflow: hidden;
     border-radius: 12px;
@@ -94,12 +96,7 @@ const AboutContainer = styled.section`
       width: 120%;
       `}
   }
-  /* img {
-    position: relative;
-    z-index: 2;
-    width: 80%;
-    margin-bottom: 50px;
-  } */
+
   .section-2 {
     position: relative;
     .img--full {
@@ -188,7 +185,7 @@ export default function About({ doc, footer, menu }) {
       pageTitle={<PrismicRichText field={about.aboutTitle} />}
       footer={footer}
       menu={menu}
-      metadescription={<PrismicText field={about.metadescription} />}
+      metadescription={about.metadescription}
     >
       <Head>
         <title> About</title>
