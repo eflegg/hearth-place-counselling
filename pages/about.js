@@ -73,12 +73,10 @@ const AboutContainer = styled.section`
     width: 90%;
     margin: 0 auto;
     width: 420px;
-    // height: 420px;
-    object-fit: cover;
+    height: 420px;
     overflow: hidden;
     border-radius: 12px;
     img {
-      // object-fit: cover;
       border-radius: 12px;
       margin-bottom: 50px;
       position: relative;
