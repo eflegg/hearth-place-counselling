@@ -72,11 +72,13 @@ const AboutContainer = styled.section`
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    max-width: 420px;
-    height: 420px;
+    width: 420px;
+    // height: 420px;
+    object-fit: cover;
     overflow: hidden;
     border-radius: 12px;
     img {
+      // object-fit: cover;
       border-radius: 12px;
       margin-bottom: 50px;
       position: relative;

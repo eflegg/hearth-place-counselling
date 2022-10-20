@@ -176,7 +176,7 @@ export default function Navigation({ menuData }) {
               className={`  nav-active`}
             >
               <div className="menu-image">
-                <img src="/Hearth-Place-moon-grass.png" alt="" />
+                <img src="/Hearth-Place-logo-final-no-words.png" alt="" />
               </div>
               <ul>
                 {menuData.data.menuLinks.map((menuLink, index) => {

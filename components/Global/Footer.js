@@ -67,9 +67,10 @@ const FooterContainer = styled.footer`
     }
     p {
       color: ${theme.colours.clay};
-      text-align: right;
+      text-align: center;
       ${theme.mediaQuery.sm`
         font-size: 32px;
+        text-align: right;
       `}
       font-size: 24px;
 
@@ -77,8 +78,11 @@ const FooterContainer = styled.footer`
       margin: 10px 0;
     }
     a.sx-verified-seal {
+      margin: 0 auto;
+      ${theme.mediaQuery.sm`
       margin-right: 0px;
       margin-left: auto;
+    `}
     }
     .footer-images {
       text-align: center;
