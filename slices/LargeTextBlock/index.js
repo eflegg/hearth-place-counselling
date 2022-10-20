@@ -19,7 +19,7 @@ const ButtonBlockContainer = styled.div`
     text-align: center;
     font-size: 32px;
     line-height: 36px;
-    font-weight: 100;
+    // font-weight: 100;
   }
 `;
 

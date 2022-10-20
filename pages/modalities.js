@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import styled from "styled-components";
 import theme from "../components/Theme";
 import { Waypoint } from "react-waypoint";
-import { useSpring, config } from "react-spring/renderprops.cjs";
+// import { useSpring, config } from "react-spring/renderprops.cjs";
 import { useState } from "react";
 import { RichText } from "prismic-reactjs";
 import { createClient } from "../prismic";

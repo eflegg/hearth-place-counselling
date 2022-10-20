@@ -34,14 +34,17 @@ $xl: 1800px;
   max-width: 350px;
   width: 90%;
   margin: auto;
+
   @include media-query-min($xs) {
     max-width: 498px;
     width: 80%;
   }
+
   @include media-query-min($sm) {
     max-width: 800px;
     width: 80%;
   }
+
   @include media-query-min($md) {
     max-width: 1000px;
   }
@@ -57,6 +60,7 @@ $xl: 1800px;
 html {
   font-size: 62.5%;
 }
+
 $headerFont: "Shadows Into Light Two", cursive;
 $bodyFont: "Raleway", sans-serif;
 
@@ -67,6 +71,7 @@ $stone: #b7aeb9;
 $clay: #e9e9e9;
 $plum: #5d3350;
 $river: #a8afbf;
+
 body {
   padding: 0;
   margin: 0;
@@ -83,14 +88,17 @@ h4 {
   color: $campfire;
   margin: 0;
 }
+
 p {
   font-family: $bodyFont;
   font-weight: 700;
 }
+
 a {
   text-decoration: none;
   font-family: $headerFont;
 }
+
 p,
 a {
   letter-spacing: 0.2rem;
@@ -106,57 +114,70 @@ a {
   //   line-height: 32px;
   // }
 }
+
 .paragraph--bold {
   font-weight: 700;
 }
+
 h1,
 .h1 {
   letter-spacing: 0.2rem;
   font-size: 48px;
   line-height: 110%;
   color: $campfire;
+
   @include media-query-min($sm) {
     font-size: calc(48px + 12 * ((100vw - 320px) / 680));
   }
+
   @include media-query-min($md) {
     @include font-size(6);
   }
 }
+
 h2,
 .h2 {
   letter-spacing: 0.2rem;
   font-size: 28px;
   line-height: 125%;
+
   @include media-query-min($sm) {
     font-size: calc(28px + 12 * ((100vw - 320px) / 680));
   }
+
   @include media-query-min($md) {
     @include font-size(3.6);
   }
 }
+
 h3,
 .h3 {
   letter-spacing: 0.2rem;
   color: $plum;
   font-size: 24px;
   line-height: 135%;
+
   @include media-query-min($sm) {
     font-size: calc(24px + 4 * ((100vw - 320px) / 680));
   }
+
   @include media-query-min($md) {
     @include font-size(2.2);
     line-height: 36px;
   }
 }
+
 h4 {
   letter-spacing: 0.2rem;
   font-size: 16px;
   line-height: 150%;
   color: $campfire;
   font-weight: 400;
+
   @include media-query-min($sm) {
     font-size: calc(16px + 2 * ((100vw - 320px) / 680));
   }
+
   @include media-query-min($md) {
     @include font-size(1.8);
     line-height: 32px;
@@ -166,11 +187,14 @@ h4 {
 li {
   list-style: none;
 }
+
 .accent {
   font-weight: 100;
 }
+
 button {
   transition: all 0.25s ease-in;
+
   &:hover {
     background: $plum;
     transition: all 0.25s ease-in;
@@ -182,21 +206,27 @@ button {
 .text-center {
   text-align: center;
 }
+
 .text-left {
   text-align: left;
 }
+
 .text-right {
   text-align: right;
 }
+
 .d-flex {
   display: flex;
 }
+
 .flex-column {
   flex-direction: column;
 }
+
 .justify-content-center {
   justify-content: center;
 }
+
 .align-items-center {
   align-items: center;
 }
@@ -204,9 +234,11 @@ button {
 .position-absolute {
   position: absolute;
 }
+
 .position-relative {
   position: relative;
 }
+
 .position-fixed {
   position: fixed;
 }
@@ -221,11 +253,13 @@ button {
   color: white;
   font-family: $headerFont;
   font-size: 22px;
+
   a {
     color: white;
     font-family: $headerFont;
     font-size: 22px;
   }
+
   text-align: center;
 }
 
@@ -234,10 +268,12 @@ button {
 img {
   max-width: 100%;
 }
+
 .img--full {
   width: 100%;
   margin: 100px 0;
   height: 600px;
+
   img {
     object-fit: cover;
     width: 100%;
@@ -257,6 +293,7 @@ img {
 
 .dark-theme {
   background: $campfire;
+
   a,
   p,
   h1,
@@ -264,22 +301,26 @@ img {
   h4 {
     color: $clay;
   }
+
   h3 {
     color: $gold;
   }
+
   .stone-box {
     background: $plum !important;
   }
 
-  .btn--container > button {
+  .btn--container>button {
     background: $clay;
     color: $campfire;
     transition: all 0.25s ease-in;
+
     &:hover {
       background: $plum;
       color: $gold;
     }
   }
+
   // .menu-logo {
   //   background: rgba(233, 233, 233, 0.1);
   //   border-radius: 50%;
@@ -288,13 +329,16 @@ img {
   .logo__light-theme {
     display: none;
   }
+
   .logo__dark-theme {
     display: block;
   }
 }
+
 .logo__light-theme {
   display: block;
 }
+
 .logo__dark-theme {
   display: none;
 }

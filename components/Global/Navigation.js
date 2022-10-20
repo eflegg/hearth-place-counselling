@@ -3,7 +3,7 @@ import Head from "next/head";
 import styled from "styled-components";
 import theme from "../Theme";
 import Link from "next/link";
-import { Spring, config } from "react-spring/renderprops.cjs";
+// import { Spring, config } from "react-spring/renderprops.cjs";
 import ActiveLink from "./ActiveLink";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 
@@ -163,7 +163,7 @@ export default function Navigation({ menuData }) {
         </button>
         {navActive ? (
           <>
-            <Spring from={{ width: "0vw" }} to={{ width: "100vw" }}>
+            {/* <Spring from={{ width: "0vw" }} to={{ width: "100vw" }}>
               {(props) => (
                 <nav
                   style={props}
@@ -197,7 +197,7 @@ export default function Navigation({ menuData }) {
                   </ul>
                 </nav>
               )}
-            </Spring>
+            </Spring> */}
           </>
         ) : null}
       </MobileNav>
