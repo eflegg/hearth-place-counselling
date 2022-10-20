@@ -72,16 +72,19 @@ const AboutContainer = styled.section`
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    width: 420px;
-    height: 420px;
-    overflow: hidden;
+    max-width: 420px;
+    max-height: 420px;
+
     border-radius: 12px;
     img {
       border-radius: 12px;
       margin-bottom: 50px;
       position: relative;
       z-index: 2;
-      /* width: 80%; */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 0;
     }
   }
 
