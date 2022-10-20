@@ -30,6 +30,15 @@
           "placeholder": ""
         }
       },
+      "ContactClickable": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Contact Clickable",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,hyperlink"
+        }
+      },
       "icon": {
         "type": "Image",
         "config": {

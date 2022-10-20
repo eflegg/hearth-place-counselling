@@ -315,7 +315,7 @@ export default function Home({ doc, footer, menu }) {
   return (
     <HomeContainer>
       <Layout
-        pageTitle={home.ogTitle ? home.ogTitle : fallBackTitle}
+        // pageTitle={home.ogTitle ? home.ogTitle : fallBackTitle}
         footer={footer}
         menu={menu}
         metadescription={home.metadescription}

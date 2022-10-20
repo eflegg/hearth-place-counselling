@@ -75,7 +75,9 @@ export default function Contact({ doc, footer, menu }) {
         <BooknowContainer>
           <div className="intro">
             <PrismicRichText field={booknow.intro} />
-            <p className="contact-info">{booknow.contact}</p>
+            <span className="contact-info">
+              <PrismicRichText field={booknow.ContactClickable} />
+            </span>
             <Waypoint
               onEnter={() => setVisibleOdd(true)}
               onLeave={() => setVisibleOdd(false)}

@@ -273,6 +273,12 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
+      },
+      "ContactClickable": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     },
     "menu": {
