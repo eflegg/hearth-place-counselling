@@ -75,9 +75,10 @@ const AboutContainer = styled.section`
     max-width: 420px;
     max-height: 420px;
     border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 50px;
     img {
       border-radius: 12px;
-      margin-bottom: 50px;
       position: relative;
       z-index: 2;
       width: 100%;
