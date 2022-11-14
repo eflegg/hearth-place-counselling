@@ -186,6 +186,8 @@ export default function About({ doc, footer, menu }) {
     "https://images.prismic.io/hearthplace/b1e2ea09-87e0-478d-8c40-da72dc23f23e_Hearth-Place-logo.png?auto=compress,format";
   const fallBackTitle = "Hearth Place - About";
 
+  console.log("home image ", about.ogImage.url);
+
   return (
     <Layout
       pageTitle={<PrismicRichText field={about.aboutTitle} />}
