@@ -68,7 +68,7 @@ export default function Contact({ doc, footer, menu }) {
         footer={footer}
         menu={menu}
         metadescription={booknow.metadescription}
-        ogImage={booknow.ogImage ? booknow.ogImage.url : fallbackImage}
+        ogImage={booknow.ogImage.url ? booknow.ogImage.url : fallbackImage}
         ogUrl="https://www.hearthplace.ca/bookNow"
         ogTitle={booknow.ogTitle ? booknow.ogTitle : fallBackTitle}
       >

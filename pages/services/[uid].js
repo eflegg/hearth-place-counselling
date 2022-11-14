@@ -212,7 +212,7 @@ export default function ServiceSingle({ doc, footer, menu }) {
       footer={footer}
       menu={menu}
       metadescription={service.metadescription}
-      ogImage={service.ogImage ? service.ogImage.url : fallbackImage}
+      ogImage={service.ogImage.url ? service.ogImage.url : fallbackImage}
       ogUrl={`https://www.hearthplace.ca/services/${doc.uid}`}
       ogTitle={service.ogTitle ? service.ogTitle : fallBackTitle}
     >

@@ -321,7 +321,7 @@ export default function Home({ doc, footer, menu }) {
         footer={footer}
         menu={menu}
         metadescription={home.metadescription}
-        ogImage={home.ogImage ? home.ogImage.url : fallbackImage}
+        ogImage={home.ogImage.url ? home.ogImage.url : fallbackImage}
         ogUrl="https://www.hearthplace.ca"
         ogTitle={home.ogTitle ? home.ogTitle : fallBackTitle}
       >
