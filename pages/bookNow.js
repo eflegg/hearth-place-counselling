@@ -18,10 +18,9 @@ const BooknowContainer = styled.div`
     p {
       font-size: 24px;
       text-align: center;
-     
     }
   }
-  .contact-info p{
+  .contact-info p {
     color: ${theme.colours.gold};
     ${theme.mediaQuery.sm`
      font-size: 30px;
@@ -69,7 +68,7 @@ export default function Contact({ doc, footer, menu }) {
         footer={footer}
         menu={menu}
         metadescription={booknow.metadescription}
-        ogImage={booknow.ogImage ? booknow.ogImage : fallbackImage}
+        ogImage={booknow.ogImage ? booknow.ogImage.url : fallbackImage}
         ogUrl="https://www.hearthplace.ca/bookNow"
         ogTitle={booknow.ogTitle ? booknow.ogTitle : fallBackTitle}
       >

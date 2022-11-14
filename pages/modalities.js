@@ -59,7 +59,7 @@ export default function Modalities({ doc, footer, menu }) {
       footer={footer}
       menu={menu}
       metadescription={modalities.metadescription}
-      ogImage={modalities.ogImage ? modalities.ogImage : fallbackImage}
+      ogImage={modalities.ogImage ? modalities.ogImage.url : fallbackImage}
       ogUrl="https://www.hearthplace.ca/modalities"
       ogTitle={modalities.ogTitle ? modalities.ogTitle : fallBackTitle}
     >

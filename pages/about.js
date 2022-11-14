@@ -192,7 +192,7 @@ export default function About({ doc, footer, menu }) {
       footer={footer}
       menu={menu}
       metadescription={about.metadescription}
-      ogImage={about.ogImage ? about.ogImage : fallbackImage}
+      ogImage={about.ogImage ? about.ogImage.url : fallbackImage}
       ogUrl="https://www.hearthplace.ca/about"
       ogTitle={about.ogTitle ? about.ogTitle : fallBackTitle}
     >

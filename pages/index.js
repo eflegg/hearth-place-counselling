@@ -308,6 +308,8 @@ export default function Home({ doc, footer, menu }) {
 
   const home = doc.data;
 
+  console.log("home image ", home.ogImage.url);
+
   const fallbackImage =
     "https://images.prismic.io/hearthplace/b1e2ea09-87e0-478d-8c40-da72dc23f23e_Hearth-Place-logo.png?auto=compress,format";
   const fallBackTitle = "Hearth Place | Counselling | Retreats | Teaching";
@@ -319,7 +321,7 @@ export default function Home({ doc, footer, menu }) {
         footer={footer}
         menu={menu}
         metadescription={home.metadescription}
-        ogImage={home.ogImage ? home.ogImage : fallbackImage}
+        ogImage={home.ogImage ? home.ogImage.url : fallbackImage}
         ogUrl="https://www.hearthplace.ca"
         ogTitle={home.ogTitle ? home.ogTitle : fallBackTitle}
       >
