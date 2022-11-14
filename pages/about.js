@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
+
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import theme from "../components/Theme";
@@ -7,7 +7,7 @@ import { Waypoint } from "react-waypoint";
 import { useSpring, animated, config } from "react-spring";
 import { useState } from "react";
 import { createClient } from "../prismic";
-import { PrismicRichText, PrismicLink, PrismicText } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 import Button from "../components/Global/Button";
 
 const AboutContainer = styled.section`
