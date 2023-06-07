@@ -74,6 +74,8 @@ const ServiceContainer = styled.div`
   }
   .text-block {
     width: 80%;
+    position: relative;
+    z-index: 20;
     ${theme.mediaQuery.sm`
     width: 70%;
     `}
@@ -81,7 +83,10 @@ const ServiceContainer = styled.div`
     width: 50%;
     `}
     margin: 30px auto;
-
+    &.text-block__three {
+      position: relative;
+      z-index: 10;
+    }
     &.text-block__one {
       h2 {
         margin-bottom: 30px;
@@ -154,7 +159,7 @@ const ServiceContainer = styled.div`
       left: -65px;
     top: -135px;
     img {
-      max-width: 400px;
+      max-width: 375px;
     }
     `}
     ${theme.mediaQuery.md`
