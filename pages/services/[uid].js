@@ -118,7 +118,7 @@ const ServiceContainer = styled.div`
     display: block;
     position: absolute;
     z-index: 2;
-    right: -20px;
+    right: -50px;
     top: -250px;
     img {
       max-width: 400px;
@@ -145,21 +145,22 @@ const ServiceContainer = styled.div`
     top: -50px;
     ${theme.mediaQuery.xs`
      left: -45px;
-    top: -80px; 
+    top: -105px; 
     `}
 
     ${theme.mediaQuery.sm`
       width: 70%;
       height: 100px;
-      left: -45px;
-    top: -188px;
+      left: -65px;
+    top: -135px;
     img {
       max-width: 400px;
     }
     `}
     ${theme.mediaQuery.md`
-//  top: -155px;
+top: -188px;
  height: 45px;
+ left: -45px;
 `}
   }
 `;
