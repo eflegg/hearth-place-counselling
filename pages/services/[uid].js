@@ -123,7 +123,7 @@ const ServiceContainer = styled.div`
     display: block;
     position: absolute;
     z-index: 2;
-    right: -50px;
+    right: -150px;
     top: -250px;
     img {
       max-width: 400px;
