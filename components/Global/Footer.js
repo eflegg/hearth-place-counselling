@@ -7,6 +7,10 @@ const FooterContainer = styled.footer`
   background: ${theme.colours.plum};
 
   .footer--inner {
+    min-height: 460px;
+    @media (min-width: 789px) {
+      min-height: 400px;
+    }
     padding: 30px 10px 0px;
     display: flex;
     flex-direction: column;
@@ -91,6 +95,18 @@ const FooterContainer = styled.footer`
         margin: 10px;
       }
     }
+    .cert-logos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      ${theme.mediaQuery.sm`
+     flex-direction: row;
+    
+    `}
+      .ccc-logo {
+        width: 125px;
+      }
+    }
   }
 `;
 
@@ -132,19 +148,25 @@ export default function Footer({ footerData, menu }) {
               <PrismicRichText field={footerData.data.email} />
             </a>
             <PrismicRichText field={footerData.data.certificationText} />
-
-            <a
-              href="https://www.psychologytoday.com/profile/1019467"
-              className="sx-verified-seal"
-              target="_blank"
-            ></a>
-            <script
-              type="text/javascript"
-              src="https://member.psychologytoday.com/verified-seal.js"
-              data-badge="13"
-              data-id="1019467"
-              data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="
-            ></script>
+            <div className="position-relative cert-logos">
+              <a
+                href="https://www.psychologytoday.com/profile/1019467"
+                className="sx-verified-seal"
+                target="_blank"
+              ></a>
+              <script
+                type="text/javascript"
+                src="https://member.psychologytoday.com/verified-seal.js"
+                data-badge="13"
+                data-id="1019467"
+                data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="
+              ></script>
+              <img
+                className="ccc-logo"
+                src="/CCCLogoColour_nobg.png"
+                alt="Canadian Certified Counsellor logo"
+              />
+            </div>
           </div>
 
           <div className="footer-images">
