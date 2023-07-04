@@ -55,6 +55,22 @@
           "constraint": {},
           "thumbnails": []
         }
+      },
+      "canCertCounsellor": {
+        "type": "Image",
+        "config": {
+          "label": "Canadian Certified Counsellor",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "psychTodayLogo": {
+        "type": "Image",
+        "config": {
+          "label": "Psychology Today Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
       }
     }
   }

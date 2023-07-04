@@ -161,10 +161,17 @@ export default function Footer({ footerData, menu }) {
                 data-id="1019467"
                 data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="
               ></script>
+
+              {/* <img
+                className="psych-today--logo"
+                src={footerData.data.psychToday.url}
+                alt={footerData.data.psychToday.alt}
+              /> */}
+
               <img
                 className="ccc-logo"
-                src="/CCCLogoColour_nobg.png"
-                alt="Canadian Certified Counsellor logo"
+                src={footerData.data.canCertCounsellor.url}
+                alt={footerData.data.canCertCounsellor.alt}
               />
             </div>
           </div>

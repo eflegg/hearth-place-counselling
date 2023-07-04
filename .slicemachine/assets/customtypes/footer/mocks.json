@@ -1,6 +1,6 @@
 {
-  "id": "eb57ce8f-9396-4770-8f11-18da1b489eb0",
-  "uid": "nesciunt-quidem-fugiat",
+  "id": "5878add5-3864-4a7d-ad19-d7c67ef8939d",
+  "uid": "eum-sunt-ratione",
   "type": "footer",
   "data": {
     "footerLogo": {
@@ -15,21 +15,21 @@
     "phoneNumber": [
       {
         "type": "paragraph",
-        "text": "Exercitation reprehenderit nisi ipsum occaecat pariatur commodo esse in enim quis ipsum Lorem. Sunt ad cillum culpa. Ad incididunt magna labore ullamco anim proident dolor magna pariatur occaecat minim.",
+        "text": "Sit esse est cillum nostrud amet elit dolore cupidatat anim.",
         "spans": []
       }
     ],
     "email": [
       {
         "type": "paragraph",
-        "text": "Nostrud eiusmod minim cupidatat sint mollit.",
+        "text": "Ipsum consectetur excepteur eu officia deserunt elit voluptate. Sint dolor exercitation exercitation duis sunt. Ad sit adipisicing amet mollit id aliqua sit amet elit deserunt esse cillum excepteur laboris.",
         "spans": []
       }
     ],
     "certificationText": [
       {
         "type": "paragraph",
-        "text": "Nostrud minim do incididunt pariatur elit veniam sint aute id nostrud ea id labore eiusmod est.",
+        "text": "Aliquip est et minim cillum do non eiusmod ullamco ex laborum officia. Nulla duis ex do amet sit eiusmod proident sunt. Laborum ut consequat anim laboris cupidatat quis minim magna proident aute enim pariatur.",
         "spans": []
       }
     ],
@@ -40,7 +40,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
     },
     "imageTwo": {
       "dimensions": {
@@ -49,7 +49,25 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+    },
+    "canCertCounsellor": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+    },
+    "psychTodayLogo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
     }
   }
 }
