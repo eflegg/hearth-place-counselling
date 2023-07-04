@@ -52,8 +52,8 @@ export default function Modalities({ doc, footer, menu }) {
   const fallbackImage =
     "https://images.prismic.io/hearthplace/b1e2ea09-87e0-478d-8c40-da72dc23f23e_Hearth-Place-logo.png?auto=compress,format";
   const fallBackTitle = "Hearth Place - Modalities";
-  console.log("modality og image: ", modalities.ogImage.url);
-  console.log("fallback og image: ", fallbackImage);
+  // console.log("modality og image: ", modalities.ogImage.url);
+  // console.log("fallback og image: ", fallbackImage);
 
   return (
     <Layout

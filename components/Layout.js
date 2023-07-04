@@ -55,8 +55,6 @@ const Layout = ({
     delay: 200,
   });
 
-  console.log("og image: ", ogImage);
-
   return (
     <>
       <Head>

@@ -176,7 +176,7 @@ export default function Navigation({ menuData }) {
       >
         <button
           id="main-menu"
-          tabindex="0"
+          tabIndex="0"
           aria-expanded={navActive ? "true" : false}
           aria-label="Main menu"
           className={`btn-nav ${navActive ? "nav-close" : "nav-open"}`}

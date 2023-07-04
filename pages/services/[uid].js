@@ -172,7 +172,6 @@ top: -188px;
 
 export default function ServiceSingle({ doc, footer, menu }) {
   const service = doc.data;
-  console.log("service: ", service);
 
   const [visibleOne, setVisibleOne] = useState(false);
 
@@ -211,7 +210,6 @@ export default function ServiceSingle({ doc, footer, menu }) {
   const fallBackTitle = `Hearth Place - ${doc.uid}`;
   // const fallBackTitle = "Counselling";
 
-  console.log("serviceTitle: ", service.serviceTitle);
   return (
     <Layout
       pageTitle={<PrismicRichText field={service.serviceTitle} />}
