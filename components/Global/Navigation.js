@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import theme from "../Theme";
@@ -135,12 +135,32 @@ const MobileNav = styled.nav`
 `;
 
 export default function Navigation({ menuData }) {
+  useEffect(() => {
+    const keyDownHandler = (event) => {
+      console.log("User pressed: ", event.key);
+
+      if (event.key === "Escape") {
+        event.preventDefault();
+
+        toggleNav(false);
+      }
+    };
+
+    document.addEventListener("keydown", keyDownHandler);
+
+    // 👇️ clean up event listener
+    return () => {
+      document.removeEventListener("keydown", keyDownHandler);
+    };
+  }, []);
+
   const [navActive, toggleNav] = useState(false);
 
   const navAnim = useSpring({
     // config: config.slow,
     opacity: navActive ? 1 : 0,
     width: navActive ? "100vw" : "0vw",
+    visibility: navActive ? "visible" : "hidden",
   });
 
   return (
@@ -149,8 +169,16 @@ export default function Navigation({ menuData }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <MobileNav className="mobile-nav">
+      <MobileNav
+        aria-labelledby="main-menu"
+        role="navigation"
+        className="mobile-nav"
+      >
         <button
+          id="main-menu"
+          tabindex="0"
+          aria-expanded={navActive ? "true" : false}
+          aria-label="Main menu"
           className={`btn-nav ${navActive ? "nav-close" : "nav-open"}`}
           onClick={() => {
             toggleNav(!navActive);
