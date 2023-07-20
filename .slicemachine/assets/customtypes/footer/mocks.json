@@ -1,35 +1,43 @@
 {
-  "id": "5878add5-3864-4a7d-ad19-d7c67ef8939d",
-  "uid": "eum-sunt-ratione",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "footer",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
   "data": {
     "footerLogo": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": "Placeholder image",
+      "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
     },
     "phoneNumber": [
       {
         "type": "paragraph",
-        "text": "Sit esse est cillum nostrud amet elit dolore cupidatat anim.",
+        "text": "Do deserunt irure amet adipisicing commodo dolore ullamco eu dolore non aliqua.",
         "spans": []
       }
     ],
     "email": [
       {
         "type": "paragraph",
-        "text": "Ipsum consectetur excepteur eu officia deserunt elit voluptate. Sint dolor exercitation exercitation duis sunt. Ad sit adipisicing amet mollit id aliqua sit amet elit deserunt esse cillum excepteur laboris.",
+        "text": "Est pariatur dolor pariatur aute consequat irure.",
         "spans": []
       }
     ],
     "certificationText": [
       {
         "type": "paragraph",
-        "text": "Aliquip est et minim cillum do non eiusmod ullamco ex laborum officia. Nulla duis ex do amet sit eiusmod proident sunt. Laborum ut consequat anim laboris cupidatat quis minim magna proident aute enim pariatur.",
+        "text": "Adipisicing incididunt aliquip excepteur nostrud enim nisi amet. Veniam qui quis qui duis velit officia adipisicing sint ipsum.",
         "spans": []
       }
     ],
@@ -38,36 +46,40 @@
         "width": 900,
         "height": 500
       },
-      "alt": "Placeholder image",
+      "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9"
     },
     "imageTwo": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": "Placeholder image",
+      "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
     },
     "canCertCounsellor": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": "Placeholder image",
+      "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0"
     },
     "psychTodayLogo": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": "Placeholder image",
+      "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    },
+    "psychtodaylink": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
     }
   }
 }

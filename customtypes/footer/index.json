@@ -71,6 +71,14 @@
           "constraint": {},
           "thumbnails": []
         }
+      },
+      "psychtodaylink": {
+        "type": "Link",
+        "config": {
+          "label": "psychTodayLink",
+          "placeholder": "",
+          "select": null
+        }
       }
     }
   }

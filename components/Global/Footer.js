@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../Theme";
-import Link from "next/link";
+import Image from "next/Image";
 import { PrismicRichText, PrismicLink, PrismicText } from "@prismicio/react";
 
 const FooterContainer = styled.footer`
@@ -96,13 +96,22 @@ const FooterContainer = styled.footer`
       }
     }
     .cert-logos {
+      height: 125px;
       display: flex;
       flex-direction: column;
       align-items: center;
       ${theme.mediaQuery.sm`
      flex-direction: row;
+     justify-content: flex-end;
     
     `}
+    img {
+      max-height: 100%;
+      max-width: 100%:
+    }
+    a {
+      height: 100%;
+    }
       .ccc-logo {
         width: 125px;
       }
@@ -114,6 +123,7 @@ export default function Footer({ footerData, menu }) {
   const year = new Date().toLocaleDateString("en-US", {
     year: "numeric",
   });
+  console.log("psych link: ", footerData.data.psychtodaylink);
 
   return (
     <FooterContainer>
@@ -149,24 +159,30 @@ export default function Footer({ footerData, menu }) {
             </a>
             <PrismicRichText field={footerData.data.certificationText} />
             <div className="position-relative cert-logos">
-              <a
-                href="https://www.psychologytoday.com/profile/1019467"
-                className="sx-verified-seal"
-                target="_blank"
-              ></a>
-              <script
-                type="text/javascript"
-                src="https://member.psychologytoday.com/verified-seal.js"
-                data-badge="13"
-                data-id="1019467"
-                data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="
-              ></script>
-
-              {/* <img
-                className="psych-today--logo"
-                src={footerData.data.psychToday.url}
-                alt={footerData.data.psychToday.alt}
-              /> */}
+              {!footerData.data.psychTodayLogo ? (
+                <>
+                  <a
+                    target="_blank"
+                    href="https://www.psychologytoday.com/profile/1019467"
+                    className="sx-verified-seal"
+                  ></a>
+                  <script
+                    type="text/javascript"
+                    src="https://member.psychologytoday.com/verified-seal.js"
+                    data-badge="13"
+                    data-id="1019467"
+                    data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy9bQkFER0VdL3Byb2ZpbGUvW1BST0ZJTEVfSURdP2NhbGxiYWNrPXN4Y2FsbGJhY2s="
+                  ></script>
+                </>
+              ) : (
+                <a target="_blank" href={footerData.data.psychtodaylink.url}>
+                  <img
+                    className="psych-today"
+                    src={footerData.data.psychTodayLogo.url}
+                    alt={footerData.data.psychTodayLogo.alt}
+                  />
+                </a>
+              )}
 
               <img
                 className="ccc-logo"
