@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import theme from "../Theme";
-import Image from "next/Image";
 import { PrismicRichText, PrismicLink, PrismicText } from "@prismicio/react";
 
 const FooterContainer = styled.footer`
@@ -123,7 +122,6 @@ export default function Footer({ footerData, menu }) {
   const year = new Date().toLocaleDateString("en-US", {
     year: "numeric",
   });
-  console.log("psych link: ", footerData.data.psychtodaylink);
 
   return (
     <FooterContainer>
