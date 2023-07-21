@@ -97,8 +97,9 @@ const FooterContainer = styled.footer`
     .cert-logos {
       height: 125px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      justify-content: center;
       ${theme.mediaQuery.sm`
      flex-direction: row;
      justify-content: flex-end;
